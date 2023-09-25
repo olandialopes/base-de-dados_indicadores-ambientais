@@ -11,11 +11,11 @@ colunas_indesejadas = [
     '(Se outro) Qual?', 'Situação Cadastral','Latitude','Longitude',
     'Tipo de Tratamento', 'Nível de Tratamento', 'Detalhe'
 ]
-#Excluir as colunas indesejadas, cujos nomes estão acima
+# Excluir as colunas indesejadas, cujos nomes estão acima
 data = data.drop(columns=colunas_indesejadas, axis=1)
 
 # Contar valores únicos de CNPJ por setor econômico
-contagem_empresas_por_setor= data.groupby('Categoria de Atividade')['CNPJ'].nunique()
+contagem_empresas_por_setor = data.groupby('Categoria de Atividade')['CNPJ'].nunique()
 
 # Contar quantas vezes cada setor aparece
 contagem_setor = data['Categoria de Atividade'].value_counts().reset_index()

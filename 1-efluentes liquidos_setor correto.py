@@ -8,10 +8,10 @@ colunas_indesejadas = [
     'Compart. Ambiental da Emissão', 'Tipo de Emissão', 'Tipo Corpo Receptor',
     'Classe do Corpo Receptor', 'Nome do Corpo Hídrico', 'Corpo Receptor',
     'Qual?', 'Empresa Receptora do Efluente', 'Tipo de Emissão Para o Solo',
-    '(Se outro) Qual?', 'Situação Cadastral','Latitude','Longitude',
-    'Nível de Tratamento','Tipo de Tratamento','Detalhe'
+    '(Se outro) Qual?', 'Situação Cadastral', 'Latitude', 'Longitude',
+    'Nível de Tratamento', 'Tipo de Tratamento', 'Detalhe'
 ]
-#Escluir as colunas indesejadas, cujos nomes estão acima
+# Excluir as colunas indesejadas, cujos nomes estão acima
 data = data.drop(columns=colunas_indesejadas, axis=1)
 
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna
@@ -20,13 +20,20 @@ data = data.dropna(how='any')
 # Excluir linhas com valores zero em qualquer coluna
 data = data[~(data == '0').any(axis=1)]
 
+
 # Mapeamento das categorias para códigos de setor econômico
 def categorize_setor_economico(categoria):
     if 'Administradora de Projetos Florestais' in categoria:
         return 1
     elif 'Extração e Tratamento de Minerais' in categoria:
         return 2
-    elif any(keyword in categoria for keyword in ['Indústria Química', 'Indústria Metalúrgica', 'Indústria de Produtos Minerais Não Metálicos', 'Indústria Mecânica', 'Indústria Têxtil', 'Indústria de Vestuário', 'Calçados e Artefatos de Tecidos', 'Indústria de Madeira', 'Indústria de Produtos de Matéria Plástica', 'Indústria de material Elétrico', 'Eletrônico e Comunicações', 'Indústrias Diversas', 'Indústria de Material de Transporte', 'Indústria de Papel e Celulose', 'Indústria de Borracha', 'Indústria de Couros e Peles', 'Indústria do Fumo', 'Indústria de Produtos Alimentares e Bebidas']):
+    elif any(keyword in categoria for keyword in
+             ['Indústria Química', 'Indústria Metalúrgica', 'Indústria de Produtos Minerais Não Metálicos',
+              'Indústria Mecânica', 'Indústria Têxtil', 'Indústria de Vestuário', 'Calçados e Artefatos de Tecidos',
+              'Indústria de Madeira', 'Indústria de Produtos de Matéria Plástica', 'Indústria de material Elétrico',
+              'Eletrônico e Comunicações', 'Indústrias Diversas', 'Indústria de Material de Transporte',
+              'Indústria de Papel e Celulose', 'Indústria de Borracha', 'Indústria de Couros e Peles',
+              'Indústria do Fumo', 'Indústria de Produtos Alimentares e Bebidas']):
         return 3
     elif 'Serviços de Utilidade' in categoria:
         return 4
@@ -40,6 +47,7 @@ def categorize_setor_economico(categoria):
         return 8
     else:
         return None  # Retorna None para categorias não mapeadas
+
 
 # Adicionar a coluna 'Código do setor econômico' com base na coluna 'Categoria de atividade'
 data['Código do setor econômico'] = data['Categoria de Atividade'].apply(categorize_setor_economico)

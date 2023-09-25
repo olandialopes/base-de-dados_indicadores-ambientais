@@ -26,7 +26,16 @@ def categorize_setor_economico(categoria):
         return 1
     elif 'Extração e Tratamento de Minerais' in categoria:
         return 2
-    elif any(keyword in categoria for keyword in ['Indústria Química', 'Indústria Metalúrgica', 'Indústria de Produtos Minerais Não Metálicos', 'Indústria Mecânica', 'Indústria Têxtil', 'Indústria de Vestuário', 'Calçados e Artefatos de Tecidos', 'Indústria de Madeira', 'Indústria de Produtos de Matéria Plástica', 'Indústria de material Elétrico', 'Eletrônico e Comunicações', 'Indústrias Diversas', 'Indústria de Material de Transporte', 'Indústria de Papel e Celulose', 'Indústria de Borracha', 'Indústria de Couros e Peles', 'Indústria do Fumo', 'Indústria de Produtos Alimentares e Bebidas']):
+    elif any(keyword in categoria for keyword in ['Indústria Química', 'Indústria Metalúrgica',
+                                                  'Indústria de Produtos Minerais Não Metálicos',
+                                                  'Indústria Mecânica', 'Indústria Têxtil', 'Indústria de Vestuário',
+                                                  'Calçados e Artefatos de Tecidos', 'Indústria de Madeira',
+                                                  'Indústria de Produtos de Matéria Plástica',
+                                                  'Indústria de material Elétrico', 'Eletrônico e Comunicações',
+                                                  'Indústrias Diversas', 'Indústria de Material de Transporte',
+                                                  'Indústria de Papel e Celulose', 'Indústria de Borracha',
+                                                  'Indústria de Couros e Peles', 'Indústria do Fumo',
+                                                  'Indústria de Produtos Alimentares e Bebidas']):
         return 3
     elif 'Serviços de Utilidade' in categoria:
         return 4
