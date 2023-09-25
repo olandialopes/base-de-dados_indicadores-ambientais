@@ -21,7 +21,7 @@ data = data.dropna(how='any')
 data = data[~(data == '0').any(axis=1)]
 
 # Crie uma amostra aleatória de 50% dos dados originais para testar
-#data = data.sample(frac=0.5)
+# data = data.sample(frac=0.5)
 
 # Ordena os CNPJs em ordem alfanumérica
 data = data.sort_values(by='CNPJ')

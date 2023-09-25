@@ -4,11 +4,11 @@ data = pd.read_csv('4-relatorio-residuos solidos_ibama a partir 2012.csv', delim
 
 # Colunas a serem excluidas
 variaveis_excluidas = [
-'Código da Categoria', 'Código do Detalhe','Detalhe','Cód. Resíduo','Tipo de Resíduo',
-   'Situação Cadastral'
+    'Código da Categoria', 'Código do Detalhe', 'Detalhe', 'Cód. Resíduo', 'Tipo de Resíduo',
+    'Situação Cadastral'
 
-    ]
-#Excluir as variáveis excluidas, cujos nomes estão acima
+]
+# Excluir as variáveis excluidas, cujos nomes estão acima
 data = data.drop(columns=variaveis_excluidas, axis=1)
 
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna
@@ -17,9 +17,8 @@ data = data.dropna(how='any')
 # Excluir linhas com valores zero em qualquer coluna
 data = data[~(data == '0').any(axis=1)]
 
-
 # Crie uma amostra aleatória de 50% dos dados originais para testar
-#data = data.sample(frac=0.5)
+# data = data.sample(frac=0.5)
 
 # Ordena os CNPJs em ordem alfanumérica
 data = data.sort_values(by='CNPJ do gerador')
@@ -40,5 +39,3 @@ cnpj_anos_df = pd.DataFrame(cnpj_anos_list)
 
 # Salvar o resultado em um arquivo CSV
 cnpj_anos_df.to_csv('4-residuos solidos a partir 2012_cnpq_ano.csv', index=False)
-
-

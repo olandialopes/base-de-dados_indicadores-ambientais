@@ -11,13 +11,13 @@ print(f'Quantidade de municipios da base original: {contagem_valores_municipios}
 
 # Colunas a serem excluidas
 variaveis_excluidas = [
-'Código da Categoria', 'Categoria de Atividade', 'Código do Detalhe','Detalhe','Cod. Resíduo','Tipo de Resíduo',
-    'Tipo de monit. realizado','Tipo de Finalidade', 'Finalidade da Transferência','CNPJ da emp. de Armazen/Destin',
-    'Raz. soc. emp. Armazen/Destin','Latitude', 'Longitude','Situação Cadastral',
+    'Código da Categoria', 'Categoria de Atividade', 'Código do Detalhe', 'Detalhe', 'Cod. Resíduo', 'Tipo de Resíduo',
+    'Tipo de monit. realizado', 'Tipo de Finalidade', 'Finalidade da Transferência', 'CNPJ da emp. de Armazen/Destin',
+    'Raz. soc. emp. Armazen/Destin', 'Latitude', 'Longitude', 'Situação Cadastral',
     'Identif. do Resíduo NBR 10.004', 'Efic. do sist. de tratamento'
 
-    ]
-#Excluir as variáveis excluidas, cujos nomes estão acima
+]
+# Excluir as variáveis excluidas, cujos nomes estão acima
 data = data.drop(columns=variaveis_excluidas, axis=1)
 
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna
@@ -45,4 +45,3 @@ contagem_valores_unicos = data['Município'].nunique()
 
 # Salvar as alterações de volta no arquivo CSV
 data.to_csv('3-result_residuossolidos_ate2012_atm.csv', index=False)
-
