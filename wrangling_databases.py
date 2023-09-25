@@ -105,7 +105,7 @@ def main(paths, to_exclude):
     cnpjs = pd.DataFrame(columns=['CNPJ', 'Ano'])
     bases = dict()
     each: str
-    for each in ['efluentes', 'poluentes_atm', 'residuos_solidos1', 'residuos_solidos2']:
+    for each in ['efluentes', 'poluentes_atm', 'residuos_solidos1', 'residuos_solidos2', 'emissoes']:
         bases[each] = pd.read_csv(os.path.join(f0, paths[each]), sep=';')
         bases[each] = cleaning_data(bases[each], to_exclude[each])
         if 'Latitude' in bases[each]:
@@ -131,4 +131,3 @@ if __name__ == '__main__':
     f0 = '../PS3/ambiental/original_data'
 
     b, cn = main(p, variaveis_excluidas)
-    # e = pd.read_csv(os.path.join(f0, p['emissoes']), sep=';')
