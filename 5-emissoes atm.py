@@ -11,15 +11,16 @@ print(f'Quantidade de municipios da base original: {contagem_valores_municipios}
 
 # Colunas a serem excluidas
 variaveis_excluidas = [
-'Código da Categoria','Categoria de Atividade','Código do Detalhe','Detalhe', 'Observações',
-'Situação Cadastral', 'Densidade','Unidade de Medida - densidade', 'Justificativa para alteração da densidade',
-'Poder Calorífico Inferior', 'Unidade de Medida - Poder Calorífico Inferior',
-'Justificativa para alteração do Poder Calorífico Inferior',
-'Justificativa para Alteração do Conteúdo de Carbono', 'Fator de Oxidação',
-'Unidade de Medida - Fator de Oxidação',
-'Justificativa para Alteração do Fator de Oxidação', 'Conteúdo de Carbono', 'Unidade de Medida - Conteúdo de Carbono'
+    'Código da Categoria', 'Categoria de Atividade', 'Código do Detalhe', 'Detalhe', 'Observações',
+    'Situação Cadastral', 'Densidade', 'Unidade de Medida - densidade', 'Justificativa para alteração da densidade',
+    'Poder Calorífico Inferior', 'Unidade de Medida - Poder Calorífico Inferior',
+    'Justificativa para alteração do Poder Calorífico Inferior',
+    'Justificativa para Alteração do Conteúdo de Carbono', 'Fator de Oxidação',
+    'Unidade de Medida - Fator de Oxidação',
+    'Justificativa para Alteração do Fator de Oxidação', 'Conteúdo de Carbono',
+    'Unidade de Medida - Conteúdo de Carbono'
 ]
-#Excluir as variáveis excluidas, cujos nomes estão acima
+# Excluir as variáveis excluidas, cujos nomes estão acima
 data = data.drop(columns=variaveis_excluidas, axis=1)
 
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna

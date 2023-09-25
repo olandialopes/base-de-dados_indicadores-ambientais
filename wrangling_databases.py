@@ -10,7 +10,7 @@ variaveis_excluidas = {'efluentes': [
     'Qual?', 'Empresa Receptora do Efluente', 'Tipo de Emissão Para o Solo',
     '(Se outro) Qual?', 'Situação Cadastral',
     'Nível de Tratamento', 'Tipo de Tratamento', 'Detalhe'
-],
+    ],
     'poluentes_atm': [
         'Código da Categoria', 'Razão Social', 'Código do Detalhe', 'Detalhe',
         'Metodologia utilizada', 'Situação Cadastral'
@@ -26,6 +26,16 @@ variaveis_excluidas = {'efluentes': [
     'residuos_solidos2': [
     'Código da Categoria', 'Razão Social do gerador', 'Código do Detalhe', 'Detalhe', 'Cód. Resíduo', 'Tipo de Resíduo',
     'Situação Cadastral'
+    ],
+    'emissoes': [
+    'Código da Categoria', 'Código do Detalhe', 'Detalhe', 'Observações',
+    'Situação Cadastral', 'Densidade', 'Unidade de Medida - densidade', 'Justificativa para alteração da densidade',
+    'Poder Calorífico Inferior', 'Unidade de Medida - Poder Calorífico Inferior',
+    'Justificativa para alteração do Poder Calorífico Inferior',
+    'Justificativa para Alteração do Conteúdo de Carbono', 'Fator de Oxidação',
+    'Unidade de Medida - Fator de Oxidação',
+    'Justificativa para Alteração do Fator de Oxidação', 'Conteúdo de Carbono',
+    'Unidade de Medida - Conteúdo de Carbono'
     ]
 }
 
@@ -94,6 +104,7 @@ def checking_geolocation(data, col):
 def main(paths, to_exclude):
     cnpjs = pd.DataFrame(columns=['CNPJ', 'Ano'])
     bases = dict()
+    each: str
     for each in ['efluentes', 'poluentes_atm', 'residuos_solidos1', 'residuos_solidos2']:
         bases[each] = pd.read_csv(os.path.join(f0, paths[each]), sep=';')
         bases[each] = cleaning_data(bases[each], to_exclude[each])
@@ -104,7 +115,6 @@ def main(paths, to_exclude):
             bases[each] = bases[each].rename(columns={'CNPJ do gerador': 'CNPJ',
                                                       'Ano da geração': 'Ano',
                                                       'Ano da geração do resíduo': 'Ano'})
-
         bases[each] = categorize_setor_economico(bases[each])
         cnpjs = pd.concat([cnpjs, getting_company_codes(bases[each])]).drop_duplicates()
     cnpjs.to_csv('cnpjs.csv', index=False)
@@ -115,8 +125,10 @@ if __name__ == '__main__':
     p = {'efluentes': 'relatorio efluentes liquidos_ibama.csv',
          'poluentes_atm': 'poluentes atmosfericos_dados_ibama.csv',
          'residuos_solidos1': 'residuos solidos_ibama_ate2012.csv',
-         'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv'}
+         'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv',
+         'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
 
     f0 = '../PS3/ambiental/original_data'
 
     b, cn = main(p, variaveis_excluidas)
+    # e = pd.read_csv(os.path.join(f0, p['emissoes']), sep=';')

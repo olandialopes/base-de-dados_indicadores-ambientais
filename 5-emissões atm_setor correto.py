@@ -4,15 +4,16 @@ data = pd.read_csv('5-relatorio_emissoes atmosfericas ibama.csv', delimiter=';')
 
 # Colunas a serem excluidas
 variaveis_excluidas = [
-'Código da Categoria','Código do Detalhe','Detalhe', 'Observações',
-'Situação Cadastral', 'Densidade','Unidade de Medida - densidade', 'Justificativa para alteração da densidade',
-'Poder Calorífico Inferior', 'Unidade de Medida - Poder Calorífico Inferior',
-'Justificativa para alteração do Poder Calorífico Inferior',
-'Justificativa para Alteração do Conteúdo de Carbono', 'Fator de Oxidação',
-'Unidade de Medida - Fator de Oxidação',
-'Justificativa para Alteração do Fator de Oxidação', 'Conteúdo de Carbono', 'Unidade de Medida - Conteúdo de Carbono'
+    'Código da Categoria', 'Código do Detalhe', 'Detalhe', 'Observações',
+    'Situação Cadastral', 'Densidade', 'Unidade de Medida - densidade', 'Justificativa para alteração da densidade',
+    'Poder Calorífico Inferior', 'Unidade de Medida - Poder Calorífico Inferior',
+    'Justificativa para alteração do Poder Calorífico Inferior',
+    'Justificativa para Alteração do Conteúdo de Carbono', 'Fator de Oxidação',
+    'Unidade de Medida - Fator de Oxidação',
+    'Justificativa para Alteração do Fator de Oxidação', 'Conteúdo de Carbono',
+    'Unidade de Medida - Conteúdo de Carbono'
 ]
-#Excluir as variáveis excluidas, cujos nomes estão acima
+# Excluir as variáveis excluidas, cujos nomes estão acima
 data = data.drop(columns=variaveis_excluidas, axis=1)
 
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna
@@ -28,7 +29,13 @@ def categorize_setor_economico(categoria):
         return 1
     elif 'Extração e Tratamento de Minerais' in categoria:
         return 2
-    elif any(keyword in categoria for keyword in ['Indústria Química', 'Indústria Metalúrgica', 'Indústria de Produtos Minerais Não Metálicos', 'Indústria Mecânica', 'Indústria Têxtil', 'Indústria de Vestuário', 'Calçados e Artefatos de Tecidos', 'Indústria de Madeira', 'Indústria de Produtos de Matéria Plástica', 'Indústria de material Elétrico', 'Eletrônico e Comunicações', 'Indústrias Diversas', 'Indústria de Material de Transporte', 'Indústria de Papel e Celulose', 'Indústria de Borracha', 'Indústria de Couros e Peles', 'Indústria do Fumo', 'Indústria de Produtos Alimentares e Bebidas']):
+    elif any(keyword in categoria for keyword in
+             ['Indústria Química', 'Indústria Metalúrgica', 'Indústria de Produtos Minerais Não Metálicos',
+              'Indústria Mecânica', 'Indústria Têxtil', 'Indústria de Vestuário', 'Calçados e Artefatos de Tecidos',
+              'Indústria de Madeira', 'Indústria de Produtos de Matéria Plástica', 'Indústria de material Elétrico',
+              'Eletrônico e Comunicações', 'Indústrias Diversas', 'Indústria de Material de Transporte',
+              'Indústria de Papel e Celulose', 'Indústria de Borracha', 'Indústria de Couros e Peles',
+              'Indústria do Fumo', 'Indústria de Produtos Alimentares e Bebidas']):
         return 3
     elif 'Serviços de Utilidade' in categoria:
         return 4
@@ -43,9 +50,9 @@ def categorize_setor_economico(categoria):
     else:
         return None  # Retorna None para categorias não mapeadas
 
+
 # Adicionar a coluna 'Código do setor econômico' com base na coluna 'Categoria de atividade'
 data['Código do setor econômico'] = data['Categoria de Atividade'].apply(categorize_setor_economico)
 
 # Salvar as alterações de volta no arquivo CSV
 data.to_csv('5-Result_emissões atm_Tratamento_setores.csv', index=False)
-
