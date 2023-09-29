@@ -4,7 +4,7 @@ Este repositório lê e organiza bases disponíveis no IBAMA :
 1. Resíduos sólidos e líquidos
 2. Poluentes e emissões atmosféricas
 
-Organizado por Olandia Lopes, Professor de Matemática (?) e Bernardo Alves Furtado
+Organizado por Olandia Lopes, Valdex de Jesus Santos e Bernardo Alves Furtado
 
 ## How to run
 
