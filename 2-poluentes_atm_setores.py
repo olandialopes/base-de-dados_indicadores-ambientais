@@ -7,7 +7,7 @@ variaveis_excluidas = [
     'Código da Categoria', 'Código do Detalhe', 'Detalhe',
     'Metodologia utilizada', 'Situação Cadastral'
 ]
-#Excluir as variáveis excluidas, cujos nomes estão acima
+# Excluir as variáveis excluidas, cujos nomes estão acima
 data = data.drop(columns=variaveis_excluidas, axis=1)
 
 

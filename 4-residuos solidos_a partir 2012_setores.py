@@ -6,7 +6,6 @@ data = pd.read_csv('4-relatorio-residuos solidos_ibama a partir 2012.csv', delim
 variaveis_excluidas = [
     'Código da Categoria', 'Código do Detalhe', 'Detalhe', 'Cód. Resíduo', 'Tipo de Resíduo',
     'Situação Cadastral'
-
 ]
 # Excluir as variáveis excluidas, cujos nomes estão acima
 data = data.drop(columns=variaveis_excluidas, axis=1)

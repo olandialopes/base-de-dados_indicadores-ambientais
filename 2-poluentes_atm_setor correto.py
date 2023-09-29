@@ -7,14 +7,11 @@ variaveis_excluidas = [
     'Código da Categoria', 'Código do Detalhe', 'Detalhe',
     'Metodologia utilizada', 'Situação Cadastral'
 ]
-#Excluir as variáveis excluidas, cujos nomes estão acima
+# Excluir as variáveis excluidas, cujos nomes estão acima
 data = data.drop(columns=variaveis_excluidas, axis=1)
-
-
 
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna
 data = data.dropna(how='any')
-
 
 # Excluir linhas com valores zero em qualquer coluna
 data = data[~(data == '0').any(axis=1)]
@@ -50,9 +47,9 @@ def categorize_setor_economico(categoria):
     else:
         return None  # Retorna None para categorias não mapeadas
 
+
 # Adicionar a coluna 'Código do setor econômico' com base na coluna 'Categoria de atividade'
 data['Código do setor econômico'] = data['Categoria de Atividade'].apply(categorize_setor_economico)
 
 # Salvar as alterações de volta no arquivo CSV
 data.to_csv('2-Result_poluentes_atm_Tratamento_setores.csv', index=False)
-
