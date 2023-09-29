@@ -18,7 +18,7 @@ colunas_indesejadas = [
     '(Se outro) Qual?', 'Situação Cadastral','Latitude','Longitude',
     'Tipo de Tratamento', 'Nível de Tratamento', 'Detalhe'
 ]
-#Escluir as colunas indesejadas, cujos nomes estão acima
+# Excluir as colunas indesejadas, cujos nomes estão acima
 data = data.drop(columns=colunas_indesejadas, axis=1)
 
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna

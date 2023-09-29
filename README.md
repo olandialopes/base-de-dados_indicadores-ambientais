@@ -23,7 +23,7 @@ Base de dados 2:
 
 - Indicadores:
 
-·         Quantidade gerada de poluentes atmosféricos (material particulado - MP) por ano e por empresa/setor;
+·         Quantidade gerada de poluentes atmosféricos (Material particulado - MP) por ano e por empresa/setor;
 
 ·         Quantidade gerada de poluentes atmosféricos (Monóxido de carbono – CO)) por ano e por empresa/setor
 
@@ -47,4 +47,10 @@ Base de dados 5:
 
 ·         Quantidade consumida de energia por tipo de fonte energética (eletricidade – rede pública; biomassa-lenha; turfa; óleo diesel, entre outros ) por ano e por empresa/setor;
 
-·         Quantidade de emissões de CO2 por ano, por empresa/setor.     
+·         Quantidade de emissões de CO2 por ano, por empresa/setor.
+
+## Sources:
+
+1. TODO: Completar fontes informação. 
+
+

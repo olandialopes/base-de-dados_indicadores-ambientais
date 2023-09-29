@@ -88,7 +88,8 @@ def cleaning_data(data, cols_to_exclude):
 
 
 def checking_geolocation(data, col):
-    data[col] = data[col].str.replace('.', '', regex=True).str.replace(',', '.').astype(float)
+    data[col] = data[col].str.replace('.', '', regex=True).str.replace(',', '.').astype(float)  # '13.409,23' =>
+    #                                                                                              13409.23
     data.loc[data[col] == 0, col] = np.nan
     # Excluding out of bounds for the case of Brazil
     if col == 'Latitude':
@@ -118,6 +119,7 @@ def main(paths, to_exclude):
         bases[each] = categorize_setor_economico(bases[each])
         cnpjs = pd.concat([cnpjs, getting_company_codes(bases[each])]).drop_duplicates()
     cnpjs.to_csv('cnpjs.csv', index=False)
+    # TODO: Eliminar parte final da base que contém observações
     return bases, cnpjs
 
 
@@ -128,6 +130,12 @@ if __name__ == '__main__':
          'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv',
          'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
 
+    # f0 = 'data'
     f0 = '../PS3/ambiental/original_data'
 
     b, cn = main(p, variaveis_excluidas)
+
+    # TODO: renomear colunas, nome descritivo, mas sem acentos e espaços
+    # Exemplo columns: Eficiência do tratamento => treatment_efficiency
+    # TODO: transformar quantidades em numérico (float)
+    # Exemplo, substituindo ',' por '.' depois astype(float)

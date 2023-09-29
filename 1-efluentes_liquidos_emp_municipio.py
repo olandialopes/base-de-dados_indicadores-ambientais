@@ -11,7 +11,7 @@ colunas_indesejadas = [
     '(Se outro) Qual?', 'Situação Cadastral','Latitude','Longitude',
     'Tipo de Tratamento', 'Nível de Tratamento', 'Detalhe'
 ]
-#Excluir as colunas indesejadas, cujos nomes estão acima
+# Excluir as colunas indesejadas, cujos nomes estão acima
 data = data.drop(columns=colunas_indesejadas, axis=1)
 
 # Contar valores únicos de CNPJ em cada município
