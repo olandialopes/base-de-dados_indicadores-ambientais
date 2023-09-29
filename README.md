@@ -41,7 +41,7 @@ Base de dados 3 e 4
 
 
 Base de dados 5: 
-## Emissões atmosféricas
+## Emissões atmosféricas 
 
 - Indicadores
 
@@ -50,7 +50,12 @@ Base de dados 5:
 ·         Quantidade de emissões de CO2 por ano, por empresa/setor.
 
 ## Sources:
+Os dados utilizados foram coletados da base de dados do IBAMA disponíveis no Relatório Anual de Atividades Potencialmente Poluidoras e Utilizadoras de Recursos Ambientais – RAPP, conforme abaixo:
 
-1. TODO: Completar fontes informação. 
+1. Efluentes liquidos: https://dadosabertos.ibama.gov.br/pt_PT/dataset/efluentes-liquidos
+2. Emissões de Poluentes atmosféricos: https://dadosabertos.ibama.gov.br/pt_PT/dataset/emissoes-de-poluentes-atmosfericos
+3. Resíduos sólidos anterior a 2012: https://dadosabertos.ibama.gov.br/pt_PT/dataset/residuos-solidos-gerador-anterior-a-2012
+4. Resíduos sólidos a partir de 2012: https://dadosabertos.ibama.gov.br/pt_PT/dataset/residuos-solidos-gerador-a-partir-de-2012
+5. Emissões atmosféricas: https://dadosabertos.ibama.gov.br/pt_PT/dataset/fontes-energeticas
 
 
