@@ -71,24 +71,35 @@ sector_mapping = {
 
 
 def getting_company_codes(data):
-    cnpjs = data[['CNPJ', 'Ano']].sort_values(by=['CNPJ', 'Ano']).drop_duplicates()
+    if 'CNPJ' in data.columns and 'Ano' in data.columns:
+        cnpjs = data[['CNPJ', 'Ano']].sort_values(by=['CNPJ', 'Ano']).drop_duplicates()
+    else:
+        # Lidar com o caso em que as colunas não existem no DataFrame
+        # Isso pode incluir a criação das colunas ou outra ação apropriada.
+        cnpjs = pd.DataFrame(columns=['CNPJ', 'Ano'])  # Exemplo: Criar um DataFrame vazio
     return cnpjs
 
 
 # Define a function to categorize the sector based on the category
 def categorize_setor_economico(data, col='Categoria de Atividade'):
-    data['cod_setor'] = data[col].map(sector_mapping)
+    if col in data.columns:
+        data['cod_setor'] = data[col].map(sector_mapping)
     return data
-
 
 # Excluir as colunas indesejadas, cujos nomes estão acima
 def cleaning_data(data, cols_to_exclude):
-    data = data.drop(columns=cols_to_exclude, axis=1)
+    for col in cols_to_exclude:
+        if col in data.columns:
+            data = data.drop(columns=col, axis=1)
+            # Aqui,  código para excluir as linhas onde a coluna "Ano" está vazia
+            if 'Ano' in data.columns:
+                data = data.dropna(subset=['Ano'])
     return data
 
 
 def checking_geolocation(data, col):
-    data[col] = data[col].str.replace('.', '', regex=True).str.replace(',', '.').astype(float)  # '13.409,23' =>
+    data[col] = data[col].str.replace('.', '', regex=True).str.replace(',', '.', regex=True) #44.934,23
+    data[col] = data[col].replace('', '0.0').astype(float) #ZERO NO LUGAR DE ESPACO VAZIO
     #                                                                                              13409.23
     data.loc[data[col] == 0, col] = np.nan
     # Excluding out of bounds for the case of Brazil
@@ -118,7 +129,7 @@ def main(paths, to_exclude):
                                                       'Ano da geração do resíduo': 'Ano'})
         bases[each] = categorize_setor_economico(bases[each])
         cnpjs = pd.concat([cnpjs, getting_company_codes(bases[each])]).drop_duplicates()
-    cnpjs.to_csv('cnpjs.csv', index=False)
+    cnpjs.to_csv('cnpjs2.csv', index=False)
     # TODO: Eliminar parte final da base que contém observações
     return bases, cnpjs
 
@@ -131,7 +142,7 @@ if __name__ == '__main__':
          'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
 
     # f0 = 'data'
-    f0 = '../PS3/ambiental/original_data'
+    f0 = '../base-de-dados_indicadores-ambientais'
 
     b, cn = main(p, variaveis_excluidas)
 
@@ -139,3 +150,4 @@ if __name__ == '__main__':
     # Exemplo columns: Eficiência do tratamento => treatment_efficiency
     # TODO: transformar quantidades em numérico (float)
     # Exemplo, substituindo ',' por '.' depois astype(float)
+
