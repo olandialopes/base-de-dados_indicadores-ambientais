@@ -19,7 +19,7 @@ def emissions_by_municipality(data):
 
 if __name__ == '__main__':
     # f0 = 'data'
-    f0 = '../PS3/ambiental/original_data'
+    f0 = '../base-de-dados_indicadores-ambientais'
     bases, _ = read_organize_databases.main(paths, read_organize_databases.variaveis_excluidas)
     for each in bases:
         emissions_by_municipality(bases[each])
