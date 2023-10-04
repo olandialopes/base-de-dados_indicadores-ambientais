@@ -11,6 +11,7 @@ Organizado por Olandia Lopes, Valdex Santos e Bernardo Alves Furtado
 1. Com as bases no diretório original_data e a path indicada na variável **f0**, simplesmente run `python wrangling_databases.py`
 2. Os resultados são as cinco bases limpas, organizadas em um dicionário e uma lista de CNPJs e Anos
 
+
 # RESULTADOS DAS BASES
 
 Base 1: 
