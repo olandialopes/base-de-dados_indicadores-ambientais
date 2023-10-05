@@ -164,19 +164,29 @@ def process_efluentes(data):
 
 
 def process_poluentes(data):
+    col = 'quant_poluentes_emitidos'
+    data = process_generic_col(data, col)
     return data
 
 
 def process_residuos(data):
+    col = 'quant_residuos_solidos'
+    data = process_generic_col(data, col)
     return data
 
 
 def process_emissoes(data):
     cols = ['quant_consumida_energia_acordo_tipo', 'quantidade_energia_padrao_calorias', 'co2_emissions']
     for col in cols:
-        data[col] = (data[col].str.replace('.', '', regex=True)
-                     .str.replace(',', '.', regex=True))
-        data[col] = pd.to_numeric(data[col], errors='coerce')
+        data = process_generic_col(data, col)
+    return data
+
+
+def process_generic_col(data, col):
+    # Generic transformation function applied repeatedly, given the column
+    data[col] = (data[col].str.replace('.', '', regex=True)
+                 .str.replace(',', '.', regex=True))
+    data[col] = pd.to_numeric(data[col], errors='coerce')
     return data
 
 
@@ -222,6 +232,3 @@ if __name__ == '__main__':
     # f0 = '../base-de-dados_indicadores-ambientais'
 
     b, cn = main(p0=f0, paths=p, to_exclude=variaveis_excluidas)
-
-    # TODO: transformar quantidades em numérico (float)
-    # Exemplo, substituindo ',' por '.' depois astype(float)
