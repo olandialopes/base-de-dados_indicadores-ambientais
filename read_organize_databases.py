@@ -96,9 +96,12 @@ renaming_variables = {'efluentes': {'CNPJ': 'cnpj', 'Estado': 'estado', 'Municí
                                             'Unidade': 'unidade'},
                       'emissoes': {'CNPJ': 'cnpj', 'Estado': 'estado', 'Município': 'mun',
                                    'Categoria de Atividade': 'cat_activity', 'Ano': 'ano',
-                                   'Quantidade Consumida': 'quant_consumida_energia',
-                                   'Energia': 'tipo_energia_consumida', 'Emissões de CO2': 'co2_emissions'}
-
+                                   'Quantidade Consumida': 'quant_consumida_energia_acordo_tipo',
+                                   'Energia': 'quantidade_energia_padrao_calorias',
+                                   'Tipo de Fonte Energética': 'tipo_energia',
+                                   'Unidade de Medida': 'unidade_medida',
+                                   # Note um espaço no nome da coluna ...
+                                   'Emissões de CO2 ': 'co2_emissions'}
                       }
 
 
@@ -145,6 +148,46 @@ def checking_geolocation(data, col):
     return data
 
 
+# Functions to handle each base quantities and necessary transformation
+def process_efluentes(data):
+    col = 'quant_efluentes_liquidos'
+    data[col] = (data[col].str.replace('.', '', regex=True).str.replace('###########', '', regex=True)
+                 .str.replace(',', '.', regex=True))
+    data[col] = pd.to_numeric(data[col], errors='coerce')
+    # Valores negativos?
+    data.loc[data[col] < 0, col] = 0
+
+    col = 'perc_efficiency_treatment'
+    data[col] = data[col].str.replace('\%', '', regex=True)
+    data[col] = pd.to_numeric(data[col], errors='coerce')
+    return data
+
+
+def process_poluentes(data):
+    return data
+
+
+def process_residuos(data):
+    return data
+
+
+def process_emissoes(data):
+    cols = ['quant_consumida_energia_acordo_tipo', 'quantidade_energia_padrao_calorias', 'co2_emissions']
+    for col in cols:
+        data[col] = (data[col].str.replace('.', '', regex=True)
+                     .str.replace(',', '.', regex=True))
+        data[col] = pd.to_numeric(data[col], errors='coerce')
+    return data
+
+
+process_quantities = {'efluentes': process_efluentes,
+                      'poluentes_atm': process_poluentes,
+                      'residuos_solidos1': process_residuos,
+                      'residuos_solidos2': process_residuos,
+                      'emissoes': process_emissoes
+                      }
+
+
 def main(p0, paths, to_exclude):
     cnpjs = pd.DataFrame(columns=['CNPJ', 'Ano'])
     bases = dict()
@@ -162,6 +205,8 @@ def main(p0, paths, to_exclude):
         bases[each] = categorize_setor_economico(bases[each])
         cnpjs = pd.concat([cnpjs, getting_company_codes(bases[each])]).drop_duplicates()
         bases[each].rename(columns=renaming_variables[each], inplace=True)
+        # Sending each base to process their quantities accordingly
+        bases[each] = process_quantities[each](bases[each])
     cnpjs.to_csv('cnpjs.csv', index=False)
     return bases, cnpjs
 
