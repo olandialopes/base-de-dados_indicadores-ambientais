@@ -161,7 +161,7 @@ def main(p0, paths, to_exclude):
                                                       'Ano da geração do resíduo': 'Ano'})
         bases[each] = categorize_setor_economico(bases[each])
         cnpjs = pd.concat([cnpjs, getting_company_codes(bases[each])]).drop_duplicates()
-        bases[each].rename(columns=renaming_variables[each])
+        bases[each].rename(columns=renaming_variables[each], inplace=True)
     cnpjs.to_csv('cnpjs.csv', index=False)
     return bases, cnpjs
 
@@ -178,7 +178,5 @@ if __name__ == '__main__':
 
     b, cn = main(p0=f0, paths=p, to_exclude=variaveis_excluidas)
 
-    # TODO: renomear colunas, nome descritivo, mas sem acentos e espaços
-    # Exemplo columns: Eficiência do tratamento => treatment_efficiency
     # TODO: transformar quantidades em numérico (float)
     # Exemplo, substituindo ',' por '.' depois astype(float)
