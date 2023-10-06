@@ -1,6 +1,21 @@
+
+# TODO
+
+# 1. Separar a base de poluentes por tipo de Poluente (análise descritiva/texto para discussão)
+# 2. Separar base emissões em emissões CO2 e energia consumida (análise descritiva)
+
+# TODO forma mais geral
+
+# 0. Todo: conferir Vitor 2906 com 4 dígitos
+# 1. Fazer a análise descritiva (até para gente conhecer a base)
+# 2. Aplicar os indicadores de ECOEFICIÊNCIA (conforme a literatura)
+# 3. Redução dos dados para entrada no modelo principal que é o PolicySpace2 (setores/indicadores)
+
+
+
 # Dados base análise indicadores poluição por setores CNAE
 
-Este repositório lê e organiza bases disponíveis no IBAMA :
+Este repositório lê e organiza bases disponíveis no IBAMA:
 1. Resíduos sólidos e líquidos
 2. Poluentes e emissões atmosféricas
 

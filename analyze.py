@@ -18,6 +18,16 @@ def emissions_by_municipality(data):
     pass
 
 
+def quant_efluentes_cnae(data):
+    data['clas_cnae20'] = data['clas_cnae20'].str[:2]
+    print(data.groupby(by='clas_cnae20').agg('mean')['quant_efluentes_liquidos'].sort_values(ascending=False).head(20))
+
+
 if __name__ == '__main__':
-    with open('bases', 'rb') as handler:
+    nome = 'bases_massa_desidentificada'
+    with open(nome, 'rb') as handler:
         b = pickle.load(handler)
+
+    # Verificar quais colunas a base tem para análise
+    for each in b:
+        print(b[each].columns)

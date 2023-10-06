@@ -3,13 +3,11 @@ import pandas as pd
 import numpy as np
 import pickle
 
+""" Se for alterar esse arquivo novamente. Será preciso rodar o 'merge' 
+"""
 
 # 1. A quantidade de efluentes líquidos da Base 1 está em m3/h
 # Consultar GUIA RAPP para detalhes sobre variáveis
-
-# TODO
-# 1. Separar a base de poluentes por tipo de Poluente
-# 2. Separar base emissões em emissões CO2 e energia consumida
 
 # Colunas a serem excluidas
 variaveis_excluidas = {'efluentes': [
