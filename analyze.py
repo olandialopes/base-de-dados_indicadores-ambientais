@@ -1,10 +1,11 @@
 """"
-Le as bases limpas.
+Lê as bases limpas.
+Salvas localmente como bases (formato pickle), após rodar read_organize_databases.py
+
 Analisar os indicadores (README.md)
 
 """
-
-import read_organize_databases
+import pickle
 
 paths = {'efluentes': 'relatorio efluentes liquidos_ibama.csv',
          'poluentes_atm': 'poluentes atmosfericos_dados_ibama.csv',
@@ -18,10 +19,5 @@ def emissions_by_municipality(data):
 
 
 if __name__ == '__main__':
-    f0 = '../PS3/ambiental/original_data'
-    # f0 = '../base-de-dados_indicadores-ambientais'
-    bases, _ = read_organize_databases.main(p0=f0, paths=paths,
-                                            to_exclude=read_organize_databases.variaveis_excluidas)
-
-    # for each in bases:
-    #     emissions_by_municipality(bases[each])
+    with open('bases', 'rb') as handler:
+        b = pickle.load(handler)

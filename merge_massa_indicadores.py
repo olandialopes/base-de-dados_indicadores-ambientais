@@ -1,3 +1,4 @@
+import pickle
 import pandas as pd
 
 f1 = 'data/cnpjs_massa_salarial.csv'
@@ -31,7 +32,28 @@ def return_massa_cnae_base():
     # Dropping if no information on massa salarial
     data = data[~data['massa_salarial'].isna()]
     return data
-    
+
+
+def main(nome):
+    """ Faz junção bases limpas com cnaes e massa salarial
+    """
+    massa = return_massa_cnae_base()
+    with open(nome, 'rb') as handler:
+        bases = pickle.load(handler)
+
+    for each in bases:
+        bases[each] = pd.merge(massa, bases[each], on=['cnpj', 'ano'])
+        # DESIDENTIFICANDO A BASE
+        try:
+            bases[each] = bases[each].drop(['cnpj', 'Latitude', 'Longitude'], axis=1)
+        except KeyError:
+            bases[each] = bases[each].drop('cnpj', axis=1)
+
+    return bases
+
 
 if __name__ == '__main__':
-    d = return_massa_cnae_base()
+    nome_base = 'bases'
+    b = main(nome_base)
+    with open('bases_massa_desindentificada', 'wb') as hand:
+        pickle.dump(b, hand)
