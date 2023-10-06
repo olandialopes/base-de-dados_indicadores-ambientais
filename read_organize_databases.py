@@ -1,11 +1,15 @@
 import os
 import pandas as pd
 import numpy as np
+import pickle
 
-# TODO:
-# 1. A quantidade de efluentes líquidos da Base 1 está em qual unidade? 0,4 o que?
-# 2. Separar a base de poluentes por tipo de Poluente
-# 3. Separar base emissões em emissões CO2 e energia consumida
+
+# 1. A quantidade de efluentes líquidos da Base 1 está em m3/h
+# Consultar GUIA RAPP para detalhes sobre variáveis
+
+# TODO
+# 1. Separar a base de poluentes por tipo de Poluente
+# 2. Separar base emissões em emissões CO2 e energia consumida
 
 # Colunas a serem excluidas
 variaveis_excluidas = {'efluentes': [
@@ -100,7 +104,7 @@ renaming_variables = {'efluentes': {'CNPJ': 'cnpj', 'Estado': 'estado', 'Municí
                                    'Energia': 'quantidade_energia_padrao_calorias',
                                    'Tipo de Fonte Energética': 'tipo_energia',
                                    'Unidade de Medida': 'unidade_medida',
-                                   # Note um espaço no nome da coluna ...
+                                   # Note um espaço no nome da coluna...
                                    'Emissões de CO2 ': 'co2_emissions'}
                       }
 
@@ -127,9 +131,9 @@ def cleaning_data(data, cols_to_exclude):
     for col in cols_to_exclude:
         if col in data.columns:
             data = data.drop(columns=col, axis=1)
-            # Aqui,  código para excluir as linhas onde a coluna "Ano" está vazia
-            if 'Ano' in data.columns:
-                data = data.dropna(subset=['Ano'])
+    # Excluindo linhas onde a coluna "Ano" está vazia
+    if 'Ano' in data.columns:
+        data = data.dropna(subset=['Ano'])
     return data
 
 
@@ -145,6 +149,13 @@ def checking_geolocation(data, col):
         data.loc[data[col] < -74, col] = np.nan
         data.loc[data[col] > - 35, col] = np.nan
     # Further checking needed. Confirm location coincides with given municipality.
+    return data
+
+
+def clean_cnpjs(data):
+    data['cnpj'] = (data['cnpj'].str.replace('.', '', regex=True)
+                    .str.replace('/', '', regex=True)
+                    .str.replace('-', '', regex=True))
     return data
 
 
@@ -217,6 +228,7 @@ def main(p0, paths, to_exclude):
         bases[each].rename(columns=renaming_variables[each], inplace=True)
         # Sending each base to process their quantities accordingly
         bases[each] = process_quantities[each](bases[each])
+        bases[each] = clean_cnpjs(bases[each])
     cnpjs.to_csv('cnpjs.csv', index=False)
     return bases, cnpjs
 
@@ -232,3 +244,7 @@ if __name__ == '__main__':
     # f0 = '../base-de-dados_indicadores-ambientais'
 
     b, cn = main(p0=f0, paths=p, to_exclude=variaveis_excluidas)
+
+    with open('bases', 'wb') as handler:
+        pickle.dump(b, handler)
+
