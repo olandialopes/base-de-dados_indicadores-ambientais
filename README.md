@@ -8,18 +8,20 @@
 
 # 0. Todo: conferir Vitor 2906 com 4 dígitos
 # 1. Fazer a análise descritiva (até para gente conhecer a base);
-# 1.1. Análise geral pela CNAE/indicadores
+# 1.1. Análise geral pela CNAE/indicadores: soma, média e desvio padrão
 #verificar se houve aumento ou diminuição da quantidade de efluentes liquidos, resíduos, emissões por ano e setor)
 #Qual o cnae que apresenta maior não conformidade em relação a eficiência do tratamento de efluentes:
 #eficiência mínima para o tratamento dos efluentes liquidos é de 80%  exigidos pela legislação" (DE VASCONCELOS, 2020)
 #Qual o cnae que apresenta a melhor eficiencia e a pior eficiência do tratamento de efluentes liquidos?
 #Qual a cnae que apresenta a maior quantidade de resíduos solidos da classe perigosa?
 #Qual a cnae que apresenta a menor quantidade de resíduos solidos da classe perigosa?
-#Houve um aumento de geração de residuos da classe perigosa ao longo do tempo ou diminuiu (análise por CNA/ano)?
+#Houve um aumento de geração de residuos da classe perigosa ao longo do tempo ou diminuiu 
+(análise por CNA/ano)?
+# criar gráficos com os dados anteriores e rankings
 
-#1.2. Análise por estado, CNAE e indicadores
+#1.2. Análise por estado, CNAE e indicadores: média e desvio padrão
 
-#1.3. Análise por estado, municipio, CNAE e indicadores
+#1.3. Análise por estado, municipio, CNAE e indicadores: média e desvio padrão
 - 
 # 2. Aplicar os indicadores de ECOEFICIÊNCIA (conforme a literatura)
 # 3. Redução dos dados para entrada no modelo principal que é o PolicySpace2 (setores/indicadores)
