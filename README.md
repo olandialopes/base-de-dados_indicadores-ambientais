@@ -7,7 +7,18 @@
 # TODO forma mais geral
 
 # 0. Todo: conferir Vitor 2906 com 4 dígitos
-# 1. Fazer a análise descritiva (até para gente conhecer a base)
+# 1. Fazer a análise descritiva (até para gente conhecer a base);
+- verificar se houve aumento ou diminuição da quantidade de efluentes liquidos, resíduos, emissões por ano e setor)
+- Qual o cnae que apresenta maior não conformidade em relação a eficiência do tratamento de efluentes:
+- Devem ser seguidos de tratamento complementar, pois sua eficiência em média não ultrapassa 60% na 
+- remoção de carga orgânica, bem abaixo dos 80% mínimos exigidos pela legislação" (DE VASCONCELOS, 2020)
+- Qual o cnae que apresenta a melhor eficiencia e a pior eficiência do tratamento de efluentes liquidos;
+- Qual a cnae que apresenta a maior quantidade de resíduos solidos da classe perigosa?
+- Qual a cnae que apresenta a maior quantidade de resíduos solidos da classe perigosa?
+- Houve um aumento de geração de residuos da classe perigosa ao longo do tempo ou diminuiu?
+- poluidoras (por poluente, por município, por ano, etc.). 
+-  CNAE por poluente, municipio, etc.
+- 
 # 2. Aplicar os indicadores de ECOEFICIÊNCIA (conforme a literatura)
 # 3. Redução dos dados para entrada no modelo principal que é o PolicySpace2 (setores/indicadores)
 
@@ -16,7 +27,7 @@
 # Dados base análise indicadores poluição por setores CNAE
 
 Este repositório lê e organiza bases disponíveis no IBAMA:
-1. Resíduos sólidos e líquidos
+1. Resíduos sólidos e efluentes líquidos
 2. Poluentes e emissões atmosféricas
 
 Organizado por Olandia Lopes, Valdex Santos e Bernardo Alves Furtado
@@ -25,10 +36,11 @@ Organizado por Olandia Lopes, Valdex Santos e Bernardo Alves Furtado
 
 1. Com as bases no diretório original_data e a path indicada na variável **f0**, simplesmente run `python read_organize_databases.py`
 2. Os resultados são as cinco bases limpas, organizadas em um dicionário e uma lista de CNPJs e Anos
-   3. Isso significa: mantendo as variáveis de interesse, com nomes harmonizaods e no formato correto.
+3. Isso significa: mantendo as variáveis de interesse, com nomes harmonizaods e no formato correto.
 4. Na sequência as bases são unidas com os dados de massa salarial por meio do CNPJ em comum
-   5. Por motivos de sigilo, a base da RAIS com a massa salarial não consta desse repositório
-   6. Será disponibilizada apenas após as análises feitos e sua desindetificação
+5. Por motivos de sigilo, a base da RAIS com a massa salarial não consta desse repositório
+6. Será disponibilizada apenas após as análises feitos e sua desindetificação
+7. A versão do python é 3.9 e a do ambiente pandas é 1.5.3;
 
 
 # RESULTADOS DAS BASES
