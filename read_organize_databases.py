@@ -238,8 +238,8 @@ if __name__ == '__main__':
          'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv',
          'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
 
-    f0 = '../PS3/ambiental/original_data'
-    # f0 = '../base-de-dados_indicadores-ambientais'
+    #f0 = '../PS3/ambiental/original_data'
+    f0 = '../base-de-dados_indicadores-ambientais'
 
     b, cn = main(p0=f0, paths=p, to_exclude=variaveis_excluidas)
 
