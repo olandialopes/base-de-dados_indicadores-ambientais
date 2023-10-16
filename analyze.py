@@ -126,4 +126,8 @@ geraçãoresiduoscnae = data.groupby(['ano', 'clas_cnae20'])['quant_residuos_sol
 
 print(geraçãoresiduoscnae)
 
+#_____________________________________________________________________________________________
+#encontrar o cnae que apresenta a menor geração de residuos solidos
+geraçãoresiduoscnaemin = data.groupby(['ano', 'clas_cnae20'])['quant_residuos_solidos'].min().reset_index()
 
+print(geraçãoresiduoscnaemin)
