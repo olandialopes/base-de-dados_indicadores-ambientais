@@ -120,7 +120,10 @@ print(count_by_cnae20)
 
 #Salvar o resultado em um arquivo CSV - número de ocorrência de não conformidade (abaixo de 80%)
 count_by_cnae20.to_csv('analise descritiva/6-tabela_cnae_ocorrencia_abaixo80eficienc_efluentes_liquidos.csv', index=False)
+#_____________________________________________________________________________________________
+#encontrar o cnae que apresenta a maior geração de residuos solidos
+geraçãoresiduoscnae = data.groupby(['ano', 'clas_cnae20'])['quant_residuos_solidos'].max().reset_index()
 
-
+print(geraçãoresiduoscnae)
 
 
