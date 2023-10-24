@@ -55,5 +55,5 @@ def main(nome):
 if __name__ == '__main__':
     nome_base = 'bases'
     b = main(nome_base)
-    # with open('bases_massa_desidentificada', 'wb') as hand:
-    #     pickle.dump(b, hand)
+    with open('bases_massa_desidentificada', 'wb') as hand:
+        pickle.dump(b, hand)
