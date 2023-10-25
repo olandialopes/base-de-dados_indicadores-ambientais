@@ -113,7 +113,7 @@ result5.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quant_eflue
 result6.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quantidade_energia_padrao_calorias.csv', index=False)
 # -------------------------------------------------------------------------------------------
 data = pd.concat(b.values(), ignore_index=True)
-# eficiencia do tratamento abaixo de 80% significa que não está atendendo a legislação
+# eficiencia do tratamento abaixo de 80% significa que não atende a legislação
 # Filtrar os dados onde 'perc_efficiency_treatment' é menor ou igual a 80% e diferente de zero
 filtered_data = data[(data['perc_efficiency_treatment'] <= 80) & (data['perc_efficiency_treatment'] != '0')]
 
