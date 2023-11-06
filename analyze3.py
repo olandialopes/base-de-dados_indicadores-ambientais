@@ -101,13 +101,17 @@ if __name__ == '__main__':
         filtered_data = data[data['clas_cnae20'].str[:2].isin(codigos)]
 
         for chave in chaves:
-            # Calcular a média e o desvio padrão para estado, mun e a categoria
-            resultado = filtered_data.groupby(['ano', 'estado', 'mun'])[chave].agg(['mean', 'std']).reset_index()
+            # Calcular o máximo para a categoria
+            max_valor_categoria = filtered_data[chave].max()
+            max_valor = filtered_data[chave].max()
 
-            # Criar um nome de arquivo com base na chave e na categoria
-            caminho_arquivo = os.path.join(pasta_saida, f'media_desvio_{chave}_categoria_{categoria}.txt')
+             # Criar um nome de arquivo com base na chave e na categoria
+            caminho_arquivo = os.path.join(pasta_saida, f'max_{chave}_categoria_{categoria}.txt')
+            caminho_arquivo = os.path.join(pasta_saida, f'max_{chave}_geral.txt')
 
             with open(caminho_arquivo, 'w') as arquivo_saida:
-                # Escrever os resultados no arquivo
-                arquivo_saida.write(f'Resultados para {chave} na categoria {categoria}:\n')
-                arquivo_saida.write(resultado.to_string(index=False))
+                  # Escrever o valor máximo no arquivo
+                  arquivo_saida.write(f'Máximo para {chave} na categoria {categoria}: {max_valor_categoria}')
+                  # Escrever o valor máximo no arquivo
+                  arquivo_saida.write(f'Máximo geral para {chave}: {max_valor}')
+
