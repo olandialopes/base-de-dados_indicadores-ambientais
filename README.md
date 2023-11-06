@@ -18,6 +18,15 @@
 #Qual a cnae que apresenta a menor quantidade de resíduos solidos da classe perigosa?
 #Houve um aumento de geração de residuos da classe perigosa ao longo do tempo ou diminuiu 
 (análise por CNA/ano)?
+# Avaliar se o os setores econômicos estão reduzindo a geração de GEE, conforme estabelecido ns compromissos do Brasil com os protocolos e COP referentes ao clima, bem como com a PNMC;
+# Avaliar se os setores estão reduzindo a geração de resíduos conforme estabelecido pela PNRS;
+# Avaliar se os municípios estão atendendo aos padrões estabelecidos pelas Resoluções do Conama em relação aos poluentes atmosféricos;
+# Avaliar se o uso de fonte energética pelos setores está coerente com os compromissos brasileiros
+# Qual o setor econômico apresenta maior poluição para os indicadores selecionados?
+# Qual o setor econômico apresenta a maior geração de renda (massa salarial) e correlação com os indicadores ambientais?
+
+
+
 # criar gráficos com os dados anteriores e rankings
 
 #1.2. Análise por estado, CNAE e indicadores: média e desvio padrão
