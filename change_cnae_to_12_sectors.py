@@ -3,7 +3,7 @@ import pandas as pd
 
 def from_cnae_2digitos_to_12_mip_sectors(data, col):
     # Source: IBGE/CONCLA ESTRUTURA and ISIS rev. 4 following
-    # de VRIES, Gaaitzen et. al. The economic transformation database (ETD): content, sources, and methods.
+    # de VRIES, Gaaitzen et al. The economic transformation database (ETD): content, sources, and methods.
     # Wider technical note 2/2021.
     tradutor_concla_ibge = {'A': ['01', '02', '03'],
                             'B': ['05', '06', '07', '08', '09'],
