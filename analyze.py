@@ -5,10 +5,14 @@ Salvas localmente como bases (formato pickle), após rodar read_organize_databas
 Analisar os indicadores (README.md)
 
 """
+from typing import Any
+
 import pandas as pd
 import os
 import pickle
+import csv
 from collections import defaultdict
+
 
 print("Diretório atual:", os.getcwd())
 
@@ -17,7 +21,44 @@ paths = {'efluentes': 'relatorio efluentes liquidos_ibama.csv',
          'residuos_solidos1': 'residuos solidos_ibama_ate2012.csv',
          'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv',
          'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
+# Wider technical note 2/2021.
+tradutor_concla_ibge = {'A': ['01', '02', '03'],
+                        'B': ['05', '06', '07', '08', '09'],
+                        'C': ['10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23',
+                              '24', '25', '26', '27', '28', '29', '30', '31', '32', '33'],
+                        'D': ['35'],
+                        'E': ['36', '37', '38', '39'],
+                        'F': ['41', '42', '43'],
+                        'G': ['45', '46', '47'],
+                        'H': ['49', '50', '51', '52', '53'],
+                        'I': ['55', '56'],
+                        'J': ['58', '59', '60', '61', '62', '63'],
+                        'K': ['64', '65', '66'],
+                        'L': ['68'],
+                        'M': ['69', '70', '71', '72', '73', '74', '75'],
+                        'N': ['77', '78', '79', '80', '81', '82'],
+                        'O': ['84'],
+                        'P': ['85'],
+                        'Q': ['86', '87', '88'],
+                        'R': ['90', '91', '92', '93'],
+                        'S': ['94', '95', '96'],
+                        'T': ['97'],
+                        'U': ['99']
+                        }
 
+tradutor_isis_12 = {'Agriculture': ['A'],
+                    'Mining': ['B'],
+                    'Manufacturing': ['C'],
+                    'Utilities': ['D', 'E'],
+                    'Construction': ['F'],
+                    'Trade': ['G', 'I'],
+                    'Transport': ['H'],
+                    'Business': ['J', 'M', 'N'],
+                    'Financial': ['K'],
+                    'RealEstate': ['L'],
+                    'Government': ['O', 'P', 'Q'],
+                    'OtherServices': ['R', 'S', 'T', 'U']
+                    }
 
 def emissions_by_municipality(data):
     pass
@@ -37,112 +78,56 @@ if __name__ == '__main__':
 data = pd.concat(b.values(), ignore_index=True)
 
 # -------------------------------------------------------------------------------------------
-
-results = defaultdict(dict)
+# Inserção de dicionário dentro de dicionário
+results: defaultdict[Any, dict] = defaultdict(dict)
 #  Agrupar os dados por 'ano' e 'class_cnae20' e somar a quantidade de efluentes líquidos
 
 chaves = ['quant_efluentes_liquidos', 'quant_poluentes_emitidos', 'quant_residuos_solidos',
           'quant_consumida_energia_acordo_tipo', 'quantidade_energia_padrao_calorias', 'co2_emissions']
 
+
+# pasta para outuput dos arquivos
+pasta_saida = 'analise descritiva'
+
+# Loop para cada chave
 for chave in chaves:
-    results[chave]['soma'] = data.groupby(['ano', 'clas_cnae20'])[chave].sum().reset_index()
-    results[chave].to_csv(f'analise descritiva/result1-tabela_cnae_ano_soma_{chave}.csv', index=False)
-    results[chave]['media'] = data.groupby(['ano', 'clas_cnae20'])[chave].mean().reset_index()
-    results[chave].to_csv(f'analise descritiva/2-result1-tabela_cnae_ano_media_{chave}.csv', index=False)
+    # Criar um nome de arquivo com base na chave (por exemplo, 'media_desvio_quant_efluentes_liquidos.txt')
+    caminho_arquivo = os.path.join(pasta_saida, f'media_desvio_{chave}.txt')
 
-# result1 = data.groupby(['ano', 'clas_cnae20'])['quant_efluentes_liquidos'].sum().reset_index()
-# result2 = data.groupby(['ano', 'clas_cnae20'])['quant_poluentes_emitidos'].sum().reset_index()
-# result3 = data.groupby(['ano', 'clas_cnae20'])['quant_residuos_solidos'].sum().reset_index()
-# result4 = data.groupby(['ano', 'clas_cnae20'])['quant_consumida_energia_acordo_tipo'].sum().reset_index()
-# result5 = data.groupby(['ano', 'clas_cnae20'])['quantidade_energia_padrao_calorias'].sum().reset_index()
-# result6 = data.groupby(['ano', 'clas_cnae20'])['co2_emissions'].sum().reset_index()
-#
-# #Salvar o resultado em um arquivo CSV - SOMA
-# result1.to_csv('analise descritiva/result1-tabela_cnae_ano_soma_quant_efluentes_liquidos.csv', index=False)
-# result2.to_csv('analise descritiva/result2-tabela_cnae_ano_soma_quant_poluentes_emitidos.csv', index=False)
-# result3.to_csv('analise descritiva/result3-tabela_cnae_ano_soma_quant_residuos_solidos.csv', index=False)
-# result4.to_csv('analise descritiva/result4-tabela_cnae_ano_soma_quant_consumida_energia_acordo_tipo.csv', index=False)
-# result5.to_csv('analise descritiva/result5-tabela_cnae_ano_soma_quantidade_energia_padrao_calorias.csv', index=False)
-# result6.to_csv('analise descritiva/result6-tabela_cnae_ano_soma_co2_emissions.csv', index=False)
-# -------------------------------------------------------------------------------------------
-# Agrupar os dados por 'ano' e 'class_cnae20' e média da quantidade de efluentes líquidos - MÉDIA
-# result1 = data.groupby(['ano', 'clas_cnae20'])['quant_efluentes_liquidos'].mean().reset_index()
-# result2 = data.groupby(['ano', 'clas_cnae20'])['quant_poluentes_emitidos'].mean().reset_index()
-# result3 = data.groupby(['ano', 'clas_cnae20'])['quant_residuos_solidos'].mean().reset_index()
-# result4 = data.groupby(['ano', 'clas_cnae20'])['quant_consumida_energia_acordo_tipo'].mean().reset_index()
-# result5 = data.groupby(['ano', 'clas_cnae20'])['quantidade_energia_padrao_calorias'].mean().reset_index()
-# result6 = data.groupby(['ano', 'clas_cnae20'])['co2_emissions'].mean().reset_index()
-# #Salvar o resultado em um arquivo CSV - MÉDIA
-# result1.to_csv('analise descritiva/2-result1-tabela_cnae_ano_media_quant_efluentes_liquidos.csv', index=False)
-# result2.to_csv('analise descritiva/2-result2-tabela_cnae_ano_media_quant_poluentes_emitidos.csv', index=False)
-# result3.to_csv('analise descritiva/2-result3-tabela_cnae_ano_media_quant_residuos_solidos.csv', index=False)
-# result4.to_csv('analise descritiva/2-result4-tabela_cnae_ano_media_quant_consumida_energia_acordo_tipo.csv',
-# index=False)
-# result5.to_csv('analise descritiva/2-result5-tabela_cnae_ano_media_quantidade_energia_padrao_calorias.csv',
-# index=False)
-# result6.to_csv('analise descritiva/2-result6-tabela_cnae_ano_media_co2_emissions.csv', index=False)
-# -------------------------------------------------------------------------------------------
-# Agrupar os dados por 'ano', 'estado' e 'class_cnae20' e média da quantidade de efluentes líquidos
-result1 = data.groupby(['ano', 'estado', 'clas_cnae20'])['quant_efluentes_liquidos'].mean().reset_index()
-result2 = data.groupby(['ano', 'estado', 'clas_cnae20'])['quant_poluentes_emitidos'].mean().reset_index()
-result3 = data.groupby(['ano', 'estado', 'clas_cnae20'])['quant_residuos_solidos'].mean().reset_index()
-result4 = data.groupby(['ano', 'estado', 'clas_cnae20'])['quant_consumida_energia_acordo_tipo'].mean().reset_index()
-result5 = data.groupby(['ano', 'estado', 'clas_cnae20'])['quantidade_energia_padrao_calorias'].mean().reset_index()
-result6 = data.groupby(['ano', 'estado', 'clas_cnae20'])['co2_emissions'].mean().reset_index()
-# Salvar o resultado em um arquivo CSV -MÉDIA
-result1.to_csv('analise descritiva/3-tabela_cnae_ano_estado_media_quant_efluentes_liquidos.csv', index=False)
-result2.to_csv('analise descritiva/3-tabela_cnae_ano_estado_media_quant_poluentes_emitidos.csv', index=False)
-result3.to_csv('analise descritiva/3-tabela_cnae_ano_estado_media_quant_residuos_solidos.csv', index=False)
-result4.to_csv('analise descritiva/3-tabela_cnae_ano_estado_media_quant_consumida_energia_acordo_tipo.csv', index=False)
-result5.to_csv('analise descritiva/3-tabela_cnae_ano_estado_media_quantidade_energia_padrao_calorias.csv', index=False)
-result6.to_csv('analise descritiva/3-tabela_cnae_ano_estado_media_co2_emissions.csv', index=False)
-# -------------------------------------------------------------------------------------------
-# Agrupar os dados por 'ano', 'estado', 'municipio' e 'class_cnae20' e média da quantidade de efluentes líquidos
-result1 = data.groupby(['ano', 'estado', 'mun', 'clas_cnae20'])['quant_efluentes_liquidos'].mean().reset_index()
-result2 = data.groupby(['ano', 'estado', 'mun', 'clas_cnae20'])['quant_poluentes_emitidos'].mean().reset_index()
-result3 = data.groupby(['ano', 'estado', 'mun', 'clas_cnae20'])['quant_residuos_solidos'].mean().reset_index()
-result4 = data.groupby(['ano', 'estado', 'mun', 'clas_cnae20'])['quant_consumida_energia_acordo_tipo'].mean().reset_index()
-result5 = data.groupby(['ano', 'estado', 'mun', 'clas_cnae20'])['quantidade_energia_padrao_calorias'].mean().reset_index()
-result6 = data.groupby(['ano', 'estado', 'mun', 'clas_cnae20'])['co2_emissions'].mean().reset_index()
-# Salvar o resultado em um arquivo CSV
-result1.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quant_efluentes_liquidos.csv', index=False)
-result2.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quant_poluentes_emitidos.csv', index=False)
-result3.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quant_residuos_solidos.csv', index=False)
-result4.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quant_consumida_energia_acordo_tipo.csv', index=False)
-result5.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quant_efluentes_liquidos.csv', index=False)
-result6.to_csv('analise descritiva/4-tabela_cnae_ano_municipio_media_quantidade_energia_padrao_calorias.csv', index=False)
-# -------------------------------------------------------------------------------------------
-data = pd.concat(b.values(), ignore_index=True)
-# eficiencia do tratamento abaixo de 80% significa que não atende a legislação
-# Filtrar os dados onde 'perc_efficiency_treatment' é menor ou igual a 80% e diferente de zero
-filtered_data = data[(data['perc_efficiency_treatment'] <= 80) & (data['perc_efficiency_treatment'] != '0')]
+    # Filtrar os dados onde 'perc_efficiency_treatment' é menor ou igual a 80% e diferente de zero
+    filtered_data = data[(data['perc_efficiency_treatment'] <= 80) & (data['perc_efficiency_treatment'] != '0')]
 
-filtered_data_sort = filtered_data.sort_values(by = 'clas_cnae20' , ascending=True)
+    # Criar um novo DataFrame com as colunas desejadas
+    filtered_data = filtered_data[['clas_cnae20', 'perc_efficiency_treatment']]
 
-# Criar um novo DataFrame com as colunas desejadas
-filtered_data_subset = filtered_data[['clas_cnae20', 'perc_efficiency_treatment']]
-# Salvar o resultado em um arquivo CSV
-filtered_data_subset.to_csv('analise descritiva/5-tabela_cnae_abaixo80eficienc_efluentes_liquidos.csv', index=False)
+    # Imprimir o percentual abaixo de 80% - conteúdo de filtered_data na tela
+    # print(filtered_data)
 
-# Contar a quantidade de ocorrências de cada valor na coluna 'clas_cnae20'
-count_by_cnae20 = filtered_data['clas_cnae20'].value_counts().reset_index()
+    # Contar a quantidade de ocorrências de cada valor na coluna 'clas_cnae20'
+    count_by_cnae20 = filtered_data['clas_cnae20'].value_counts().reset_index()
 
-# Renomear as colunas - cnae e número de ocorrências de não conformidade (abaixo de 80#)
-count_by_cnae20.columns = ['class_cnae20', 'qtde']
+    # Renomear as colunas - cnae e número de ocorrências de não conformidade (abaixo de 80#)
+    count_by_cnae20.columns = ['class_cnae20', 'qtde']
 
-# imprimir o número de ocorrências
-print(count_by_cnae20)
+    # calculando a média e desvio padrão para estado mun e cnae de todos os dados filtrados
+    resultado = data.groupby(['ano', 'clas_cnae20', 'estado', 'mun'])[chave].agg(['mean', 'std']).reset_index()
+    resultado = data.groupby(['ano', 'clas_cnae20', 'estado'])[chave].agg(['mean', 'std']).reset_index()
+    resultado = data.groupby(['ano', 'clas_cnae20'])[chave].agg(['mean', 'std']).reset_index()
+    # Abrir o arquivo para escrita
 
-# Salvar o resultado em um arquivo CSV - número de ocorrência de não conformidade (abaixo de 80%)
-count_by_cnae20.to_csv('analise descritiva/6-tabela_cnae_ocorrencia_abaixo80eficienc_efluentes_liquidos.csv', index=False)
-# _____________________________________________________________________________________________
-# encontrar o cnae que apresenta a maior geração de residuos solidos
-geraçãoresiduoscnae = data.groupby(['ano', 'clas_cnae20'])['quant_residuos_solidos'].max().reset_index()
+    # Encontre o CNAE com a maior geração de resíduos sólidos
+    max_residuos_solidos_cnae = data.groupby('clas_cnae20')['quant_residuos_solidos'].sum().idxmax()
+    max_residuos_solidos_valor = data.groupby('clas_cnae20')['quant_residuos_solidos'].sum().max()
+    print(f'O CNAE com a maior geração de resíduos sólidos é {max_residuos_solidos_cnae} com um total de {max_residuos_solidos_valor} resíduos sólidos gerados.')
 
-print(geraçãoresiduoscnae)
+    with open(caminho_arquivo, 'w') as arquivo_saida:
+        # Escrever os resultados no arquivo
+        arquivo_saida.write(f'Resultados para {chave}:\n')
+        arquivo_saida.write(resultado.to_string(index=False))
 
-# _____________________________________________________________________________________________
-# encontrar o cnae que apresenta a menor geração de residuos solidos
-geraçãoresiduoscnaemin = data.groupby(['ano', 'clas_cnae20'])['quant_residuos_solidos'].min().reset_index()
+        # Salvar a contagem por CNAE em um arquivo
+        output_cont_cnae = os.path.join(pasta_saida, 'contagem_cnae20.txt')
 
-print(geraçãoresiduoscnaemin)
+        with open(output_cont_cnae, 'w') as arquivo_saida:
+            arquivo_saida.write('Contagem por CNAE:\n')
+            arquivo_saida.write(count_by_cnae20.to_string(index=False))

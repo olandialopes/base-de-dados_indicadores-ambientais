@@ -231,6 +231,7 @@ def main(p0, paths, to_exclude):
     return bases, cnpjs
 
 
+
 if __name__ == '__main__':
     p = {'efluentes': 'relatorio efluentes liquidos_ibama.csv',
          'poluentes_atm': 'poluentes atmosfericos_dados_ibama.csv',
@@ -246,3 +247,4 @@ if __name__ == '__main__':
     with open('bases', 'wb') as handler:
         pickle.dump(b, handler)
 
+print(bases.columns)

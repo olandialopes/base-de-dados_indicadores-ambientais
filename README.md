@@ -17,7 +17,9 @@
 #Qual a cnae que apresenta a maior quantidade de resíduos solidos da classe perigosa?
 #Qual a cnae que apresenta a menor quantidade de resíduos solidos da classe perigosa?
 #Houve um aumento de geração de residuos da classe perigosa ao longo do tempo ou diminuiu 
-(análise por CNA/ano)?
+(análise por CNA/ano)? 
+# Avaliar se os setores economicos 
+![img_6.png](img_6.png)
 # Avaliar se o os setores econômicos estão reduzindo a geração de GEE, conforme estabelecido ns compromissos do Brasil com os protocolos e COP referentes ao clima, bem como com a PNMC;
 # Avaliar se os setores estão reduzindo a geração de resíduos conforme estabelecido pela PNRS;
 # Avaliar se os municípios estão atendendo aos padrões estabelecidos pelas Resoluções do Conama em relação aos poluentes atmosféricos;
@@ -65,7 +67,7 @@ Base 1:
 Indicadores: Quantidade gerada de efluentes líquidos por ano e por empresa/setor e eficiência do tratamento;
 
 Base de dados 2: 
-## Emissões atmosféricas
+## Emissões atmosféricas (toneladas/ano)
 
 - Indicadores:
 
