@@ -26,6 +26,8 @@ data = data.drop(columns=variaveis_excluidas, axis=1)
 # Excluir linhas com pelo menos uma célula vazia em qualquer coluna
 data = data.dropna(how='any')
 
+valores_unicos_unidade = data['Unidade de Medida'].unique()
+
 # Contar valores únicos na coluna CNPJ (quantidade de CNPJ na base de dados)
 contagem_valores_CNPJ = data['CNPJ'].nunique()
 contagem_valores_municipios = data['Município'].nunique()
@@ -48,3 +50,6 @@ contagem_valores_unicos = data['Município'].nunique()
 
 # Salvar as alterações de volta no arquivo CSV
 data.to_csv('5-result_emissoes_atm.csv', index=False)
+
+print("Valores únicos da coluna 'Unidade de Medida':")
+print(valores_unicos_unidade)
