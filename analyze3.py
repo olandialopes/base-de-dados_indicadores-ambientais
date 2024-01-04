@@ -13,6 +13,7 @@ import pandas as pd
 import change_cnae_to_12_sectors
 import matplotlib.pyplot as plt
 
+
 print("Diretório atual:", os.getcwd())
 
 paths = {'efluentes': 'relatorio efluentes liquidos_ibama.csv',
@@ -61,6 +62,8 @@ if __name__ == '__main__':
         for chave in chaves:
             if chave == 'perc_efficiency_treatment':
                 if chave in base[cada]:
+
+                   # _________________________________________________________________________________________________
                     caminho_arquivo = os.path.join(pasta_saida, f'nao_conformidade_{chave}_setor.csv')
                     temp = base[cada][(base[cada][chave] <= 100) & (base[cada][chave] >= 0)].copy()
                     temp.loc[:, 'nao_conformidade'] = 0
@@ -72,6 +75,28 @@ if __name__ == '__main__':
 
 
             if chave in base[cada]:
+                # Por UFs - Cálculo da razão
+                # Por Setores - Cálculo da razão
+                caminho_arquivo_razao = os.path.join(pasta_saida, f'razao_{chave}_setor.csv')
+                base[cada]['cnpj'] = 'valores_cnpj_aqui'
+                temp_setor_razao = base[cada][[chave, 'isis_12', 'cnpj']].groupby(['isis_12', 'cnpj']).agg({
+                    chave: 'sum'
+                }).reset_index()
+
+                # Contagem única de CNPJ por setor
+                temp_setor_razao_count = temp_setor_razao.groupby('isis_12')['cnpj'].nunique().reset_index(
+                    name='quantidade_empresas')
+
+                # Merge dos dados para calcular a razão
+                temp_setor_razao_final = pd.merge(temp_setor_razao.groupby('isis_12').agg({chave: 'sum'}).reset_index(),
+                                                  temp_setor_razao_count, on='isis_12')
+
+                # Cálculo da razão
+                temp_setor_razao_final['razao'] = temp_setor_razao_final[chave] / temp_setor_razao_final[
+                    'quantidade_empresas']
+                temp_setor_razao_final.to_csv(caminho_arquivo_razao)
+
+
                 # Por setores
                 caminho_arquivo = os.path.join(pasta_saida, f'descritivas_{chave}_setor.csv')
                 temp_setor = base[cada][[chave, 'isis_12']].groupby('isis_12').agg(['max', 'mean',
