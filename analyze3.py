@@ -46,9 +46,16 @@ if __name__ == '__main__':
               'quant_consumida_energia_acordo_tipo', 'quantidade_energia_padrao_calorias', 'co2_emissions',
               'perc_efficiency_treatment']
 
+    total_municipios = 0
     for cada in paths:
         base[cada]['cnae2d'] = base[cada]['clas_cnae20'].str[:2]
         base[cada] = change_cnae_to_12_sectors.from_cnae_2digitos_to_12_mip_sectors(base[cada], 'cnae2d')
+        if 'mun' in base[cada].columns:
+            total_municipios += base[cada]['mun'].nunique()
+            print(f"Total de municípios em {cada}: {base[cada]['mun'].nunique()}")
+        else:
+            print(f"A coluna 'mun' não está presente em {cada}.")
+
 
         # Filtrar os dados para os últimos 10 anos
         base[cada] = base[cada][base[cada]['ano'] >= base[cada]['ano'].max() - 9]
@@ -151,4 +158,17 @@ if __name__ == '__main__':
     plt.ylabel('Emissões de CO2 (toneladas)')
     plt.show()
 
+    print(f"Total de municípios em todas as bases: {total_municipios}")
 
+
+# Mapear fatores de conversão para toneladas em notação científica
+fatores_conversao = {'kilogramas': 1e-3, 'Tonelada': 1, 'Grama': 1e-6, 'Miligrama': 1e-9}
+
+# Converter a coluna "Quantidade" para valores numéricos
+data['Quantidade'] = pd.to_numeric(data['Quantidade'], errors='coerce')
+
+# Criar uma nova coluna "Quantidade em Toneladas" com os valores convertidos
+data['Quantidade em Toneladas'] = data.apply(lambda row: row['Quantidade'] * fatores_conversao[row['Unidade']], axis=1)
+
+# Salvar o DataFrame modificado de volta para um arquivo CSV
+data.to_csv('3-nova_base_convertida.csv', index=False)
