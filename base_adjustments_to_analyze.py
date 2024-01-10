@@ -7,6 +7,8 @@
 """
 
 import pickle
+import seaborn as sns
+from matplotlib import pyplot as plt
 
 import change_cnae_to_12_sectors
 
@@ -19,6 +21,14 @@ paths = {'efluentes': 'relatorio efluentes liquidos_ibama.csv',
          'residuos_solidos1': 'residuos solidos_ibama_ate2012.csv',
          'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv',
          'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
+
+regions = {'Sudeste': ['SAO PAULO', 'RIO DE JANEIRO', 'MINAS GERAIS', 'ESPIRITO SANTO',],
+           'Centro-oeste': ['DISTRITO FEDERAL', 'GOIAS', 'MATO GROSSO', 'MATO GROSSO DO SUL'],
+           'Nordeste': ['PERNAMBUCO', 'CEARA', 'PARAIBA', 'BAHIA',
+                        'RIO GRANDE DO NORTE', 'PIAUI',
+                        'MARANHAO', 'SERGIPE', 'ALAGOAS'],
+           'Sul': ['PARANA', 'RIO GRANDE DO SUL', 'SANTA CATARINA'],
+           'Norte': ['PARA', 'TOCANTINS', 'AMAZONAS', 'AMAPA', 'RONDONIA', 'ACRE', 'RORAIMA']}
 
 
 def convert_to_isic(base):
@@ -44,6 +54,14 @@ def no_conformity_indicators(base):
     return base
 
 
+def add_regions(base):
+    for key in base:
+        base[key]['region'] = base[key]['estado'].map({state: region
+                                                       for region, states in regions.items()
+                                                       for state in states})
+    return base
+
+
 def adjust_units_residuos(base):
     return base
 
@@ -52,7 +70,16 @@ def adjust_units_energia(base):
     return base
 
 
+def represent_quantities(base, key, col1, col2):
+    pivot_table = base[key].pivot_table(index=col1, columns=col2, aggfunc='size', fill_value=0)
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(pivot_table, annot=True, fmt='d', cmap='viridis', cbar_kws={'label': 'Count'})
+    plt.title(f'Counts by {col1} and {col2}')
+    plt.show()
+
+
 def counting_firms(base):
+    # Contar as empresas, por regiao, por regiao, por estado, por ano, # por município
     return base
 
 
@@ -60,23 +87,23 @@ def calcular_ecoficiencia_indicator(base):
     return base
 
 
-def main():
-    pass
+def main(base):
+    base = convert_to_isic(base)
+    base = no_conformity_indicators(base)
+    base = add_regions(base)
+    return base
 
 
 if __name__ == '__main__':
     nome = 'bases_massa_desidentificada'
     nome2 = 'base_final_isic'
-    # with open(nome, 'rb') as handler:
-    #     b = pickle.load(handler)
-    #
-    # b = convert_to_isic(b)
-    # b = no_conformity_indicators(b)
-    #
-    # with open(nome2, 'wb') as handler:
-    #     pickle.dump(b, handler)
+    with open(nome, 'rb') as handler:
+        b = pickle.load(handler)
+
+    b = main(b)
+
+    with open(nome2, 'wb') as handler:
+        pickle.dump(b, handler)
 
     with open(nome2, 'rb') as handler:
         b = pickle.load(handler)
-
-
