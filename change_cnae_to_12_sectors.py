@@ -45,20 +45,22 @@ def from_cnae_2digitos_to_12_mip_sectors(data: object, col: object) -> object:
 
     data['letter_code'] = data[col].apply(lambda x: next((key for key, value in tradutor_concla_ibge.items()
                                                           if x in value), None))
-    data['isis_12'] = data['letter_code'].apply(lambda x: next((key for key, value in tradutor_isis_12.items()
+    data['isic_12'] = data['letter_code'].apply(lambda x: next((key for key, value in tradutor_isis_12.items()
                                                                 if x in value), None))
     return data
+
+
 if __name__ == '__main__':
     # Arquivo CSV para incluir os 12 setores
-     # f = 'mean.csv'
+    # f = 'mean.csv'
     # Arquivo CSV para incluir os 12 setores
     f = 'median_setoresISIS.csv'
 
     # Ler arquivo
-    mea = pd.read_csv(f, dtype={'isis_12': str, 'codemun': str})
+    mea = pd.read_csv(f, dtype={'isic_12': str, 'codemun': str})
     # Nome da coluna que contenha os dois dígitos da CNAE em STR.
-           #    (se não tiver essa coluna, basta fazer: data['cnae_2d'] = data['cnae'].apply(lambda x: x.str[2:]
-    coluna_a_traduzir = 'isis_12'
+    #    (se não tiver essa coluna, basta fazer: data['cnae_2d'] = data['cnae'].apply(lambda x: x.str[2:]
+    coluna_a_traduzir = 'isic_12'
     mea = from_cnae_2digitos_to_12_mip_sectors(mea, coluna_a_traduzir)
 
 
