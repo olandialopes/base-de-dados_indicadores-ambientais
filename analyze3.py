@@ -32,6 +32,8 @@ def quant_efluentes_cnae(data):
 
 
 if __name__ == '__main__':
+
+    # LER BASE FINAL NA QUAL TODAS AS MUDANÇAS DE FORMA, CORREÇOES, INDICADORES NOVOS JÁ FORAM FEITAS.
     nome = 'bases_massa_desidentificada'
     with open(nome, 'rb') as handler:
         base = pickle.load(handler)
@@ -60,41 +62,41 @@ if __name__ == '__main__':
 
         # Loop para cada variável de interesse
         for chave in chaves:
-            if chave == 'perc_efficiency_treatment':
-                if chave in base[cada]:
-
-                   # _________________________________________________________________________________________________
-                    caminho_arquivo = os.path.join(pasta_saida, f'nao_conformidade_{chave}_setor.csv')
-                    temp = base[cada][(base[cada][chave] <= 100) & (base[cada][chave] >= 0)].copy()
-                    temp.loc[:, 'nao_conformidade'] = 0
-                    temp.loc[:, 'conformidade'] = 0
-                    temp.loc[temp[chave] < 80, 'nao_conformidade'] = 1
-                    temp.loc[temp[chave] >= 80, 'conformidade'] = 1
-                    temp = temp[['nao_conformidade', 'conformidade', 'isis_12']].groupby('isis_12').agg('sum')
-                    temp.to_csv(caminho_arquivo)
+            # if chave == 'perc_efficiency_treatment':
+            #     if chave in base[cada]:
+            #
+            #        # _________________________________________________________________________________________________
+            #         caminho_arquivo = os.path.join(pasta_saida, f'nao_conformidade_{chave}_setor.csv')
+            #         temp = base[cada][(base[cada][chave] <= 100) & (base[cada][chave] >= 0)].copy()
+            #         temp.loc[:, 'nao_conformidade'] = 0
+            #         temp.loc[:, 'conformidade'] = 0
+            #         temp.loc[temp[chave] < 80, 'nao_conformidade'] = 1
+            #         temp.loc[temp[chave] >= 80, 'conformidade'] = 1
+            #         temp = temp[['nao_conformidade', 'conformidade', 'isis_12']].groupby('isis_12').agg('sum')
+            #         temp.to_csv(caminho_arquivo)
 
 
             if chave in base[cada]:
-                # Por UFs - Cálculo da razão
-                # Por Setores - Cálculo da razão
-                caminho_arquivo_razao = os.path.join(pasta_saida, f'razao_{chave}_setor.csv')
-                base[cada]['cnpj'] = 'valores_cnpj_aqui'
-                temp_setor_razao = base[cada][[chave, 'isis_12', 'cnpj']].groupby(['isis_12', 'cnpj']).agg({
-                    chave: 'sum'
-                }).reset_index()
-
-                # Contagem única de CNPJ por setor
-                temp_setor_razao_count = temp_setor_razao.groupby('isis_12')['cnpj'].nunique().reset_index(
-                    name='quantidade_empresas')
-
-                # Merge dos dados para calcular a razão
-                temp_setor_razao_final = pd.merge(temp_setor_razao.groupby('isis_12').agg({chave: 'sum'}).reset_index(),
-                                                  temp_setor_razao_count, on='isis_12')
-
-                # Cálculo da razão
-                temp_setor_razao_final['razao'] = temp_setor_razao_final[chave] / temp_setor_razao_final[
-                    'quantidade_empresas']
-                temp_setor_razao_final.to_csv(caminho_arquivo_razao)
+            #     # Por UFs - Cálculo da razão
+            #     # Por Setores - Cálculo da razão
+            #     caminho_arquivo_razao = os.path.join(pasta_saida, f'razao_{chave}_setor.csv')
+            #     base[cada]['cnpj'] = 'valores_cnpj_aqui'
+            #     temp_setor_razao = base[cada][[chave, 'isis_12', 'cnpj']].groupby(['isis_12', 'cnpj']).agg({
+            #         chave: 'sum'
+            #     }).reset_index()
+            #
+            #     # Contagem única de CNPJ por setor
+            #     temp_setor_razao_count = temp_setor_razao.groupby('isis_12')['cnpj'].nunique().reset_index(
+            #         name='quantidade_empresas')
+            #
+            #     # Merge dos dados para calcular a razão
+            #     temp_setor_razao_final = pd.merge(temp_setor_razao.groupby('isis_12').agg({chave: 'sum'}).reset_index(),
+            #                                       temp_setor_razao_count, on='isis_12')
+            #
+            #     # Cálculo da razão
+            #     temp_setor_razao_final['razao'] = temp_setor_razao_final[chave] / temp_setor_razao_final[
+            #         'quantidade_empresas']
+            #     temp_setor_razao_final.to_csv(caminho_arquivo_razao)
 
 
                 # Por setores
@@ -144,11 +146,11 @@ if __name__ == '__main__':
         # Importar os dados
     dados = pd.read_csv('analise_descritiva/ecoeficiencia_co2_emissions_setor.csv')
 
-
-    # Criar o gráfico
-    plt.bar(dados['isis_12'], dados['co2_emissions'])
-    plt.xlabel('Setor econômico')
-    plt.ylabel('Emissões de CO2 (toneladas)')
-    plt.show()
+    #
+    # # Criar o gráfico
+    # plt.bar(dados['isis_12'], dados['co2_emissions'])
+    # plt.xlabel('Setor econômico')
+    # plt.ylabel('Emissões de CO2 (toneladas)')
+    # plt.show()
 
 
