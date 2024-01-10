@@ -60,6 +60,7 @@ tradutor_isis_12 = {'Agriculture': ['A'],
                     'OtherServices': ['R', 'S', 'T', 'U']
                     }
 
+
 def emissions_by_municipality(data):
     pass
 
