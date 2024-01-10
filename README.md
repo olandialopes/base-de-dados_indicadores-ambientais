@@ -55,7 +55,7 @@ Organizado por Olandia Lopes, Valdex Santos e Bernardo Alves Furtado
 3. Isso significa: mantendo as variáveis de interesse, com nomes harmonizaods e no formato correto.
 4. Na sequência as bases são unidas com os dados de massa salarial por meio do CNPJ em comum
 5. Por motivos de sigilo, a base da RAIS com a massa salarial não consta desse repositório
-6. Será disponibilizada apenas após as análises feitos e sua desindetificação
+6. Será disponibilizada apenas após as análises feitos e sua desidetificação
 7. A versão do python é 3.9 e a do ambiente pandas é 1.5.3;
 
 
