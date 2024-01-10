@@ -75,12 +75,15 @@ def represent_quantities(base, key, col1, col2):
     plt.figure(figsize=(10, 8))
     sns.heatmap(pivot_table, annot=True, fmt='d', cmap='viridis', cbar_kws={'label': 'Count'})
     plt.title(f'Counts by {col1} and {col2}')
+    plt.tight_layout()
+    plt.savefig(f'figures/{key}_{col1}_{col2}_count.png')
     plt.show()
 
 
 def counting_firms(base):
     # Contar as empresas, por regiao, por regiao, por estado, por ano, # por município
-    return base
+    for key in base:
+        represent_quantities(base, key, 'region', 'isic_12')
 
 
 def calcular_ecoficiencia_indicator(base):
@@ -97,13 +100,13 @@ def main(base):
 if __name__ == '__main__':
     nome = 'bases_massa_desidentificada'
     nome2 = 'base_final_isic'
-    with open(nome, 'rb') as handler:
-        b = pickle.load(handler)
-
-    b = main(b)
-
-    with open(nome2, 'wb') as handler:
-        pickle.dump(b, handler)
+    # with open(nome, 'rb') as handler:
+    #     b = pickle.load(handler)
+    #
+    # b = main(b)
+    #
+    # with open(nome2, 'wb') as handler:
+    #     pickle.dump(b, handler)
 
     with open(nome2, 'rb') as handler:
         b = pickle.load(handler)
