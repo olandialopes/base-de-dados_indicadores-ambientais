@@ -113,8 +113,9 @@ def indicators_boxplot(base):
                 fig, ax = plt.subplots()
                 sns.boxplot(data=base[key], x='ano', y=indicator, whis=(0, 100), ax=ax)
                 sns.despine(bottom=True, left=True)
-                plt.show()
                 plt.savefig(f'figures/boxplot_{key}_{indicator}.png')
+                plt.show()
+
 
 
 def counting_firms(base):
