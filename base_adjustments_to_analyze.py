@@ -22,7 +22,7 @@ paths = {'efluentes': 'relatorio efluentes liquidos_ibama.csv',
          'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv',
          'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
 
-regions = {'Sudeste': ['SAO PAULO', 'RIO DE JANEIRO', 'MINAS GERAIS', 'ESPIRITO SANTO',],
+regions = {'Sudeste': ['SAO PAULO', 'RIO DE JANEIRO', 'MINAS GERAIS', 'ESPIRITO SANTO', ],
            'Centro-oeste': ['DISTRITO FEDERAL', 'GOIAS', 'MATO GROSSO', 'MATO GROSSO DO SUL'],
            'Nordeste': ['PERNAMBUCO', 'CEARA', 'PARAIBA', 'BAHIA',
                         'RIO GRANDE DO NORTE', 'PIAUI',
@@ -62,11 +62,30 @@ def add_regions(base):
     return base
 
 
-def adjust_units_residuos(base):
+def adjust_units_residuos(base, key='residuos_solidos1'):
+    if key == 'residuos_solidos1':
+        conversao_ton = {'kilogramas': 1e-3,
+                         'Tonelada': 1,
+                         'Grama': 1e-6,
+                         'Miligrama': 1e-9,
+                         'Ton. por ano': 1,
+                         }
+    else:
+        conversao_ton = {'quilogramas': 1e-3, 'Litro': 0.001, 'Unidade': 1}
+
+    def adjust(row):
+        try:
+            return row['quant_residuos_solidos'] * conversao_ton[row['unidade']]
+        except KeyError:
+            return None
+
+    base[key].loc[:, 'quant_tonelada'] = base[key].apply(lambda row: adjust(row), axis=1)
     return base
 
 
 def adjust_units_energia(base):
+    base = adjust_units_residuos(base, 'residuos_solidos1')
+    base = adjust_units_residuos(base, 'residuos_solidos2')
     return base
 
 
@@ -78,6 +97,27 @@ def represent_quantities(base, key, col1, col2):
     plt.tight_layout()
     plt.savefig(f'figures/{key}_{col1}_{col2}_count.png')
     plt.show()
+
+
+def line_plot_by_year(base, key, col):
+    # Plot line chart
+    plt.figure(figsize=(10, 6))
+    for region in regions:
+        temp = base[key][base[key]['region'] == region].copy()
+        plt.plot(temp['ano'], temp[col], label=region)
+
+    plt.title(f'{col} Across Regions Over Time')
+    plt.xlabel('Year')
+    plt.ylabel(f'{col}')
+    plt.legend()
+    plt.show()
+
+
+def indicators_panorama(base):
+    for key in base:
+        for indicator in chaves:
+            if indicator in base[key]:
+                line_plot_by_year(base, key, indicator)
 
 
 def counting_firms(base):
@@ -94,6 +134,7 @@ def main(base):
     base = convert_to_isic(base)
     base = no_conformity_indicators(base)
     base = add_regions(base)
+    base = adjust_units_energia(base)
     return base
 
 
