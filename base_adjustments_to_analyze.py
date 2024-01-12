@@ -124,6 +124,10 @@ def counting_firms(base):
 
 
 def calcular_ecoficiencia_indicator(base):
+    for key in base:
+        for indicator in chaves:
+            if indicator != 'perc_efficiency_treatment':
+                base[key][f'eco_efic_{indicator}'] = base[key]['massa_salarial'] / base[key][indicator]
     return base
 
 
@@ -132,6 +136,7 @@ def main(base):
     base = no_conformity_indicators(base)
     base = add_regions(base)
     base = adjust_units_energia(base)
+    base = calcular_ecoficiencia_indicator(base)
     indicators_boxplot(base)
     return base
 
