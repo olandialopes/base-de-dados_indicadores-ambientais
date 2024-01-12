@@ -117,7 +117,6 @@ def indicators_boxplot(base):
                 plt.show()
 
 
-
 def counting_firms(base):
     # Contar as empresas, por regiao, por regiao, por estado, por ano, # por município
     for key in base:
