@@ -9,7 +9,7 @@
 import pickle
 import seaborn as sns
 from matplotlib import pyplot as plt
-
+from ridge_density_plot import draw_density_plot
 import change_cnae_to_12_sectors
 
 chaves = ['quant_efluentes_liquidos', 'quant_poluentes_emitidos', 'quant_residuos_solidos',
@@ -99,25 +99,22 @@ def represent_quantities(base, key, col1, col2):
     plt.show()
 
 
-def line_plot_by_year(base, key, col):
-    # Plot line chart
-    plt.figure(figsize=(10, 6))
-    for region in regions:
-        temp = base[key][base[key]['region'] == region].copy()
-        plt.plot(temp['ano'], temp[col], label=region)
-
-    plt.title(f'{col} Across Regions Over Time')
-    plt.xlabel('Year')
-    plt.ylabel(f'{col}')
-    plt.legend()
-    plt.show()
-
-
-def indicators_panorama(base):
+def indicators_ridge_plot(base):
     for key in base:
         for indicator in chaves:
             if indicator in base[key]:
-                line_plot_by_year(base, key, indicator)
+                draw_density_plot(base, key, 'ano', indicator)
+
+
+def indicators_boxplot(base):
+    for key in base:
+        for indicator in chaves:
+            if indicator in base[key]:
+                fig, ax = plt.subplots()
+                sns.boxplot(data=base[key], x='ano', y=indicator, whis=(0, 100), ax=ax)
+                sns.despine(bottom=True, left=True)
+                plt.savefig(f'figures/boxplot_{key}_{indicator}.png')
+                plt.show()
 
 
 def counting_firms(base):
@@ -127,6 +124,10 @@ def counting_firms(base):
 
 
 def calcular_ecoficiencia_indicator(base):
+    for key in base:
+        for indicator in chaves:
+            if indicator != 'perc_efficiency_treatment':
+                base[key][f'eco_efic_{indicator}'] = base[key]['massa_salarial'] / base[key][indicator]
     return base
 
 
@@ -135,19 +136,21 @@ def main(base):
     base = no_conformity_indicators(base)
     base = add_regions(base)
     base = adjust_units_energia(base)
+    base = calcular_ecoficiencia_indicator(base)
+    indicators_boxplot(base)
     return base
 
 
 if __name__ == '__main__':
     nome = 'bases_massa_desidentificada'
     nome2 = 'base_final_isic'
-    # with open(nome, 'rb') as handler:
-    #     b = pickle.load(handler)
-    #
-    # b = main(b)
-    #
-    # with open(nome2, 'wb') as handler:
-    #     pickle.dump(b, handler)
+    with open(nome, 'rb') as handler:
+        b = pickle.load(handler)
+
+    b = main(b)
+
+    with open(nome2, 'wb') as handler:
+        pickle.dump(b, handler)
 
     with open(nome2, 'rb') as handler:
         b = pickle.load(handler)
