@@ -123,12 +123,12 @@ def counting_firms(base):
         represent_quantities(base, key, 'region', 'isic_12')
 
 
-def calcular_ecoficiencia_indicator(base):
-    for key in base:
-        for indicator in chaves:
-            if indicator != 'perc_efficiency_treatment':
-                base[key][f'eco_efic_{indicator}'] = base[key]['massa_salarial'] / base[key][indicator]
-    return base
+# def calcular_ecoficiencia_indicator(base):
+    # for key in base:
+        # for indicator in chaves:
+            # if indicator != 'perc_efficiency_treatment':
+                # base[key][f'eco_efic_{indicator}'] = base[key]['massa_salarial'] / base[key][indicator]
+    # return base
 
 
 def main(base):
@@ -136,8 +136,43 @@ def main(base):
     base = no_conformity_indicators(base)
     base = add_regions(base)
     base = adjust_units_energia(base)
-    base = calcular_ecoficiencia_indicator(base)
+    # base = calcular_ecoficiencia_indicator(base)
     indicators_boxplot(base)
+    return base
+
+
+density_table = {
+        'óleo Diesel': 853,
+        'Gás Natural (Seco)': 0.63,
+        'Gás Natural Úmido': 0.63,
+        'Gasolina': 0.715,
+        'Lubrificantes': 902,
+        'Biomassa - Álcool Etílico Anidro': 791.5,
+        'Biomassa - Biodiesel B100': 880,
+        'Querosene Iluminante': 803,
+        'Querosene de Aviação': 760,
+        'Gás Liquefeito de Petróleo (GLP)': 522,
+        'Eletricidade - Rede Pública': None,  # Representing 'NA' as None
+        'Petróleo Bruto': 980,
+        'Óleo Combustível': 967,
+        'Coque de Petróleo': 830,
+        'Gasolina de Aviação': 710,
+        'Nafta': 750,
+        'Óleo de Xisto': 970,
+        'Biomassa - Carvão Vegetal': 490,
+        'Biomassa - Outro Combustível Renovável-Lenha de Eucalipto': 800,
+        'Outro Combustível Não-Renovável-THINNER': 845
+    }
+#___________________________________________________________________
+def get_density(material):
+
+
+    return density_table.get(material, None)
+
+def adjust_units_emissoes(base, key='emissoes'):
+    if key == 'emissoes':
+        base[key]['conversao_ener'] = base[key]["quant_consumida_energia_acordo_tipo"] * density_table[base][key]
+        ['unidade_medida']
     return base
 
 
