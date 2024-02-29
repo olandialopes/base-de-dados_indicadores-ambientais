@@ -123,14 +123,6 @@ def counting_firms(base):
         represent_quantities(base, key, 'region', 'isic_12')
 
 
-# def calcular_ecoficiencia_indicator(base):
-    # for key in base:
-        # for indicator in chaves:
-            # if indicator != 'perc_efficiency_treatment':
-                # base[key][f'eco_efic_{indicator}'] = base[key]['massa_salarial'] / base[key][indicator]
-    # return base
-
-
 def main(base):
     base = convert_to_isic(base)
     base = no_conformity_indicators(base)
@@ -163,16 +155,17 @@ density_table = {
         'Biomassa - Outro Combustível Renovável-Lenha de Eucalipto': 800,
         'Outro Combustível Não-Renovável-THINNER': 845
     }
-#___________________________________________________________________
+
+
+# ___________________________________________________________________
 def get_density(material):
-
-
     return density_table.get(material, None)
+
 
 def adjust_units_emissoes(base, key='emissoes'):
     if key == 'emissoes':
-        base[key]['conversao_ener'] = base[key]["quant_consumida_energia_acordo_tipo"] * density_table[base][key]
-        ['unidade_medida']
+        base[key]['conversao_ener'] = (base[key]["quant_consumida_energia_acordo_tipo"] *
+                                       density_table[base][key]['unidade_medida'])
     return base
 
 
