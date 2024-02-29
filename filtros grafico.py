@@ -70,25 +70,36 @@ plt.show()
 # gráfico 11 TD - emissoes de CO2 acima de zero região centro-oeste
 Região centro-oeste
 
-b9= b['emissoes'][(b['emissoes']['co2_emissions']>0)&(b['emissoes']['region'] == 'Centro-oeste')]
+g11= b['emissoes'][(b['emissoes']['co2_emissions']>0)&(b['emissoes']['region'] == 'Centro-oeste')]
 sns.boxplot(data=b9,x='isic_12', y='co2_emissions', whis=(0,100))
 plt.xticks(rotation=90)
 plt.tight_layout(pad=2.0)
 plt.show()
 
-Região Nordeste
-b9= b['emissoes'][(b['emissoes']['co2_emissions']>0)&(b['emissoes']['region'] == 'Nordeste')]
+# Região Nordeste
+g12= b['emissoes'][(b['emissoes']['co2_emissions']>0)&(b['emissoes']['region'] == 'Nordeste')]
 sns.boxplot(data=b9,x='isic_12', y='co2_emissions', whis=(0,100))
 plt.xticks(rotation=90)
 plt.tight_layout(pad=2.0)
 plt.show()
 
-Região Sudeste
-b9= b['emissoes'][(b['emissoes']['co2_emissions']>0)&(b['emissoes']['region'] == 'Sudeste')]
+# Região Sudeste
+g13= b['emissoes'][(b['emissoes']['co2_emissions']>0)&(b['emissoes']['region'] == 'Sudeste')]
 sns.boxplot(data=b9,x='isic_12', y='co2_emissions', whis=(0,100))
 plt.xticks(rotation=90)
 plt.tight_layout(pad=2.0)
 plt.show()
+
+# grafico 14 TD - indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <100)
+
+g14= b['efluentes'][(b['efluentes']['perc_efficiency_treatment']>0)&(b['efluentes']['perc_efficiency_treatment']<100)]
+sns.boxplot(data=b9,x='isic_12', y='co2_emissions', whis=(0,100))
+sns.boxplot(data=b9,x='isic_12', y='perc_efficiency_treatment', whis=(0,100))
+plt.xticks(rotation=90)
+plt.tight_layout(pad=2.0)
+plt.show()
+
+
 
 
 
