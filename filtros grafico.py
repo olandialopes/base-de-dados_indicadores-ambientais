@@ -93,7 +93,6 @@ plt.show()
 # grafico 14 TD - indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <100)
 
 g14= b['efluentes'][(b['efluentes']['perc_efficiency_treatment']>0)&(b['efluentes']['perc_efficiency_treatment']<100)]
-sns.boxplot(data=g14,x='isic_12', y='co2_emissions', whis=(0,100))
 sns.boxplot(data=b9,x='isic_12', y='perc_efficiency_treatment', whis=(0,100))
 plt.xticks(rotation=90)
 plt.tight_layout(pad=2.0)
