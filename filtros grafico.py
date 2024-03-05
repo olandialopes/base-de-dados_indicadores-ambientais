@@ -30,20 +30,13 @@ def gera_plots(data):
     plot_boxplot(base1, y=indicador, number=number)
     number += 1
 
-    # grafico 2 TD - residuos solidos acima de 26000 toneladas - setor transport
-    setor = 'Transport'
-    minimum = 26000
-    base2 = data[key][(data[key][indicador] > minimum) &
-                      (data[key]['isic_12'] == setor)]
-    plot_boxplot(base2, y=indicador, number=number)
-    number += 1
-
-    # grafico 3 TD - residuos solidos acima de 26000 toneladas - setor trade
-    setor = 'Trade'
-    base3 = data[key][(data[key][indicador] > minimum) &
-                      (data[key]['isic_12'] == setor)]
-    plot_boxplot(base3, y=indicador, number=number)
-    number += 1
+    # grafico 2 TD - residuos solidos acima de 26000 toneladas - setor transport/trade
+    for setor in ['Transport', 'Trade']:
+        minimum = 26000
+        base2 = data[key][(data[key][indicador] > minimum) &
+                          (data[key]['isic_12'] == setor)]
+        plot_boxplot(base2, y=indicador, number=number)
+        number += 1
 
     # Gráfico 4 TD - poluentes atmosféricos por setores econômicos acima de zero. Mesmas keys para regiões
     key = 'poluentes_atm'
