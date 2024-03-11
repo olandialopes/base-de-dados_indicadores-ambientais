@@ -63,7 +63,7 @@ def gera_plots(data):
                      (data[key][indicator] < max(value))]
     plot_boxplot(base, y=indicator, number=number)
 
-    # grafico 16 TD - efluentes liquidos  acima de 9000 toneladas - nacional
+    # grafico 16 TD - efluentes liquidos  acima de 9000 m3/h - nacional
     key = 'efluentes'
     indicator = 'quant_efluentes_liquidos'
     minimum = 9000
