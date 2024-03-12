@@ -46,10 +46,10 @@ def gera_plots(data):
     plot_boxplot(base4, y=indicator, number=number)
     number += 1
 
-    gráfico - teste para separar o tipo de poluente atmosférico:
+    # gráfico - teste para separar o tipo de poluente atmosférico:
     key = 'poluentes_atm'
     indicator = 'quant_poluentes_emitidos'
-    Poluente emitido = ['Material Particulado (MP)','Monóxido de carbono (CO)','Óxidos de nitrogênio (NOx)',
+    Poluente_emitido = ['Material Particulado (MP)','Monóxido de carbono (CO)','Óxidos de nitrogênio (NOx)',
     'Óxidos de enxofre (SOx)']
 
     # base = data[key][(data[key][indicator] ==  Poluente emitido) &
@@ -58,7 +58,7 @@ def gera_plots(data):
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
     regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
-    for key, indicator in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions', ]):
+    for key, indicator in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions' ]):
         for region in regions:
             base = data[key][(data[key][indicator] > minimum) &
                              (data[key]['region'] == region)]
@@ -86,15 +86,15 @@ def gera_plots(data):
 # análise da proporcionalidade da poluição por região
 # calculo da razão - somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
 regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
-    for key, indicator in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions', ]):
-            for region, dados in regions.items():
-                somatório indicator = sum(dados["indicator"])
-                for key in base:
-                    represent_quantities(base, key, 'region', 'isic_12')
-                quantidade_empresas = dados["region"]
-                razao = somatório indicator / quantidade_empresas
-            plot_boxplot(base, y=indicator, number=number)
-            number += 1
+for key, indicator in zip(['poluentes_atm', 'emissoes'], ['quant_poluentes_emitidos', 'co2_emissions' ]):
+    for region in regions:
+        somatorio_indicator = sum((region[key][indicator]))
+        #for key in base:
+            #represent_quantities(base, key, 'region', 'isic_12')
+            #quantidade_empresas = dados["region"]
+            #razao = somatorio_indicator / quantidade_empresas
+            #plot_boxplot(base, y=indicator, number=number)
+            #number += 1
 
 if __name__ == '__main__':
     nome = 'base_final_isic'
