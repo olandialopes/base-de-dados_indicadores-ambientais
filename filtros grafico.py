@@ -7,8 +7,24 @@ import matplotlib.pyplot as plt
 import pickle
 
 
-def plot_boxplot(data, x='ano', y='quant_tonelada', number=1):
+indicadores = ['quant_efluentes_liquidos',
+               'quant_poluentes_emitidos',
+               'quant_residuos_solidos',
+               'co2_emissions']
+
+
+def count_unique_firms(base):
+    num_firms = dict()
+    for key in base:
+        num_firms[key] = base[key].groupby(by=['ano', 'region', 'massa_salarial']).agg('size').reset_index()
+        num_firms[key][0] = 1
+        num_firms[key] = num_firms[key].groupby(by=['ano', 'region']).agg('size').reset_index()
+    return num_firms
+
+
+def plot_boxplot(data, x='ano', y='quant_tonelada', number=1, region=''):
     sns.boxplot(data=data, x=x, y=y, whis=(0, 100))
+    plt.title(f'{x}_{y}_{region}'.capitalize())
     plt.xticks(rotation=90)
     plt.tight_layout(pad=2.0)
     plt.savefig(f'plots_td/boxplot_{number}.png')
@@ -47,22 +63,24 @@ def gera_plots(data):
     number += 1
 
     # gráfico - teste para separar o tipo de poluente atmosférico:
-    key = 'poluentes_atm'
-    indicator = 'quant_poluentes_emitidos'
-    Poluente_emitido = ['Material Particulado (MP)','Monóxido de carbono (CO)','Óxidos de nitrogênio (NOx)',
-    'Óxidos de enxofre (SOx)']
-
-    # base = data[key][(data[key][indicator] ==  Poluente emitido) &
-                        # (data[key]['isic_12'] == setor)]
-    # plot_boxplot(base, y=indicator, number=number)
+    # key = 'poluentes_atm'
+    # indicator = 'quant_poluentes_emitidos'
+    # poluente_emitido = ['Material Particulado (MP)',
+    #                     'Monóxido de carbono (CO)',
+    #                     'Óxidos de nitrogênio (NOx)',
+    #                     'Óxidos de enxofre (SOx)']
+    # for poluente in poluente_emitido:
+    #     base = data[key][(data[key]['Poluente emitido'] == poluente) &
+    #                      (data[key]['isic_12'] == setor)]
+    #     plot_boxplot(base, y=poluente, number=number)
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
     regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
-    for key, indicator in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions' ]):
+    for key, indicator in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions']):
         for region in regions:
             base = data[key][(data[key][indicator] > minimum) &
                              (data[key]['region'] == region)]
-            plot_boxplot(base, y=indicator, number=number)
+            plot_boxplot(base, y=indicator, number=number, region=region)
             number += 1
 
     # grafico 15 TD - indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <100)
@@ -72,29 +90,34 @@ def gera_plots(data):
     base = data[key][(data[key][indicator] > min(value)) &
                      (data[key][indicator] < max(value))]
     plot_boxplot(base, y=indicator, number=number)
+    number += 1
 
     # grafico 16 TD - efluentes liquidos  acima de 9000 m3/h - nacional
     key = 'efluentes'
     indicator = 'quant_efluentes_liquidos'
     minimum = 9000
     year = 2010
-    base = data[key][(data[key][indicator] > minimum)
-    &(data[key]['isic_12'] == setor)&
-    (data[key]['ano'] > year)&(data[key]['region'] == region)]
+    # TODO FIX GRAPHS
+    base = data[key][(data[key][indicator] > minimum) &
+                     (data[key]['isic_12'] == setor) &
+                     (data[key]['ano'] > year) &
+                     (data[key]['region'] == region)]
     plot_boxplot(base, y=indicator, number=number)
     number += 1
-# análise da proporcionalidade da poluição por região
-# calculo da razão - somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
-regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
-for key, indicator in zip(['poluentes_atm', 'emissoes'], ['quant_poluentes_emitidos', 'co2_emissions' ]):
-    for region in regions:
-        somatorio_indicator = sum((region[key][indicator]))
-        #for key in base:
-            #represent_quantities(base, key, 'region', 'isic_12')
-            #quantidade_empresas = dados["region"]
-            #razao = somatorio_indicator / quantidade_empresas
-            #plot_boxplot(base, y=indicator, number=number)
-            #number += 1
+
+    # análise da proporcionalidade da poluição por região
+    # calculo da razão-somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
+    quantidade_empresas = count_unique_firms(data)
+    for key in data:
+        for indicador in indicadores:
+            if indicador in data[key]:
+                sum_indicador = data[key].groupby(by=['ano', 'region'])[indicador].agg('sum').reset_index()
+                quantidade_empresas[key]['razao'] = sum_indicador[indicador] / quantidade_empresas[key][0]
+                for region in regions:
+                    plot_boxplot(quantidade_empresas[key][quantidade_empresas[key]['region'] == region],
+                                 y='razao', number=number, region=region)
+                    number += 1
+
 
 if __name__ == '__main__':
     nome = 'base_final_isic'
