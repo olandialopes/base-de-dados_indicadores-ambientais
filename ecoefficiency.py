@@ -4,6 +4,13 @@ import seaborn as sns
 from base_adjustments_to_analyze import chaves
 
 
+def calcular_num_firms_region(base):
+    num_firms = dict()
+    for key in base:
+        num_firms[key] = base[key].groupby(by=['ano', 'region']).agg('size').reset_index()
+    return num_firms
+
+
 def indicators_boxplot(base):
     for key in base:
         for indicator in base[key]:
@@ -30,4 +37,4 @@ if __name__ == '__main__':
         b = pickle.load(handler)
 
     b2 = calcular_ecoficiencia_indicator(b)
-
+    n_firms = calcular_num_firms_region(b)

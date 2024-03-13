@@ -48,7 +48,8 @@ def gera_plots(data):
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
     regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
-    for key, indicator in zip(['poluentes_atm', 'emissoes'], ['quant_poluentes_emitidos', 'co2_emissions']):
+    for key, indicator in zip(['poluentes_atm', 'emissoes'],
+                              ['quant_poluentes_emitidos', 'co2_emissions']):
         for region in regions:
             base = data[key][(data[key][indicator] > minimum) &
                              (data[key]['region'] == region)]
