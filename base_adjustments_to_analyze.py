@@ -71,7 +71,7 @@ def adjust_units_residuos(base, key='residuos_solidos1'):
                          'Ton. por ano': 1,
                          }
     else:
-        conversao_ton = {'quilogramas': 1e-3, 'Litro': 0.001, 'Unidade': 1}
+        conversao_ton = {'kilogramas': 1e-3, 'Litro': 0.001, 'Unidade': 1}
 
     def adjust(row):
         try:
@@ -89,8 +89,7 @@ def adjust_units_energia(base):
     return base
 
 
-def represent_quantities(base, key, col1, col2):
-    pivot_table = base[key].pivot_table(index=col1, columns=col2, aggfunc='size', fill_value=0)
+def plot_quantities(pivot_table, key, col1, col2):
     plt.figure(figsize=(10, 8))
     sns.heatmap(pivot_table, annot=True, fmt='d', cmap='viridis', cbar_kws={'label': 'Count'})
     plt.title(f'Counts by {col1} and {col2}')
@@ -117,10 +116,11 @@ def indicators_boxplot(base):
                 plt.show()
 
 
-def counting_firms(base):
-    # Contar as empresas, por regiao, por regiao, por estado, por ano, # por município
+def plot_count_firms(base, col1='region', col2='isic_12'):
+    # Contar as empresas, por regiao, por estado, por ano, # por município
     for key in base:
-        represent_quantities(base, key, 'region', 'isic_12')
+        pivot_table = base[key].pivot_table(index=col1, columns=col2, aggfunc='size', fill_value=0)
+        plot_quantities(pivot_table, key, col1, col2)
 
 
 def main(base):
@@ -128,6 +128,7 @@ def main(base):
     base = no_conformity_indicators(base)
     base = add_regions(base)
     base = adjust_units_energia(base)
+    plot_count_firms(base)
     # base = calcular_ecoficiencia_indicator(base)
     indicators_boxplot(base)
     return base
