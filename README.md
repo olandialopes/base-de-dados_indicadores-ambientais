@@ -52,10 +52,10 @@ Organizado por Olandia Lopes, Valdex Santos e Bernardo Alves Furtado
 
 1. Com as bases no diretório original_data e a path indicada na variável **f0**, simplesmente run `python read_organize_databases.py`
 2. Os resultados são as cinco bases limpas, organizadas em um dicionário e uma lista de CNPJs e Anos
-3. Isso significa: mantendo as variáveis de interesse, com nomes harmonizaods e no formato correto.
+3. Isso significa: mantendo as variáveis de interesse, com nomes harmonizados e no formato correto.
 4. Na sequência as bases são unidas com os dados de massa salarial por meio do CNPJ em comum
 5. Por motivos de sigilo, a base da RAIS com a massa salarial não consta desse repositório
-6. Será disponibilizada apenas após as análises feitos e sua desidetificação
+6. Será disponibilizada apenas após as análises feitos e sua desidentificação
 7. A versão do python é 3.9 e a do ambiente pandas é 1.5.3;
 
 
