@@ -22,12 +22,12 @@ def count_unique_firms(base):
     return num_firms
 
 
-def plot_boxplot(data, x='ano', y='quant_tonelada', number=1, region=''):
+def plot_boxplot(data, x='ano', y='quant_tonelada', number=1, region='', setor='', poluente=''):
     sns.boxplot(data=data, x=x, y=y, whis=(0, 100))
-    plt.title(f'{x}_{y}_{region}'.capitalize())
+    plt.title(f'{x}_{y}_{region}_{setor}_{poluente}'.capitalize())
     plt.xticks(rotation=90)
     plt.tight_layout(pad=2.0)
-    plt.savefig(f'plots_td/boxplot_{number}.png')
+    plt.savefig(f'plots_td/boxplot_{number}_{region}_{setor}_{poluente}.png')
     plt.show()
     plt.close()
 
@@ -63,19 +63,24 @@ def gera_plots(data):
     number += 1
 
     # gráfico - teste para separar o tipo de poluente atmosférico:
-    # key = 'poluentes_atm'
-    # indicator = 'quant_poluentes_emitidos'
-    # poluente_emitido = ['Material Particulado (MP)',
-    #                     'Monóxido de carbono (CO)',
-    #                     'Óxidos de nitrogênio (NOx)',
-    #                     'Óxidos de enxofre (SOx)']
-    # for poluente in poluente_emitido:
-    #     base = data[key][(data[key]['Poluente emitido'] == poluente) &
-    #                      (data[key]['isic_12'] == setor)]
-    #     plot_boxplot(base, y=poluente, number=number)
+    regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
+    key = 'poluentes_atm'
+    indicator = 'quant_poluentes_emitidos'
+    poluente_emitido = ['Material Particulado (MP)',
+                        'Monóxido de carbono (CO)',
+                        'Óxidos de nitrogênio (NOx)',
+                        'Óxidos de enxofre (SOx)']
+    for region in regions:
+        for setor in data[key]['isic_12'].unique():
+            for poluente in poluente_emitido:
+                base = data[key][(data[key]['tipo_poluente'] == poluente) &
+                                 (data[key]['isic_12'] == setor) &
+                                 (data[key]['region'] == region)]
+                plot_boxplot(base, y=indicator, number=number, region=region, setor=setor, poluente=poluente)
+                number += 1
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
-    regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
+
     for key, indicator in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions']):
         for region in regions:
             base = data[key][(data[key][indicator] > minimum) &
@@ -97,7 +102,6 @@ def gera_plots(data):
     indicator = 'quant_efluentes_liquidos'
     minimum = 9000
     year = 2010
-    # TODO FIX GRAPHS
     base = data[key][(data[key][indicator] > minimum) &
                      (data[key]['isic_12'] == setor) &
                      (data[key]['ano'] > year) &
