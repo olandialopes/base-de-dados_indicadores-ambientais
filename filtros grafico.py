@@ -113,6 +113,8 @@ def gera_plots(data):
             if indicador in data[key]:
                 sum_indicador = data[key].groupby(by=['ano', 'region'])[indicador].agg('sum').reset_index()
                 quantidade_empresas[key]['razao'] = sum_indicador[indicador] / quantidade_empresas[key][0]
+                for this_key in quantidade_empresas:
+                    quantidade_empresas[this_key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)
                 for region in regions:
                     plot_boxplot(quantidade_empresas[key][quantidade_empresas[key]['region'] == region],
                                  y='razao', number=number, region=region)
