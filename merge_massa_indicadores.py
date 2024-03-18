@@ -35,7 +35,7 @@ def return_massa_cnae_base():
 
 
 def main(nome):
-    """ Faz junção bases limpas com cnaes e massa salarial
+    """ Faz junção bases limpas com cnae e massa salarial
     """
     massa = return_massa_cnae_base()
     with open(nome, 'rb') as handler:
@@ -43,7 +43,13 @@ def main(nome):
 
     for each in bases:
         bases[each] = pd.merge(massa, bases[each], on=['cnpj', 'ano'])
-        # DESIDENTIFICANDO A BASE
+        # Providing a unique unidentified ID
+        grouped = bases[each].groupby('cnpj')
+        # Step 2: Assign a unique ascending ID to each group
+        unique_ids = pd.Series(range(len(grouped)), index=grouped.groups.keys())
+        # Step 3: Merge the IDs back into the original DataFrame
+        bases[each]['ID'] = bases[each]['cnpj'].map(unique_ids)
+        # Desidentificando a base
         try:
             bases[each] = bases[each].drop(['cnpj', 'Latitude', 'Longitude'], axis=1)
         except KeyError:
