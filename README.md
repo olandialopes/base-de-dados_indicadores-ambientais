@@ -1,6 +1,9 @@
 
 # How to run
 
+0. Base utilizada: `bases_massa_desidentificada`
+1. Base gerada: `base_final_isic`
+
 1. Com as bases no diretório original_data e a path indicada na variável **f0**, simplesmente run 
 
 `python read_organize_databases.py`
@@ -13,11 +16,19 @@
 
 5. As tarefas estão presentes, mas a execução é restrita por motivos de sigilo. Com isso, a base da RAIS com a massa 
 salarial não consta desse repositório. Será disponibilizada apenas após sua desidentificação.
+6. Então a base é ajustada conforme os procedimentos listados na função main
 
+`python base_adjustments_to_analyze.py`
 
-7. A versão do python é 3.11 e a do ambiente pandas é 1.5.3;
+7. Finalmente, após filtros de interesse, os plots e figuras são gerados com 
 
-## TODO forma mais geral
+`python filtros_grafico.py`
+
+8. Alternativamente, é possível também o script `python ecofficiency.py`
+
+7. A versão do python é 3.11 e a do ambiente pandas é 1.5.3. Veja todas as bibliotecas necessárias em `environment.yml`
+
+## Tarefas de forma mais geral
 
 0. Todo: conferir Vitor 2906 com 4 dígitos
 1. TODO 1. Separar base emissões em emissões CO2 e energia consumida (análise descritiva)
@@ -34,7 +45,7 @@ salarial não consta desse repositório. Será disponibilizada apenas após sua 
 (análise por CNA/ano)?
 
 ## Avaliar os setores econômicos 
-![img_6.png](img_6.png)
+
 0. Avaliar se o os setores econômicos estão reduzindo a geração de GEE, conforme estabelecido ns compromissos do Brasil com os protocolos e COP referentes ao clima, bem como com a PNMC;
 1. Avaliar se os setores estão reduzindo a geração de resíduos conforme estabelecido pela PNRS;
 2. Avaliar se os municípios estão atendendo aos padrões estabelecidos pelas Resoluções do Conama em relação aos poluentes atmosféricos;
