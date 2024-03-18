@@ -9,7 +9,7 @@ import pickle
 # 1. A quantidade de efluentes líquidos da Base 1 está em m3/h
 # Consultar GUIA RAPP para detalhes sobre variáveis
 
-# Colunas a serem excluidas
+# Colunas a serem excluídas
 variaveis_excluidas = {'efluentes': [
     'Código da Categoria', 'Razão Social', 'Código do Detalhe', 'Desc. Monitoramento Utilizado',
     'Compart. Ambiental da Emissão', 'Tipo de Emissão', 'Tipo Corpo Receptor',
@@ -238,8 +238,7 @@ if __name__ == '__main__':
          'residuos_solidos2': 'residuos solidos_ibama_apartir2012.csv',
          'emissoes': 'relatorio_emissoes atmosfericas ibama.csv'}
 
-    # f0 = '../PS3/ambiental/original_data'
-    f0 = '../base-de-dados_indicadores-ambientais'
+    f0 = '../base-de-dados_indicadores-ambientais/original_data'
 
     b, cn = main(p0=f0, paths=p, to_exclude=variaveis_excluidas)
 
