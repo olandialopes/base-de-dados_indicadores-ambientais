@@ -56,16 +56,16 @@ def gera_plots(data):
 
     # Gráfico 4 TD - poluentes atmosféricos por setores econômicos acima de zero. Mesmas keys para regiões
     key = 'poluentes_atm'
-    indicator = 'quant_poluentes_emitidos'
+    indicador = 'quant_poluentes_emitidos'
     minimum = 0
-    base4 = data[key][(data[key][indicator] > minimum)]
-    plot_boxplot(base4, y=indicator, number=number)
+    base4 = data[key][(data[key][indicador] > minimum)]
+    plot_boxplot(base4, y=indicador, number=number)
     number += 1
 
     # gráfico - teste para separar o tipo de poluente atmosférico:
     regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
     key = 'poluentes_atm'
-    indicator = 'quant_poluentes_emitidos'
+    indicador = 'quant_poluentes_emitidos'
     poluente_emitido = ['Material Particulado (MP)',
                         'Monóxido de carbono (CO)',
                         'Óxidos de nitrogênio (NOx)',
@@ -76,38 +76,40 @@ def gera_plots(data):
                 base = data[key][(data[key]['tipo_poluente'] == poluente) &
                                  (data[key]['isic_12'] == setor) &
                                  (data[key]['region'] == region)]
-                plot_boxplot(base, y=indicator, number=number, region=region, setor=setor, poluente=poluente)
-                number += 1
+                if len(base) > 0:
+                    plot_boxplot(base, y=indicador, number=number, region=region, setor=setor, poluente=poluente)
+                    number += 1
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
 
-    for key, indicator in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions']):
+    for key, indicador in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions']):
         for region in regions:
-            base = data[key][(data[key][indicator] > minimum) &
+            base = data[key][(data[key][indicador] > minimum) &
                              (data[key]['region'] == region)]
-            plot_boxplot(base, y=indicator, number=number, region=region)
+            plot_boxplot(base, y=indicador, number=number, region=region)
             number += 1
 
     # grafico 15 TD - indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <100)
     key = 'efluentes'
-    indicator = 'perc_efficiency_treatment'
+    indicador = 'perc_efficiency_treatment'
     value = [0, 100]
-    base = data[key][(data[key][indicator] > min(value)) &
-                     (data[key][indicator] < max(value))]
-    plot_boxplot(base, y=indicator, number=number)
+    base = data[key][(data[key][indicador] > min(value)) &
+                     (data[key][indicador] < max(value))]
+    plot_boxplot(base, y=indicador, number=number)
     number += 1
 
     # grafico 16 TD - efluentes liquidos  acima de 9000 m3/h - nacional
     key = 'efluentes'
-    indicator = 'quant_efluentes_liquidos'
+    indicador = 'quant_efluentes_liquidos'
     minimum = 9000
     year = 2010
-    base = data[key][(data[key][indicator] > minimum) &
+    base = data[key][(data[key][indicador] > minimum) &
                      (data[key]['isic_12'] == setor) &
                      (data[key]['ano'] > year) &
                      (data[key]['region'] == region)]
-    plot_boxplot(base, y=indicator, number=number)
-    number += 1
+    if len(base) > 0:
+        plot_boxplot(base, y=indicador, number=number)
+        number += 1
 
     # análise da proporcionalidade da poluição por região
     # calculo da razão-somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
@@ -117,8 +119,7 @@ def gera_plots(data):
             if indicador in data[key]:
                 sum_indicador = data[key].groupby(by=['ano', 'region'])[indicador].agg('sum').reset_index()
                 quantidade_empresas[key]['razao'] = sum_indicador[indicador] / quantidade_empresas[key][0]
-                for this_key in quantidade_empresas:
-                    quantidade_empresas[this_key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)
+                quantidade_empresas[key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)
                 for region in regions:
                     plot_boxplot(quantidade_empresas[key][quantidade_empresas[key]['region'] == region],
                                  y='razao', number=number, region=region)

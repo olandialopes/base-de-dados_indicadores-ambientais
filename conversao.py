@@ -10,7 +10,8 @@ def convert(data):
     data['Quantidade'] = pd.to_numeric(data['Quantidade'], errors='coerce')
 
     # Criar uma nova coluna "Quantidade em Toneladas" com os valores convertidos
-    data['Quantidade em Toneladas'] = data.apply(lambda row: row['Quantidade'] * fatores_conversao[row['Unidade']], axis=1)
+    data['Quantidade em Toneladas'] = data.apply(lambda row: row['Quantidade'] * fatores_conversao[row['Unidade']],
+                                                 axis=1)
 
     # Salvar o DataFrame modificado de volta para um arquivo CSV
     data.to_csv('3-nova_base_convertida.csv', index=False)
