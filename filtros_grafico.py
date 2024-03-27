@@ -53,7 +53,8 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
                 title = 'Quantidade poluentes / Setores',
                 ylim_superior = 200, ylim_inferior = 1,
                 ylabel='Quantidade poluente (Mg)',
-                xlabel='Setores', pallete=color_palette):
+                xlabel='Setores', pallete=color_palette,
+                description=False):
     
     if region or poluente:
         title += '\n'
@@ -61,15 +62,29 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
         title += f'{region}'
     if poluente:
         title += f' - {poluente}'
-    
+
+    plt.figure(figsize=(10, 6))
     sns.boxplot(data=data, x=x, y=y, palette=pallete)
+
+    # Putting the info about median, mean, min and max values (if description variable is set).
+    if description:
+        media = data[y].mean()
+        mediana = data[y].median()
+        minimo = data[y].min()
+        maximo = data[y].max()
     
+        plt.axhline(y=media, color='grey', linestyle='--', label=f'Média: {media:.2f}')
+        plt.axhline(y=mediana, color='red', linestyle='--', label=f'Mediana: {mediana:.2f}')
+        plt.axhline(y=minimo, color='blue', linestyle='--', label=f'Mínimo: {minimo:.2f}')
+        plt.axhline(y=maximo, color='purple', linestyle='--', label=f'Máximo: {maximo:.2f}')
+        plt.legend(loc='best', bbox_to_anchor=(1,1))
+        
     plt.title(title)
     plt.ylim((ylim_inferior, ylim_superior))
     plt.ylabel(ylabel)
     plt.xlabel(xlabel)
     plt.xticks(rotation=45)
-    plt.tight_layout(pad=1.0)
+    plt.tight_layout(pad=2.0)
 
     title = f'boxplot_{number}'
 
@@ -81,7 +96,7 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
 
     # Made file path more flexible on different operational systems.
     plt.savefig(os.path.join('plots_td', title))
-#    plt.show()
+    #plt.show()
     plt.close()
 
 
@@ -114,9 +129,10 @@ def gera_plots(data):
     indicador = 'quant_poluentes_emitidos'
     minimum = 0
     base4 = data[key][(data[key][indicador] > minimum)]
+    print(base4[indicador])
     plot_boxplot(base4, y=indicador, number=number, 
                  title='Poluentes atmosféricos / Setores econômicos',
-                 ylim_superior=5000)
+                 ylim_superior=5000, description=True)
     number += 1
 
     # Gráfico - Teste para separar o tipo de poluente atmosférico:
@@ -134,7 +150,7 @@ def gera_plots(data):
             if len(base) > 0:
                 plot_boxplot(base, y=indicador, number=number,
                              region=region, poluente=poluente,
-                             ylim_superior=3500)
+                             ylim_superior=3500, description=True)
                 number += 1
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
@@ -146,10 +162,11 @@ def gera_plots(data):
             plot_boxplot(base, y=indicador,
                         number=number, region=region,
                         ylim_superior=30000,
-                        title='Poluentes atmosféricos / Setores econômicos')
+                        title='Poluentes atmosféricos / Setores econômicos',
+                        description=True)
             number += 1
 
-    # Gráfico 15 TD - Indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <100).
+    # Gráfico 15 TD - Indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <= 100).
     key = 'efluentes'
     indicador = 'perc_efficiency_treatment'
     value = [0, 100]
