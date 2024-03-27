@@ -54,7 +54,8 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
                 ylim_superior = 200, ylim_inferior = 1,
                 ylabel='Quantidade poluente (Mg)',
                 xlabel='Setores', pallete=color_palette,
-                description=False):
+                description=False, des_data: pd.DataFrame = None,
+                co2=''):
     
     if region or poluente:
         title += '\n'
@@ -78,6 +79,15 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
         plt.axhline(y=minimo, color='blue', linestyle='--', label=f'Mínimo: {minimo:.2f}')
         plt.axhline(y=maximo, color='purple', linestyle='--', label=f'Máximo: {maximo:.2f}')
         plt.legend(loc='best', bbox_to_anchor=(1,1))
+
+        plot_title = f'{region} {poluente} {co2}'.strip() if poluente or region else \
+                                                    'Nacional'
+        des_data = des_data.append({'box_plot': plot_title,
+                         'Média': media,
+                         'Mediana': mediana,
+                         'Mínimo': minimo,
+                         'Máximo': maximo
+                         }, ignore_index=True)
         
     plt.title(title)
     plt.ylim((ylim_inferior, ylim_superior))
@@ -98,10 +108,18 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
     plt.savefig(os.path.join('plots_td', title))
     #plt.show()
     plt.close()
+    return des_data
 
 
 def gera_plots(data):
     number = 1
+    
+    # Init dataframe to csv
+    csv_description = pd.DataFrame(columns=['box_plot',
+                                            'Média',
+                                            'Mediana',
+                                            'Máximo',
+                                            'Mínimo' ])
 
     # Gráfico 1 TD - Resíduos sólidos acima de 1 tonelada - setor realestate
     key = 'residuos_solidos2'
@@ -130,9 +148,9 @@ def gera_plots(data):
     minimum = 0
     base4 = data[key][(data[key][indicador] > minimum)]
     print(base4[indicador])
-    plot_boxplot(base4, y=indicador, number=number, 
+    csv_description = plot_boxplot(base4, y=indicador, number=number, 
                  title='Poluentes atmosféricos / Setores econômicos',
-                 ylim_superior=5000, description=True)
+                 ylim_superior=5000, description=True, des_data=csv_description)
     number += 1
 
     # Gráfico - Teste para separar o tipo de poluente atmosférico:
@@ -148,9 +166,10 @@ def gera_plots(data):
             base = data[key][(data[key]['tipo_poluente'] == poluente) &
                              (data[key]['region'] == region)]
             if len(base) > 0:
-                plot_boxplot(base, y=indicador, number=number,
+                csv_description = plot_boxplot(base, y=indicador, number=number,
                              region=region, poluente=poluente,
-                             ylim_superior=3500, description=True)
+                             ylim_superior=3500, description=True,
+                             des_data=csv_description)
                 number += 1
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
@@ -159,11 +178,12 @@ def gera_plots(data):
         for region in regions:
             base = data[key][(data[key][indicador] > minimum) &
                              (data[key]['region'] == region)]
-            plot_boxplot(base, y=indicador,
+            csv_description = plot_boxplot(base, y=indicador,
                         number=number, region=region,
                         ylim_superior=30000,
                         title='Poluentes atmosféricos / Setores econômicos',
-                        description=True)
+                        description=True, des_data=csv_description,
+                        co2=indicador)
             number += 1
 
     # Gráfico 15 TD - Indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <= 100).
@@ -210,6 +230,7 @@ def gera_plots(data):
                                 title='Indicador / Região', xlabel='Regiões')
                 number += 1
 
+    csv_description.to_csv('descritivos.csv')
 
 if __name__ == '__main__':
     nome = 'base_final_isic'

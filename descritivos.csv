@@ -1,0 +1,32 @@
+,box_plot,Média,Mediana,Máximo,Mínimo
+0,Nacional,4866.683931032799,110.0,99999.0,1.0
+1,Sudeste Material Particulado (MP),3297.576146651479,54.0,99850.0,0.0
+2,Sudeste Monóxido de carbono (CO),4783.73876106602,73.0,99000.0,0.0
+3,Sudeste Óxidos de nitrogênio (NOx),8321.774979186861,450.0,99394.0,0.0
+4,Sudeste Óxidos de enxofre (SOx),3397.0499423217498,58.43795,99963.0,0.0
+5,Norte Material Particulado (MP),2753.689382008182,70.0,98600.0,0.0
+6,Norte Monóxido de carbono (CO),5356.710705713647,100.0,98400.0,0.0
+7,Norte Óxidos de nitrogênio (NOx),6996.036290287631,100.0,97806.0,0.0
+8,Norte Óxidos de enxofre (SOx),3110.7132099261607,40.0,99800.0,0.0
+9,Sul Material Particulado (MP),2010.0172841333983,49.0,96360.0,0.0
+10,Sul Monóxido de carbono (CO),5897.663673133021,520.5,99416.0,0.0
+11,Sul Óxidos de nitrogênio (NOx),5206.082539214031,280.5,99830.0,0.0
+12,Sul Óxidos de enxofre (SOx),2263.1066443425966,37.0,99000.0,0.0
+13,Centro-oeste Material Particulado (MP),6446.588613919029,233.0,95107.0,0.0
+14,Centro-oeste Monóxido de carbono (CO),7923.5163133028445,197.5,99999.0,0.0
+15,Centro-oeste Óxidos de nitrogênio (NOx),8640.820619632696,663.0,98419.0,0.0
+16,Centro-oeste Óxidos de enxofre (SOx),2515.438971101928,13.0,97720.0,0.0
+17,Nordeste Material Particulado (MP),4781.803249701591,66.5,98500.0,0.0
+18,Nordeste Monóxido de carbono (CO),4714.667819985253,50.0,99395.0,0.0
+19,Nordeste Óxidos de nitrogênio (NOx),6918.412536368745,136.0,98848.0,0.0
+20,Nordeste Óxidos de enxofre (SOx),4738.18757325367,10.0,99854.0,0.0
+21,Sudeste  quant_poluentes_emitidos,4801.788355507572,100.0,99963.0,1.0
+22,Norte  quant_poluentes_emitidos,4648.356205063645,103.5,99800.0,1.0
+23,Sul  quant_poluentes_emitidos,3892.556683590816,134.0,99830.0,1.0
+24,Centro-oeste  quant_poluentes_emitidos,7292.356988693412,300.0,99999.0,1.0
+25,Nordeste  quant_poluentes_emitidos,5714.756302370924,90.0,99854.0,1.0
+26,Sudeste  co2_emissions,105977.67123491924,10996.0,999783.0,1.0
+27,Norte  co2_emissions,87990.48174678329,2677.0,997822.0,1.003717
+28,Sul  co2_emissions,117919.17993525875,15766.5,999443.0,1.0
+29,Centro-oeste  co2_emissions,128856.47865600041,18234.0,998082.0,1.007474
+30,Nordeste  co2_emissions,99662.54019508924,4352.0,997864.0,1.0
