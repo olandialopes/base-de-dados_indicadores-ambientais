@@ -8,6 +8,31 @@ import pickle
 import pandas as pd
 import os
 
+def description_per_sector(data: pd.DataFrame, csv_obj: pd.DataFrame):
+    regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
+    key = 'poluentes_atm'
+    indicador = 'quant_poluentes_emitidos'
+    poluente_emitido = ['Material Particulado (MP)',
+                        'Monóxido de carbono (CO)',
+                        'Óxidos de nitrogênio (NOx)',
+                        'Óxidos de enxofre (SOx)']
+    for region in regions:
+        for poluente in poluente_emitido:
+            for section in data[key]['isic_12'].unique():
+                if section:
+                    base = data[key][(data[key]['tipo_poluente'] == poluente) &
+                                    (data[key]['region'] == region) &
+                                    (data[key]['isic_12'] == section)]
+                    plot_title = f'{region} {poluente} {section}'
+                    csv_obj = csv_obj.append({'box_plot': plot_title,
+                            'Média': base[indicador].mean(),
+                            'Mediana': base[indicador].median(),
+                            'Mínimo': base[indicador].min(),
+                            'Máximo': base[indicador].max()
+                            }, ignore_index=True)
+    return csv_obj
+                
+
 # Colors to use on boxplots
 color_palette = {
     'Manufacturing': 'red',
@@ -111,16 +136,9 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
     return des_data
 
 
-def gera_plots(data):
+def gera_plots(data, csv_description=None):
     number = 1
     
-    # Init dataframe to csv
-    csv_description = pd.DataFrame(columns=['box_plot',
-                                            'Média',
-                                            'Mediana',
-                                            'Máximo',
-                                            'Mínimo' ])
-
     # Gráfico 1 TD - Resíduos sólidos acima de 1 tonelada - setor realestate
     key = 'residuos_solidos2'
     indicador = 'quant_tonelada'
@@ -230,11 +248,20 @@ def gera_plots(data):
                                 title='Indicador / Região', xlabel='Regiões')
                 number += 1
 
-    csv_description.to_csv('descritivos.csv')
+    return csv_description
 
 if __name__ == '__main__':
     nome = 'base_final_isic'
     with open(nome, 'rb') as handler:
         b = pickle.load(handler)
+    
+     # Init dataframe to csv
+    csv_description = pd.DataFrame(columns=['box_plot',
+                                            'Média',
+                                            'Mediana',
+                                            'Máximo',
+                                            'Mínimo' ])
 
-    gera_plots(b)
+    csv_description = gera_plots(b, csv_description=csv_description)
+    csv_description = description_per_sector(b, csv_description)
+    csv_description.to_csv('descritivos.csv')
