@@ -30,3 +30,243 @@
 28,Sul  co2_emissions,117919.17993525875,15766.5,999443.0,1.0
 29,Centro-oeste  co2_emissions,128856.47865600041,18234.0,998082.0,1.007474
 30,Nordeste  co2_emissions,99662.54019508924,4352.0,997864.0,1.0
+31,Sudeste Material Particulado (MP) Manufacturing,3368.799640737057,67.0,99850.0,0.0
+32,Sudeste Material Particulado (MP) Mining,2609.658887194818,20.0,98600.0,0.0
+33,Sudeste Material Particulado (MP) Trade,1592.5458355899418,10.0,96960.0,0.0
+34,Sudeste Material Particulado (MP) Transport,1230.524,11.0,55000.0,0.0
+35,Sudeste Material Particulado (MP) Construction,920.9208075736738,14.0,81752.0,0.0
+36,Sudeste Material Particulado (MP) Agriculture,4902.871451871345,109.0,90227.0,0.0
+37,Sudeste Material Particulado (MP) Government,1449.0408163265306,2.0,8400.0,0.0
+38,Sudeste Material Particulado (MP) Utilities,9221.425638127295,200.0,98962.0,0.0
+39,Sudeste Material Particulado (MP) OtherServices,1166.836496062992,58.0,26538.0,0.0
+40,Sudeste Material Particulado (MP) Business,2839.9865953055555,20.0,99580.0,0.0
+41,Sudeste Material Particulado (MP) Financial,1025.4736842105262,9.0,19200.0,1.0
+42,Sudeste Material Particulado (MP) RealEstate,,,,
+43,Sudeste Monóxido de carbono (CO) Manufacturing,4576.166131875587,67.0,99000.0,0.0
+44,Sudeste Monóxido de carbono (CO) Mining,6094.351630443351,95.0,92417.0,0.0
+45,Sudeste Monóxido de carbono (CO) Trade,1321.7404246723047,30.0,97259.0,0.0
+46,Sudeste Monóxido de carbono (CO) Transport,4570.55664117647,30.777,68100.0,0.0
+47,Sudeste Monóxido de carbono (CO) Construction,6315.453818297873,115.0,93500.0,0.0
+48,Sudeste Monóxido de carbono (CO) Agriculture,6634.195027977527,45.0,54627.0,0.0
+49,Sudeste Monóxido de carbono (CO) Government,6760.823529411765,4.0,55772.0,1.0
+50,Sudeste Monóxido de carbono (CO) Utilities,7614.390787274679,252.0,96600.0,0.0
+51,Sudeste Monóxido de carbono (CO) OtherServices,8044.348588636363,100.0,85229.0,0.0
+52,Sudeste Monóxido de carbono (CO) Business,4204.7027739000005,50.0,93983.0,0.0
+53,Sudeste Monóxido de carbono (CO) Financial,14.697872307692307,5.0,40.0,0.0
+54,Sudeste Monóxido de carbono (CO) RealEstate,140.0,140.0,140.0,140.0
+55,Sudeste Óxidos de nitrogênio (NOx) Manufacturing,7590.205430162885,474.5,99343.0,0.0
+56,Sudeste Óxidos de nitrogênio (NOx) Mining,12455.574817376,209.0,99394.0,0.0
+57,Sudeste Óxidos de nitrogênio (NOx) Trade,1175.4754328358208,43.5,40463.0,0.0
+58,Sudeste Óxidos de nitrogênio (NOx) Transport,633.375,47.0,13500.0,0.0
+59,Sudeste Óxidos de nitrogênio (NOx) Construction,6891.4159340659335,24.0,81432.0,0.0
+60,Sudeste Óxidos de nitrogênio (NOx) Agriculture,1120.5969387755101,177.0,33116.0,0.0
+61,Sudeste Óxidos de nitrogênio (NOx) Government,418.5,418.5,836.0,1.0
+62,Sudeste Óxidos de nitrogênio (NOx) Utilities,16226.911762460735,4651.0,97481.0,0.0
+63,Sudeste Óxidos de nitrogênio (NOx) OtherServices,12592.112599210528,153.5,99232.0,0.0
+64,Sudeste Óxidos de nitrogênio (NOx) Business,11027.131643793104,499.0,89193.0,0.0
+65,Sudeste Óxidos de nitrogênio (NOx) Financial,3138.3333333333335,145.0,18100.0,130.0
+66,Sudeste Óxidos de nitrogênio (NOx) RealEstate,,,,
+67,Sudeste Óxidos de enxofre (SOx) Manufacturing,3359.255082154321,61.0,98460.0,0.0
+68,Sudeste Óxidos de enxofre (SOx) Mining,5198.753293656958,176.5,99963.0,0.0
+69,Sudeste Óxidos de enxofre (SOx) Trade,92.59433962264151,1.5,2608.0,0.0
+70,Sudeste Óxidos de enxofre (SOx) Transport,106.16666666666667,8.0,1200.0,0.0
+71,Sudeste Óxidos de enxofre (SOx) Construction,2675.900900900901,22.0,56544.0,0.0
+72,Sudeste Óxidos de enxofre (SOx) Agriculture,73.75175,12.5,764.0,0.0
+73,Sudeste Óxidos de enxofre (SOx) Government,0.8,1.0,1.0,0.0
+74,Sudeste Óxidos de enxofre (SOx) Utilities,2677.1714621513943,16.0,90172.0,0.0
+75,Sudeste Óxidos de enxofre (SOx) OtherServices,1858.5588235294117,356.5,14704.0,0.0
+76,Sudeste Óxidos de enxofre (SOx) Business,2287.046502330097,35.0,68455.0,0.0
+77,Sudeste Óxidos de enxofre (SOx) Financial,206.0,210.0,230.0,170.0
+78,Sudeste Óxidos de enxofre (SOx) RealEstate,,,,
+79,Norte Material Particulado (MP) Manufacturing,2681.2045026215023,80.0,98600.0,0.0
+80,Norte Material Particulado (MP) Mining,3610.31676968254,100.0,83000.0,0.0
+81,Norte Material Particulado (MP) Trade,627.5514018691589,16.0,20600.0,0.0
+82,Norte Material Particulado (MP) Transport,40.1,28.0,147.0,2.0
+83,Norte Material Particulado (MP) Construction,129.52589049382715,2.72039,3310.0,0.0
+84,Norte Material Particulado (MP) Agriculture,6555.1333766233765,300.0,30115.0,0.0
+85,Norte Material Particulado (MP) Government,0.67459,0.0,2.69836,0.0
+86,Norte Material Particulado (MP) Utilities,3729.2563552272723,182.5,38775.0,0.0
+87,Norte Material Particulado (MP) OtherServices,26.0,26.0,50.0,2.0
+88,Norte Material Particulado (MP) Business,2461.737011521739,42.0,57073.0,0.0
+89,Norte Material Particulado (MP) Financial,,,,
+90,Norte Material Particulado (MP) RealEstate,36175.0,36175.0,72000.0,350.0
+91,Norte Monóxido de carbono (CO) Manufacturing,5493.0842468381925,100.0,98400.0,0.0
+92,Norte Monóxido de carbono (CO) Mining,7857.849255473685,50.0,80000.0,0.0
+93,Norte Monóxido de carbono (CO) Trade,2101.8391451136363,50.0,52513.0,0.0
+94,Norte Monóxido de carbono (CO) Transport,1384.3474999999999,5.5,10900.0,1.0
+95,Norte Monóxido de carbono (CO) Construction,8005.846017333333,100.0,53662.0,1.0
+96,Norte Monóxido de carbono (CO) Agriculture,3192.9717233333336,45.0,20700.0,1.0
+97,Norte Monóxido de carbono (CO) Government,10.0,10.0,10.0,10.0
+98,Norte Monóxido de carbono (CO) Utilities,4903.909589459459,70.05325,67500.0,0.0
+99,Norte Monóxido de carbono (CO) OtherServices,2.0,2.0,2.0,2.0
+100,Norte Monóxido de carbono (CO) Business,2436.197796521739,42.0,15300.0,0.0
+101,Norte Monóxido de carbono (CO) Financial,,,,
+102,Norte Monóxido de carbono (CO) RealEstate,,,,
+103,Norte Óxidos de nitrogênio (NOx) Manufacturing,6722.411927555555,97.0,97806.0,0.0
+104,Norte Óxidos de nitrogênio (NOx) Mining,11603.340683387094,157.0,88604.0,0.0
+105,Norte Óxidos de nitrogênio (NOx) Trade,1456.7692307692307,110.0,17500.0,0.0
+106,Norte Óxidos de nitrogênio (NOx) Transport,45.0,27.0,107.0,6.0
+107,Norte Óxidos de nitrogênio (NOx) Construction,22409.17391304348,941.0,85767.0,0.0
+108,Norte Óxidos de nitrogênio (NOx) Agriculture,4598.388888888889,4560.0,14506.0,0.0
+109,Norte Óxidos de nitrogênio (NOx) Government,5.0,5.0,5.0,5.0
+110,Norte Óxidos de nitrogênio (NOx) Utilities,5434.980917058823,329.0,80684.0,0.0
+111,Norte Óxidos de nitrogênio (NOx) OtherServices,,,,
+112,Norte Óxidos de nitrogênio (NOx) Business,7221.917842380951,42.0,91744.0,1.72574
+113,Norte Óxidos de nitrogênio (NOx) Financial,,,,
+114,Norte Óxidos de nitrogênio (NOx) RealEstate,,,,
+115,Norte Óxidos de enxofre (SOx) Manufacturing,2845.1961220520234,30.0,99800.0,0.0
+116,Norte Óxidos de enxofre (SOx) Mining,3084.870842580645,588.0,53296.0,0.0
+117,Norte Óxidos de enxofre (SOx) Trade,153.65217391304347,31.0,972.0,0.0
+118,Norte Óxidos de enxofre (SOx) Transport,15.285714285714286,9.0,46.0,3.0
+119,Norte Óxidos de enxofre (SOx) Construction,1578.596211,98.0,11753.0,0.0
+120,Norte Óxidos de enxofre (SOx) Agriculture,925.6923076923077,300.0,6322.0,0.0
+121,Norte Óxidos de enxofre (SOx) Government,16.88835,16.88835,16.88835,16.88835
+122,Norte Óxidos de enxofre (SOx) Utilities,5958.397093697478,510.0,93061.0,0.0
+123,Norte Óxidos de enxofre (SOx) OtherServices,,,,
+124,Norte Óxidos de enxofre (SOx) Business,2413.800485,383.5,14842.0,0.0
+125,Norte Óxidos de enxofre (SOx) Financial,,,,
+126,Norte Óxidos de enxofre (SOx) RealEstate,,,,
+127,Sul Material Particulado (MP) Manufacturing,2175.285173619495,56.0,93247.0,0.0
+128,Sul Material Particulado (MP) Mining,1863.9997016260163,66.5,96360.0,0.0
+129,Sul Material Particulado (MP) Trade,444.8959595959596,20.0,52898.0,0.0
+130,Sul Material Particulado (MP) Transport,1271.8154761904761,50.0,24920.0,0.0
+131,Sul Material Particulado (MP) Construction,338.39073634204277,2.0,50000.0,0.0
+132,Sul Material Particulado (MP) Agriculture,4838.2975,299.0,86000.0,0.0
+133,Sul Material Particulado (MP) Government,505.34386777777786,20.0,5000.0,0.0
+134,Sul Material Particulado (MP) Utilities,2536.8606502666667,23.5,90400.0,0.0
+135,Sul Material Particulado (MP) OtherServices,727.5186287878787,39.0,50000.0,0.0
+136,Sul Material Particulado (MP) Business,760.995,5.25,10000.0,0.0
+137,Sul Material Particulado (MP) Financial,1700.3333333333333,70.0,14900.0,0.0
+138,Sul Material Particulado (MP) RealEstate,511.3333333333333,97.0,1437.0,0.0
+139,Sul Monóxido de carbono (CO) Manufacturing,5782.863699656703,582.5,99416.0,0.0
+140,Sul Monóxido de carbono (CO) Mining,12435.230371004785,600.0,96120.0,0.0
+141,Sul Monóxido de carbono (CO) Trade,3097.3580592913386,100.0,99316.0,0.0
+142,Sul Monóxido de carbono (CO) Transport,2967.754667738095,573.5,25000.0,0.0
+143,Sul Monóxido de carbono (CO) Construction,7559.5967238095245,77.0,98200.0,0.0
+144,Sul Monóxido de carbono (CO) Agriculture,13784.819490060605,2437.0,96935.0,0.0
+145,Sul Monóxido de carbono (CO) Government,,,,
+146,Sul Monóxido de carbono (CO) Utilities,4103.723533095238,100.0,74400.0,0.0
+147,Sul Monóxido de carbono (CO) OtherServices,5936.308319589042,564.0,88300.0,1.0
+148,Sul Monóxido de carbono (CO) Business,4264.913793103448,32.0,68400.0,0.0
+149,Sul Monóxido de carbono (CO) Financial,9375.333333333334,2321.0,25700.0,105.0
+150,Sul Monóxido de carbono (CO) RealEstate,0.0,0.0,0.0,0.0
+151,Sul Óxidos de nitrogênio (NOx) Manufacturing,5262.686028061785,310.0,99830.0,0.0
+152,Sul Óxidos de nitrogênio (NOx) Mining,6556.307692307692,234.0,35787.0,0.0
+153,Sul Óxidos de nitrogênio (NOx) Trade,1062.352603508772,26.0,17428.0,0.0
+154,Sul Óxidos de nitrogênio (NOx) Transport,2166.5384615384614,230.0,15879.0,19.0
+155,Sul Óxidos de nitrogênio (NOx) Construction,680.0833333333334,47.0,8500.0,0.0
+156,Sul Óxidos de nitrogênio (NOx) Agriculture,7024.205876521738,2031.0,59254.0,0.0
+157,Sul Óxidos de nitrogênio (NOx) Government,56.8125,6.5,225.0,0.0
+158,Sul Óxidos de nitrogênio (NOx) Utilities,8439.172199548873,46.0,69101.0,0.0
+159,Sul Óxidos de nitrogênio (NOx) OtherServices,2845.3333333333335,32.0,28364.0,3.0
+160,Sul Óxidos de nitrogênio (NOx) Business,716.3125,3.0,5000.0,0.0
+161,Sul Óxidos de nitrogênio (NOx) Financial,20980.5,20980.5,40800.0,1161.0
+162,Sul Óxidos de nitrogênio (NOx) RealEstate,,,,
+163,Sul Óxidos de enxofre (SOx) Manufacturing,2341.7562449201596,41.5,99000.0,0.0
+164,Sul Óxidos de enxofre (SOx) Mining,2987.5692307692307,200.0,37573.0,0.0
+165,Sul Óxidos de enxofre (SOx) Trade,529.9746835443038,2.0,21120.0,0.0
+166,Sul Óxidos de enxofre (SOx) Transport,1090.0,38.5,9483.0,0.0
+167,Sul Óxidos de enxofre (SOx) Construction,946.4347826086956,23.5,36568.0,0.0
+168,Sul Óxidos de enxofre (SOx) Agriculture,2575.771419354839,30.0,50896.0,0.0
+169,Sul Óxidos de enxofre (SOx) Government,38.0,15.5,275.0,0.0
+170,Sul Óxidos de enxofre (SOx) Utilities,2872.481071229508,38.028999999999996,56425.0,0.0
+171,Sul Óxidos de enxofre (SOx) OtherServices,72.11111111111111,64.0,316.0,0.0
+172,Sul Óxidos de enxofre (SOx) Business,1748.6470588235295,1.0,28727.0,0.0
+173,Sul Óxidos de enxofre (SOx) Financial,,,,
+174,Sul Óxidos de enxofre (SOx) RealEstate,,,,
+175,Centro-oeste Material Particulado (MP) Manufacturing,7327.09666784495,389.0,95102.0,0.0
+176,Centro-oeste Material Particulado (MP) Mining,3587.7778846583847,50.0,85151.0,0.0
+177,Centro-oeste Material Particulado (MP) Trade,932.1379127826086,10.0,35145.0,0.0
+178,Centro-oeste Material Particulado (MP) Transport,511.84,1.0,5808.0,0.0
+179,Centro-oeste Material Particulado (MP) Construction,1669.3813559322034,27.0,35424.0,0.0
+180,Centro-oeste Material Particulado (MP) Agriculture,9921.810534193548,3853.5,64842.0,0.0
+181,Centro-oeste Material Particulado (MP) Government,,,,
+182,Centro-oeste Material Particulado (MP) Utilities,8059.1081149090915,76.33075,95107.0,0.0
+183,Centro-oeste Material Particulado (MP) OtherServices,1.0,1.0,1.0,1.0
+184,Centro-oeste Material Particulado (MP) Business,2732.5,18.0,61516.0,0.0
+185,Centro-oeste Material Particulado (MP) Financial,200.0,200.0,200.0,200.0
+186,Centro-oeste Material Particulado (MP) RealEstate,,,,
+187,Centro-oeste Monóxido de carbono (CO) Manufacturing,8391.821337833655,277.31132,99999.0,0.0
+188,Centro-oeste Monóxido de carbono (CO) Mining,7620.23193818182,8.048,81303.0,0.0
+189,Centro-oeste Monóxido de carbono (CO) Trade,7068.13129659091,184.5,65015.0,0.0
+190,Centro-oeste Monóxido de carbono (CO) Transport,2947.3954,100.0,20000.0,0.0
+191,Centro-oeste Monóxido de carbono (CO) Construction,3610.3779517460316,262.0,56000.0,0.0
+192,Centro-oeste Monóxido de carbono (CO) Agriculture,10113.117647058823,3770.0,32000.0,0.0
+193,Centro-oeste Monóxido de carbono (CO) Government,,,,
+194,Centro-oeste Monóxido de carbono (CO) Utilities,5377.284779230768,50.0,52317.0,0.0
+195,Centro-oeste Monóxido de carbono (CO) OtherServices,91.0,91.0,104.0,78.0
+196,Centro-oeste Monóxido de carbono (CO) Business,9437.380056176471,10.216705000000001,85303.0,0.0
+197,Centro-oeste Monóxido de carbono (CO) Financial,,,,
+198,Centro-oeste Monóxido de carbono (CO) RealEstate,,,,
+199,Centro-oeste Óxidos de nitrogênio (NOx) Manufacturing,8995.316998396756,962.4573,98419.0,0.0
+200,Centro-oeste Óxidos de nitrogênio (NOx) Mining,2502.6687703409093,4.0,47600.0,0.0
+201,Centro-oeste Óxidos de nitrogênio (NOx) Trade,225.2962962962963,1.0,3975.0,0.0
+202,Centro-oeste Óxidos de nitrogênio (NOx) Transport,3693.6666666666665,61.0,21060.0,3.0
+203,Centro-oeste Óxidos de nitrogênio (NOx) Construction,3385.3662620689656,41.0,37800.0,0.0
+204,Centro-oeste Óxidos de nitrogênio (NOx) Agriculture,20847.424242424244,9702.0,89626.0,0.0
+205,Centro-oeste Óxidos de nitrogênio (NOx) Government,,,,
+206,Centro-oeste Óxidos de nitrogênio (NOx) Utilities,11741.355126250002,162.489505,76962.0,0.0
+207,Centro-oeste Óxidos de nitrogênio (NOx) OtherServices,,,,
+208,Centro-oeste Óxidos de nitrogênio (NOx) Business,1056.6782822727273,1.0,23039.0,0.0
+209,Centro-oeste Óxidos de nitrogênio (NOx) Financial,,,,
+210,Centro-oeste Óxidos de nitrogênio (NOx) RealEstate,,,,
+211,Centro-oeste Óxidos de enxofre (SOx) Manufacturing,2793.001509297619,21.0,97720.0,0.0
+212,Centro-oeste Óxidos de enxofre (SOx) Mining,900.3705314634147,1.0,27873.0,0.0
+213,Centro-oeste Óxidos de enxofre (SOx) Trade,265.1,1.0,5290.0,0.0
+214,Centro-oeste Óxidos de enxofre (SOx) Transport,28.0,7.0,76.0,1.0
+215,Centro-oeste Óxidos de enxofre (SOx) Construction,4856.578399999999,14.0,29400.0,0.0
+216,Centro-oeste Óxidos de enxofre (SOx) Agriculture,41.5,6.5,190.0,0.0
+217,Centro-oeste Óxidos de enxofre (SOx) Government,,,,
+218,Centro-oeste Óxidos de enxofre (SOx) Utilities,423.841918,29.0,17925.0,0.0
+219,Centro-oeste Óxidos de enxofre (SOx) OtherServices,,,,
+220,Centro-oeste Óxidos de enxofre (SOx) Business,584.480916875,1.0,9294.0,0.0
+221,Centro-oeste Óxidos de enxofre (SOx) Financial,,,,
+222,Centro-oeste Óxidos de enxofre (SOx) RealEstate,,,,
+223,Nordeste Material Particulado (MP) Manufacturing,5441.569844734387,90.0,98359.0,0.0
+224,Nordeste Material Particulado (MP) Mining,1747.332861368268,50.0,98500.0,0.0
+225,Nordeste Material Particulado (MP) Trade,2245.036940835821,6.0,95040.0,0.0
+226,Nordeste Material Particulado (MP) Transport,1182.533375,45.0,7892.0,0.0
+227,Nordeste Material Particulado (MP) Construction,776.0813008130082,2.0,80000.0,0.0
+228,Nordeste Material Particulado (MP) Agriculture,4603.048887692307,51.5,49248.0,1.0
+229,Nordeste Material Particulado (MP) Government,18723.0,15.5,74850.0,11.0
+230,Nordeste Material Particulado (MP) Utilities,7220.606826334231,127.0,93427.0,0.0
+231,Nordeste Material Particulado (MP) OtherServices,1865.4336848672565,10.0,30031.0,0.0
+232,Nordeste Material Particulado (MP) Business,1628.279998425926,49.5,56376.0,0.0
+233,Nordeste Material Particulado (MP) Financial,38025.822,29400.964,93300.0,1.36
+234,Nordeste Material Particulado (MP) RealEstate,,,,
+235,Nordeste Monóxido de carbono (CO) Manufacturing,4172.474597696408,44.0,99140.0,0.0
+236,Nordeste Monóxido de carbono (CO) Mining,6282.675597577855,176.0,83370.0,0.0
+237,Nordeste Monóxido de carbono (CO) Trade,4235.880816158537,46.5,50000.0,0.0
+238,Nordeste Monóxido de carbono (CO) Transport,2264.338323529412,80.0,30000.0,0.0
+239,Nordeste Monóxido de carbono (CO) Construction,5740.617261333333,50.0,91694.0,0.0
+240,Nordeste Monóxido de carbono (CO) Agriculture,5010.142968059702,60.0,99395.0,1.0
+241,Nordeste Monóxido de carbono (CO) Government,,,,
+242,Nordeste Monóxido de carbono (CO) Utilities,10712.464522034383,97.0,90175.0,0.0
+243,Nordeste Monóxido de carbono (CO) OtherServices,107.23660292307692,11.0,700.0,0.0
+244,Nordeste Monóxido de carbono (CO) Business,8434.159062857143,237.5,86722.0,0.0
+245,Nordeste Monóxido de carbono (CO) Financial,3.6769999999999996,3.5065,5.897,1.798
+246,Nordeste Monóxido de carbono (CO) RealEstate,6.5,6.5,13.0,0.0
+247,Nordeste Óxidos de nitrogênio (NOx) Manufacturing,6222.590685781662,140.0,97490.0,0.0
+248,Nordeste Óxidos de nitrogênio (NOx) Mining,10418.50737378788,290.5,97504.0,0.0
+249,Nordeste Óxidos de nitrogênio (NOx) Trade,2569.861541746032,44.0,47376.0,0.0
+250,Nordeste Óxidos de nitrogênio (NOx) Transport,7303.117647058823,2.0,53300.0,0.0
+251,Nordeste Óxidos de nitrogênio (NOx) Construction,544.8181818181819,105.0,2500.0,1.0
+252,Nordeste Óxidos de nitrogênio (NOx) Agriculture,8523.92857142857,243.0,72564.0,1.0
+253,Nordeste Óxidos de nitrogênio (NOx) Government,140.0,135.0,179.0,106.0
+254,Nordeste Óxidos de nitrogênio (NOx) Utilities,12300.731684954406,70.0,98848.0,0.0
+255,Nordeste Óxidos de nitrogênio (NOx) OtherServices,391.1343283333333,62.0,1574.0,0.0
+256,Nordeste Óxidos de nitrogênio (NOx) Business,11291.824904000001,538.5,72576.0,0.0
+257,Nordeste Óxidos de nitrogênio (NOx) Financial,17.0835,16.2915,27.397,8.354
+258,Nordeste Óxidos de nitrogênio (NOx) RealEstate,400.0,400.0,400.0,400.0
+259,Nordeste Óxidos de enxofre (SOx) Manufacturing,4872.383547503228,10.0,99854.0,0.0
+260,Nordeste Óxidos de enxofre (SOx) Mining,5635.266242081219,15.0,98042.0,0.0
+261,Nordeste Óxidos de enxofre (SOx) Trade,1814.4411757142855,8.7107,44064.0,0.0
+262,Nordeste Óxidos de enxofre (SOx) Transport,2461.4,2.0,24800.0,0.0
+263,Nordeste Óxidos de enxofre (SOx) Construction,111.35714285714286,8.5,718.0,0.0
+264,Nordeste Óxidos de enxofre (SOx) Agriculture,10289.083333333334,459.0,88128.0,0.0
+265,Nordeste Óxidos de enxofre (SOx) Government,1000.3333333333334,965.0,1280.0,756.0
+266,Nordeste Óxidos de enxofre (SOx) Utilities,4380.296423254902,8.725,98521.0,0.0
+267,Nordeste Óxidos de enxofre (SOx) OtherServices,42.951812000000004,44.9645,78.0,0.0
+268,Nordeste Óxidos de enxofre (SOx) Business,454.2061862068966,9.0,8900.0,0.0
+269,Nordeste Óxidos de enxofre (SOx) Financial,2.7730000000000006,2.6445,4.447,1.356
+270,Nordeste Óxidos de enxofre (SOx) RealEstate,40.0,40.0,40.0,40.0
