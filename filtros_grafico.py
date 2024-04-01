@@ -22,14 +22,20 @@ def description_per_sector(data: pd.DataFrame, csv_obj: pd.DataFrame):
                 if section:
                     base = data[key][(data[key]['tipo_poluente'] == poluente) &
                                     (data[key]['region'] == region) &
-                                    (data[key]['isic_12'] == section)]
+                                    (data[key]['isic_12'] == section) &
+                                    (data[key][indicador] > 0)]
                     plot_title = f'{region} {poluente} {section}'
-                    csv_obj = csv_obj.append({'box_plot': plot_title,
-                            'Média': base[indicador].mean(),
-                            'Mediana': base[indicador].median(),
-                            'Mínimo': base[indicador].min(),
-                            'Máximo': base[indicador].max()
-                            }, ignore_index=True)
+                    media = base[indicador].mean()
+                    mediana = base[indicador].median()
+                    min = base[indicador].min()
+                    max = base[indicador].max()
+                    if media and mediana and min and max:
+                        csv_obj = csv_obj.append({'box_plot': plot_title,
+                                'Média': base[indicador].mean(),
+                                'Mediana': base[indicador].median(),
+                                'Mínimo': base[indicador].min(),
+                                'Máximo': base[indicador].max()
+                                }, ignore_index=True)
     return csv_obj
                 
 
@@ -163,7 +169,7 @@ def gera_plots(data, csv_description=None):
     # Gráfico 4 TD - Poluentes atmosféricos por setores econômicos acima de zero. Mesmas keys para regiões
     key = 'poluentes_atm'
     indicador = 'quant_poluentes_emitidos'
-    minimum = 0
+    minimum = 1
     base4 = data[key][(data[key][indicador] > minimum)]
     print(base4[indicador])
     csv_description = plot_boxplot(base4, y=indicador, number=number, 
@@ -182,7 +188,8 @@ def gera_plots(data, csv_description=None):
     for region in regions:
         for poluente in poluente_emitido:
             base = data[key][(data[key]['tipo_poluente'] == poluente) &
-                             (data[key]['region'] == region)]
+                             (data[key]['region'] == region) &
+                             (data[key][indicador] > minimum)]
             if len(base) > 0:
                 csv_description = plot_boxplot(base, y=indicador, number=number,
                              region=region, poluente=poluente,
@@ -209,7 +216,7 @@ def gera_plots(data, csv_description=None):
     indicador = 'perc_efficiency_treatment'
     value = [0, 100]
     base = data[key][(data[key][indicador] > min(value)) &
-                     (data[key][indicador] < max(value))]
+                     (data[key][indicador] <= max(value))]
     plot_boxplot(base, y=indicador, number=number,
                  ylim_inferior=1, ylim_superior=100,
                  title='Indicador eficiência efluentes / Setor',
@@ -264,4 +271,5 @@ if __name__ == '__main__':
 
     csv_description = gera_plots(b, csv_description=csv_description)
     csv_description = description_per_sector(b, csv_description)
+    csv_description = csv_description.dropna().reset_index(drop=True)
     csv_description.to_csv('descritivos.csv')
