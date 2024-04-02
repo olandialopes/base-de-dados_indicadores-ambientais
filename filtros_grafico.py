@@ -218,7 +218,7 @@ def gera_plots(data, csv_description=None):
                 title_base = 'Emissão de CO2' 
             csv_description = plot_boxplot(base, y=indicador,
                         number=number, region=region,
-                        ylim_superior=30000,
+                        ylim_superior=base[indicador].mean(),
                         title=f'{title_base} / Setores econômicos',
                         description=True, des_data=csv_description,
                         ylabel='Quantidade poluente emitido',
