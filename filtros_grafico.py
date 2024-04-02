@@ -154,7 +154,9 @@ def gera_plots(data, csv_description=None):
     year = 2011
     base1 = data[key][(data[key][indicador] > minimum) &
                       (data[key]['ano'] > year)]
-    plot_boxplot(base1, y=indicador, number=number, co2='Nacional')
+    plot_boxplot(base1, y=indicador, number=number, co2='Nacional',
+                 ylabel='Resíduos sólidos (Mg)',
+                 title='Resíduos sólidos / Setores econômicos')
     number += 1
     #########################################################################
 
@@ -164,8 +166,10 @@ def gera_plots(data, csv_description=None):
     base2 = data[key][(data[key][indicador] > minimum)]
     base2 = base2[(base2['isic_12'] == 'Transport') | (base2['isic_12'] == 'Trade')]
     plot_boxplot(base2, y=indicador, number=number,
-                 ylim_inferior=40000, ylim_superior=1000000,
-                 co2='Nacional')
+                 ylim_inferior=minimum, ylim_superior=1000000,
+                 co2='Nacional',
+                 ylabel='Resíduos sólidos (Mg)',
+                 title='Resíduos sólidos / Setores econômicos')
     number += 1
 
     #########################################################################
@@ -179,7 +183,7 @@ def gera_plots(data, csv_description=None):
     csv_description = plot_boxplot(base4, y=indicador, number=number, 
                  title='Poluentes atmosféricos / Setores econômicos',
                  ylim_superior=5000, description=True, des_data=csv_description,
-                 co2='Nacional')
+                 co2='Nacional', ylabel='Quantidade poluentes emitidos')
     number += 1
 
     # Gráfico - Teste para separar o tipo de poluente atmosférico:
@@ -199,7 +203,7 @@ def gera_plots(data, csv_description=None):
                 csv_description = plot_boxplot(base, y=indicador, number=number,
                              region=region, poluente=poluente,
                              ylim_superior=3500, description=True,
-                             des_data=csv_description)
+                             des_data=csv_description, ylabel='Quantidade poluentes emitidos')
                 number += 1
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
@@ -213,6 +217,7 @@ def gera_plots(data, csv_description=None):
                         ylim_superior=30000,
                         title='Poluentes atmosféricos / Setores econômicos',
                         description=True, des_data=csv_description,
+                        ylabel='Quantidade poluente emitido',
                         co2=indicador)
             number += 1
 
@@ -225,7 +230,7 @@ def gera_plots(data, csv_description=None):
     plot_boxplot(base, y=indicador, number=number,
                  ylim_inferior=1, ylim_superior=100,
                  title='Indicador eficiência efluentes / Setor',
-                 ylabel='Indicador eficiência efluentes (0 < valor < 100)',
+                 ylabel='Indicador eficiência efluentes (0 < valor <= 100)',
                  region=' ',
                  co2=indicador)
     number += 1
