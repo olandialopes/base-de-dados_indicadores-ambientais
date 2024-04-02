@@ -182,8 +182,8 @@ def gera_plots(data, csv_description=None):
     print(base4[indicador])
     csv_description = plot_boxplot(base4, y=indicador, number=number, 
                  title='Poluentes atmosféricos / Setores econômicos',
-                 ylim_superior=5000, description=True, des_data=csv_description,
-                 co2='Nacional', ylabel='Quantidade poluentes emitidos')
+                 ylim_superior=base4[indicador].mean(), description=True, des_data=csv_description,
+                 co2='Nacional', ylabel='Quantidade poluente emitido')
     number += 1
 
     # Gráfico - Teste para separar o tipo de poluente atmosférico:
@@ -202,8 +202,8 @@ def gera_plots(data, csv_description=None):
             if len(base) > 0:
                 csv_description = plot_boxplot(base, y=indicador, number=number,
                              region=region, poluente=poluente,
-                             ylim_superior=3500, description=True,
-                             des_data=csv_description, ylabel='Quantidade poluentes emitidos')
+                             ylim_superior=base[indicador].mean(), description=True,
+                             des_data=csv_description, ylabel='Quantidade poluente emitido')
                 number += 1
 
     # Gráfico 5 a 9 e 10 a 14 TD - poluentes atmosféricos por setores econômicos e por região (valores acima de zero)
@@ -263,8 +263,8 @@ def gera_plots(data, csv_description=None):
                 quantidade_empresas[key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)
                 
                 plot_boxplot(quantidade_empresas[key],
-                                y='razao', number=number, ylabel='Indicador por região',
-                                x='region', pallete=color_region, ylim_inferior=200, ylim_superior=150000,
+                                y='razao', number=number, ylabel='Razão',
+                                x='region', pallete=color_region, ylim_inferior=200, ylim_superior=quantidade_empresas[key]['razao'].mean(),
                                 title='Indicador / Região', xlabel='Regiões', co2=indicador)
                 number += 1
 
