@@ -286,15 +286,40 @@ def gera_plots(data, csv_description=None):
     indicador = 'quant_efluentes_liquidos'
     minimum = 9000
     year = 2010
-    base = data[key][(data[key][indicador] > minimum) &
-                     (data[key]['ano'] > year)]
+    base = data[key][(data[key][indicador] > minimum)]
     if len(base) > 0:
-        plot_boxplot(base, y=indicador, number=number,
-                     ylim_inferior=minimum, ylim_superior=50000,
+        csv_description = plot_boxplot(base, y=indicador, number=number,
+                     ylim_inferior=minimum, ylim_superior=10**5,
                      title = 'Efluentes líquidos / Setores',
                      ylabel='Efluentes líquidos (m3/h)',
+                     co2=f'{indicador} | Nacional',
+                     description=True, des_data=csv_description)
+        number += 1
+
+    # Per region
+    for region in regions:
+        base2 = data[key][(data[key][indicador] > minimum) &
+                         (data[key]['ano'] > year) &
+                         (data[key]['region'] == region)]
+        if len(base2) > 0:
+            csv_description = plot_boxplot(base2, y=indicador, number=number,
+                        ylim_inferior=minimum, ylim_superior=10**5,
+                        title = f'Efluentes líquidos / Setores \n {region}',
+                        ylabel='Efluentes líquidos (m3/h)',
+                        co2=f'{indicador} | {region}',
+                        description=True, des_data=csv_description)
+            number += 1
+
+    
+    if len(base) > 0:
+        plot_boxplot(base, y=indicador, number=number, x='region',
+                     ylim_inferior=minimum, ylim_superior=10**5,
+                     title = 'Efluentes líquidos / Regiões',
+                     ylabel='Efluentes líquidos (m3/h)',
+                     xlabel='Regiões', pallete=color_region,
                      co2=indicador)
         number += 1
+        
 
     # análise da proporcionalidade da poluição por região
     # calculo da razão-somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
@@ -307,9 +332,9 @@ def gera_plots(data, csv_description=None):
                 quantidade_empresas[key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)
                 
                 plot_boxplot(quantidade_empresas[key],
-                                y='razao', number=number, ylabel=indicadores_t[indicador],
+                                y='razao', number=number, ylabel='Razão-somatória',
                                 x='region', pallete=color_region, ylim_inferior=200, ylim_superior=quantidade_empresas[key]['razao'].mean(),
-                                title=f'{indicadores_t[indicador]} / Região', xlabel='Regiões', co2=indicador)
+                                title=f'Proporcionalidade poluição / Região \n {indicadores_t[indicador]}', xlabel='Regiões', co2=indicador)
                 number += 1
 
     return csv_description
