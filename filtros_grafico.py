@@ -83,7 +83,7 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
                 number=1, region='', poluente='',
                 title = 'Quantidade poluentes / Setores',
                 ylim_superior = 200, ylim_inferior = 1,
-                ylabel='Quantidade poluente (Mg)',
+                ylabel='Quantidade poluente (t)',
                 xlabel='Setores', pallete=color_palette,
                 description=False, des_data: pd.DataFrame = None,
                 co2=''):
@@ -156,7 +156,7 @@ def gera_plots(data, csv_description=None):
                       (data[key]['ano'] > year)]
     plot_boxplot(base1, y=indicador, number=number, co2='Residuos Solidos (Nacional)',
                  region=' ',
-                 ylabel='Resíduos sólidos (Mg)',
+                 ylabel='Resíduos sólidos (t)',
                  title='Resíduos sólidos / Setores econômicos')
     number += 1
     #########################################################################
@@ -168,9 +168,9 @@ def gera_plots(data, csv_description=None):
     base2 = base2[(base2['isic_12'] == 'Transport') | (base2['isic_12'] == 'Trade')]
     plot_boxplot(base2, y=indicador, number=number,
                  ylim_inferior=minimum, ylim_superior=1000000,
-                 co2='Residuos Solidos acima de 26000 Mg',
+                 co2='Residuos Solidos acima de 26000 t',
                  region=' ',
-                 ylabel='Resíduos sólidos (Mg)',
+                 ylabel='Resíduos sólidos (t)',
                  title='Resíduos sólidos / Setores econômicos')
     number += 1
 
@@ -182,9 +182,9 @@ def gera_plots(data, csv_description=None):
     base2_t = base2_t.dropna().reset_index(drop=True)
     csv_description = plot_boxplot(base2_t, y=indicador, number=number,
                  ylim_inferior=minimum, ylim_superior=base2_t[indicador].mean(),
-                 co2='Residuos Solidos acima de 250000 Mg',
-                 ylabel='Resíduos sólidos (Mg)',
-                 title='Resíduos sólidos (acima de 250.000 Mg) / Setores econômicos',
+                 co2='Residuos solidos (Grandes Geradores)',
+                 ylabel='Resíduos sólidos (t)',
+                 title='Resíduos sólidos (Grandes Geradores) / Setores econômicos',
                  description=True, des_data=csv_description)   
     number += 1
     #########################################################################
