@@ -69,6 +69,15 @@ indicadores = ['quant_efluentes_liquidos',
                'quant_residuos_solidos',
                'co2_emissions']
 
+indicadores_t = dict(zip(
+    indicadores, ['Quantidade efluentes líquidos',
+                  'Quantidade poluentes emitidos',
+                  'Quantidade resíduos sólidos',
+                  'Emissão de CO2']
+))
+
+print(indicadores_t)
+
 
 def count_unique_firms(base):
     num_firms = dict()
@@ -298,9 +307,9 @@ def gera_plots(data, csv_description=None):
                 quantidade_empresas[key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)
                 
                 plot_boxplot(quantidade_empresas[key],
-                                y='razao', number=number, ylabel='Razão',
+                                y='razao', number=number, ylabel=indicadores_t[indicador],
                                 x='region', pallete=color_region, ylim_inferior=200, ylim_superior=quantidade_empresas[key]['razao'].mean(),
-                                title='Indicador / Região', xlabel='Regiões', co2=indicador)
+                                title=f'{indicadores_t[indicador]} / Região', xlabel='Regiões', co2=indicador)
                 number += 1
 
     return csv_description
