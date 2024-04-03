@@ -111,7 +111,7 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
         plt.axhline(y=maximo, color='purple', linestyle='--', label=f'Máximo: {maximo:.2f}')
         plt.legend(loc='best', bbox_to_anchor=(1,1))
 
-        plot_title = f'{region} {poluente} {co2}'.strip() if poluente or region else \
+        plot_title = f'{region} {poluente} {co2}'.strip() if poluente or region or co2 else \
                                                     'Nacional'
         des_data = des_data.append({'box_plot': plot_title,
                          'Média': media,
@@ -154,24 +154,39 @@ def gera_plots(data, csv_description=None):
     year = 2011
     base1 = data[key][(data[key][indicador] > minimum) &
                       (data[key]['ano'] > year)]
-    plot_boxplot(base1, y=indicador, number=number, co2='Nacional',
+    plot_boxplot(base1, y=indicador, number=number, co2='Residuos Solidos (Nacional)',
+                 region=' ',
                  ylabel='Resíduos sólidos (Mg)',
                  title='Resíduos sólidos / Setores econômicos')
     number += 1
     #########################################################################
 
     # Gráfico 2 TD - resíduos sólidos acima de 26000 toneladas - setor transport/trade
-    # 250000 toneladas por região 
+ 
     minimum = 26000
     base2 = data[key][(data[key][indicador] > minimum)]
     base2 = base2[(base2['isic_12'] == 'Transport') | (base2['isic_12'] == 'Trade')]
     plot_boxplot(base2, y=indicador, number=number,
                  ylim_inferior=minimum, ylim_superior=1000000,
-                 co2='Nacional',
+                 co2='Residuos Solidos acima de 26000 Mg',
+                 region=' ',
                  ylabel='Resíduos sólidos (Mg)',
                  title='Resíduos sólidos / Setores econômicos')
     number += 1
 
+    # 250000 toneladas por região
+    minimum = 25 * 10**4
+    year_t = 2012
+    base2_t = data[key][(data[key][indicador] > minimum) &
+                        (data[key]['ano'] >= year_t)]
+    base2_t = base2_t.dropna().reset_index(drop=True)
+    csv_description = plot_boxplot(base2_t, y=indicador, number=number,
+                 ylim_inferior=minimum, ylim_superior=base2_t[indicador].mean(),
+                 co2='Residuos Solidos acima de 250000 Mg',
+                 ylabel='Resíduos sólidos (Mg)',
+                 title='Resíduos sólidos (acima de 250.000 Mg) / Setores econômicos',
+                 description=True, des_data=csv_description)   
+    number += 1
     #########################################################################
 
     # Gráfico 4 TD - Poluentes atmosféricos por setores econômicos acima de zero. Mesmas keys para regiões
@@ -224,6 +239,22 @@ def gera_plots(data, csv_description=None):
                         ylabel='Quantidade poluente emitido',
                         co2=indicador)
             number += 1
+
+    for key, indicador in zip(['poluentes_atm', 'emissoes',], ['quant_poluentes_emitidos', 'co2_emissions']):
+        
+        base = data[key][(data[key][indicador] > minimum)]
+        if indicador == 'quant_poluentes_emitidos':
+            title_base = 'Quantidade de poluentes emitidos'
+        else:
+            title_base = 'Emissão de CO2' 
+        csv_description = plot_boxplot(base, y=indicador,
+                    number=number, region=' ',
+                    ylim_superior=7*10**5,
+                    title=f'{title_base} / Setores econômicos',
+                    description=True, des_data=csv_description,
+                    ylabel='Quantidade poluente emitido',
+                    co2='Emissão de CO2 (Nacional)')
+    number += 1
 
     # Gráfico 15 TD - Indicador eficiência de tratamento de efluentes por setor econômico (valores >0 e <= 100).
     key = 'efluentes'
