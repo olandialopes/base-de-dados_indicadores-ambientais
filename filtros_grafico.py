@@ -76,8 +76,6 @@ indicadores_t = dict(zip(
                   'Emissão de CO2']
 ))
 
-print(indicadores_t)
-
 
 def count_unique_firms(base):
     num_firms = dict()
@@ -154,7 +152,18 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
 
 
 def gera_plots(data, csv_description=None):
-    number = 1
+    number = 1    
+
+    # Massa Salarial
+    indicador = 'massa_salarial'
+    new_data = pd.concat([ data[key][['massa_salarial', 'isic_12']] for key in data ],axis=0 )
+    new_data = new_data[(new_data[indicador] > 0)]
+    new_data = new_data.reset_index(drop=True)
+
+    plot_boxplot(new_data, y=indicador, number=number,
+                 ylabel='Massa salarial', title='Massa salarial / Setores econômicos',
+                 ylim_inferior=0, ylim_superior=2*10**8)
+    number += 1
     
     # Gráfico 1 TD - Resíduos sólidos acima de 1 tonelada - setor realestate
     key = 'residuos_solidos2'
@@ -203,7 +212,6 @@ def gera_plots(data, csv_description=None):
     indicador = 'quant_poluentes_emitidos'
     minimum = 1
     base4 = data[key][(data[key][indicador] > minimum)]
-    print(base4[indicador])
     csv_description = plot_boxplot(base4, y=indicador, number=number, 
                  title='Poluentes atmosféricos / Setores econômicos',
                  ylim_superior=base4[indicador].mean(), description=True, des_data=csv_description,
@@ -319,7 +327,7 @@ def gera_plots(data, csv_description=None):
                      xlabel='Regiões', pallete=color_region,
                      co2=indicador)
         number += 1
-        
+
 
     # análise da proporcionalidade da poluição por região
     # calculo da razão-somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
