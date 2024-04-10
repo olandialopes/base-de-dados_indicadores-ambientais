@@ -8,7 +8,7 @@ import pickle
 import pandas as pd
 import os
 
-def description_per_sector(data: pd.DataFrame, csv_obj: pd.DataFrame):
+def description_per_sector(data: pd.DataFrame, csv_obj: pd.DataFrame, indicador=''):
     regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
     key = 'poluentes_atm'
     indicador = 'quant_poluentes_emitidos'
@@ -95,6 +95,13 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
                 description=False, des_data: pd.DataFrame = None,
                 co2=''):
     
+    quantil1 = data[y].quantile(.25)
+    quantil3 = data[y].quantile(.75)
+    omega = 1.9
+    qit = quantil3 - quantil1
+    ylim_inferior = -0.1
+    ylim_superior = quantil3 + omega * qit
+
     if region or poluente:
         title += '\n'
     if region:
@@ -155,14 +162,19 @@ def gera_plots(data, csv_description=None):
     number = 1    
 
     # Massa Salarial
+
+    
+    year = 2010
     indicador = 'massa_salarial'
-    new_data = pd.concat([ data[key][['massa_salarial', 'isic_12']] for key in data ],axis=0 )
-    new_data = new_data[(new_data[indicador] > 0)]
+    new_data = pd.concat([ data[key][['massa_salarial', 'isic_12', 'ano']] for key in data ],axis=0 )
+    new_data = new_data[(new_data[indicador] > 0) &
+                        (new_data['ano'] >= year)]
     new_data = new_data.reset_index(drop=True)
+
 
     plot_boxplot(new_data, y=indicador, number=number,
                  ylabel='Massa salarial', title='Massa salarial / Setores econômicos',
-                 ylim_inferior=0, ylim_superior=2*10**8)
+                 ylim_inferior=0, ylim_superior=5*10**7)
     number += 1
     
     # Gráfico 1 TD - Resíduos sólidos acima de 1 tonelada - setor realestate
@@ -197,6 +209,7 @@ def gera_plots(data, csv_description=None):
     year_t = 2012
     base2_t = data[key][(data[key][indicador] > minimum) &
                         (data[key]['ano'] >= year_t)]
+                        
     base2_t = base2_t.dropna().reset_index(drop=True)
     csv_description = plot_boxplot(base2_t, y=indicador, number=number,
                  ylim_inferior=minimum, ylim_superior=base2_t[indicador].mean(),
