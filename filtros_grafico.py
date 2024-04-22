@@ -8,7 +8,7 @@ import pickle
 import pandas as pd
 import os
 
-def description_per_sector(data: pd.DataFrame, csv_obj: pd.DataFrame):
+def description_per_sector(data: pd.DataFrame, csv_obj: pd.DataFrame, indicador=''):
     regions = ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']
     key = 'poluentes_atm'
     indicador = 'quant_poluentes_emitidos'
@@ -69,6 +69,13 @@ indicadores = ['quant_efluentes_liquidos',
                'quant_residuos_solidos',
                'co2_emissions']
 
+inds  = [      'quant_efluentes_liquidos',
+               'quant_poluentes_emitidos',
+               'quant_residuos_solidos',
+               'quant_residuos_solidos',
+               'co2_emissions']
+
+
 indicadores_t = dict(zip(
     indicadores, ['Quantidade efluentes líquidos',
                   'Quantidade poluentes emitidos',
@@ -88,13 +95,20 @@ def count_unique_firms(base):
 
 def plot_boxplot(data, x='isic_12', y='quant_tonelada',
                 number=1, region='', poluente='',
-                title = 'Quantidade poluentes / Setores',
                 ylim_superior = 200, ylim_inferior = 1,
+                title = 'Quantidade poluentes / Setores',
                 ylabel='Quantidade poluente (t)',
                 xlabel='Setores', pallete=color_palette,
                 description=False, des_data: pd.DataFrame = None,
                 co2=''):
     
+    quantil1 = data[y].quantile(.25)
+    quantil3 = data[y].quantile(.75)
+    omega = 1.9
+    qit = quantil3 - quantil1
+    ylim_inferior = -0.1
+    ylim_superior = quantil3 + omega * qit
+
     if region or poluente:
         title += '\n'
     if region:
@@ -116,7 +130,7 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
         plt.axhline(y=mediana, color='red', linestyle='--', label=f'Mediana: {mediana:.2f}')
         plt.axhline(y=minimo, color='blue', linestyle='--', label=f'Mínimo: {minimo:.2f}')
         plt.axhline(y=maximo, color='purple', linestyle='--', label=f'Máximo: {maximo:.2f}')
-        plt.legend(loc='best', bbox_to_anchor=(1,1))
+        plt.legend(loc='upper right', bbox_to_anchor=(1,1))
 
         plot_title = f'{region} {poluente} {co2}'.strip() if poluente or region or co2 else \
                                                     'Nacional'
@@ -142,27 +156,102 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
         title += f'_{poluente}'
     if co2:
         title += f'_{co2}'
+    # Made file path more flexible on different operational systems.
     title += '.png'
 
-    # Made file path more flexible on different operational systems.
     plt.savefig(os.path.join('plots_td', title))
     #plt.show()
     plt.close()
     return des_data
 
+def plot_graphs(base: pd.DataFrame, region=None, key=None):
+
+    title_plot = 'Proporcionalidade poluição / Ano'
+    title = 'lineplot_razao'
+
+    if region:
+        title_plot += f'\n {region}'
+        title += f'_{region}'
+
+    if key:
+        title += f'_{key}'
+    
+    title += '.png'
+    
+    plt.figure(figsize=(12, 6))
+
+    if region:
+        bs = base[ (base['razao'] > 0) &
+        (base['region'] == region)]
+    else:
+        bs = base[(base['razao'] > 0)]
+    
+    sns.lineplot(data=bs, x='ano', y='razao',
+    marker='o', markersize=10, linewidth=4, errorbar=None, markerfacecolor='white',
+    markeredgecolor='orange',
+    markeredgewidth=2.5)
+    
+    plt.xlabel('Ano', labelpad=5,  fontweight='bold')
+    plt.ylabel('Proporcionalidade poluição', labelpad=10, fontweight='bold')
+    #plt.xlim((min_x, max_x))
+    
+    plt.grid(True, which='major', axis='y', linestyle='-', color='gray', linewidth=0.5)
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
+    plt.gca().spines['bottom'].set_visible(False)
+    plt.gca().spines['left'].set_visible(False)
+    plt.tick_params(axis='both', which='both', bottom=True, top=False, left=False, right=False) 
+    plt.xticks(base['ano'].unique(), rotation=45)
+    plt.yticks()
+    ax = plt.gca()
+    plt.subplots_adjust(left=0.05)
+    plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+    plt.legend(['Razão'], loc='upper left', bbox_to_anchor=(1, 1.05))
+    plt.title(title_plot,  fontweight='bold')
+    plt.savefig(os.path.join('plots_td', title))
+
 
 def gera_plots(data, csv_description=None):
-    number = 1    
+    number = 1
 
+    # análise da proporcionalidade da poluição por região
+    # calculo da razão-somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
+    quantidade_empresas = count_unique_firms(data)
+    for key in data:
+        
+        # firms = pd.DataFrame(columns=['ISIC_12', 'Total'])
+
+        # for isic in quantidade_empresas[key]['isic_12'].unique():
+        #     total = quantidade_empresas[key][
+        #         (quantidade_empresas[key]['isic_12'] == isic)][0].sum()
+        #     firms = pd.concat([firms, pd.DataFrame({'ISIC_12': isic, 'Total': total},
+        #      index=[0])]).reset_index(drop=True)
+        #     firms.to_csv(os.path.join('output', f'firms_count_per_sector(com_filtro)_{key}.csv'))
+
+        for indicador in indicadores:
+            if indicador in data[key]:
+                sum_indicador = data[key].groupby(by=['ano', 'region'])[indicador].agg('sum').reset_index()
+                quantidade_empresas[key]['razao'] = sum_indicador[indicador] / quantidade_empresas[key][0]
+                quantidade_empresas[key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)                
+                plot_boxplot(quantidade_empresas[key],
+                                y='razao', number=number, ylabel='Proporcionalidade poluição',
+                                x='region', pallete=color_region, ylim_inferior=200, ylim_superior=quantidade_empresas[key]['razao'].mean(),
+                                title=f'Proporcionalidade poluição / Região', xlabel='Regiões', co2=key)
+                for region in quantidade_empresas[key]['region'].unique():
+                    plot_graphs(base=quantidade_empresas[key], region=region, key=key)
     # Massa Salarial
+
+    year = 2010
     indicador = 'massa_salarial'
-    new_data = pd.concat([ data[key][['massa_salarial', 'isic_12']] for key in data ],axis=0 )
-    new_data = new_data[(new_data[indicador] > 0)]
+    new_data = pd.concat([ data[key][['massa_salarial', 'isic_12', 'ano']] for key in data ],axis=0 )
+    new_data = new_data[(new_data[indicador] > 0) &
+                        (new_data['ano'] >= year)]
     new_data = new_data.reset_index(drop=True)
+
 
     plot_boxplot(new_data, y=indicador, number=number,
                  ylabel='Massa salarial', title='Massa salarial / Setores econômicos',
-                 ylim_inferior=0, ylim_superior=2*10**8)
+                 ylim_inferior=0, ylim_superior=5*10**7)
     number += 1
     
     # Gráfico 1 TD - Resíduos sólidos acima de 1 tonelada - setor realestate
@@ -197,6 +286,7 @@ def gera_plots(data, csv_description=None):
     year_t = 2012
     base2_t = data[key][(data[key][indicador] > minimum) &
                         (data[key]['ano'] >= year_t)]
+                        
     base2_t = base2_t.dropna().reset_index(drop=True)
     csv_description = plot_boxplot(base2_t, y=indicador, number=number,
                  ylim_inferior=minimum, ylim_superior=base2_t[indicador].mean(),
@@ -327,24 +417,7 @@ def gera_plots(data, csv_description=None):
                      xlabel='Regiões', pallete=color_region,
                      co2=indicador)
         number += 1
-
-
-    # análise da proporcionalidade da poluição por região
-    # calculo da razão-somatória do indicador por estado ou DF de cada região pela quantidade de empresa em cada regiao
-    quantidade_empresas = count_unique_firms(data)
-    for key in data:
-        for indicador in indicadores:
-            if indicador in data[key]:
-                sum_indicador = data[key].groupby(by=['ano', 'region'])[indicador].agg('sum').reset_index()
-                quantidade_empresas[key]['razao'] = sum_indicador[indicador] / quantidade_empresas[key][0]
-                quantidade_empresas[key].to_csv(f'output/quantidade_empresas_{key}.csv', index=False)
-                
-                plot_boxplot(quantidade_empresas[key],
-                                y='razao', number=number, ylabel='Razão-somatória',
-                                x='region', pallete=color_region, ylim_inferior=200, ylim_superior=quantidade_empresas[key]['razao'].mean(),
-                                title=f'Proporcionalidade poluição / Região \n {indicadores_t[indicador]}', xlabel='Regiões', co2=indicador)
-                number += 1
-
+    
     return csv_description
 
 if __name__ == '__main__':
