@@ -8,7 +8,7 @@ credentials = {
                 'HOST': '127.0.1.1',
                 'PORT': '5432',
                 'USER': 'dani',
-                'PASSWORD': 'inter1000',
+                'PASSWORD': '',
                 'DATABASE': 'Dados_RFB'
               }
 
@@ -111,7 +111,7 @@ def main():
     data = pd.read_csv('final_ppgu.csv')
 
     for cnae in data['CNAE']:
-        cmd = f"select count(*) from empresa, cnae, estabelecimento where (empresa.cnpj_basico = estabelecimento.cnpj_basico) and (cnae.codigo::integer = estabelecimento.cnae_fiscal_principal) and (cnae.descricao = %s);"
+        cmd = f"select empresa  . from empresa, cnae, estabelecimento where (empresa.cnpj_basico = estabelecimento.cnpj_basico) and (cnae.codigo::integer = estabelecimento.cnae_fiscal_principal) and (cnae.descricao = %s);"
         cur.execute(cmd, (cnae,))
         num = cur.fetchone()[0]
               
