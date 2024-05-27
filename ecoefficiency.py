@@ -6,7 +6,10 @@ from filtros_grafico import plot_boxplot
 import pandas as pd
 import os
 import numpy as np
-
+from matplotlib.colors import BoundaryNorm, ListedColormap
+import matplotlib.patches as mpatches
+from matplotlib_scalebar.scalebar import ScaleBar
+from PIL import Image
 
 import re
 
@@ -43,13 +46,13 @@ year = {'efluentes': 2010, 'poluentes_atm': 2010, 'residuos_solidos1': 2012,
             'residuos_solidos2': 2012, 'emissoes': 2002}
 year_t = dict()
 
-ind_keys = {'eco_efic_quant_efluentes_liquidos': 'Efluentes líquidos',
-                'eco_efic_co2_emissions': 'Emissão de CO2',
-                'eco_efic_quant_residuos_solidos': 'Resíduos sólidos',
-                'eco_efic_quant_poluentes_emitidos': 'Poluentes emitidos',
-                'eco_efic_quantidade_energia_padrao_calorias': 'Quantidade de energia (calorias)',
-                'eco_efic_quant_consumida_energia_acordo_tipo': 'Quantidade de energia consumida'
-            }
+# ind_keys = {'eco_efic_quant_efluentes_liquidos': 'Efluentes líquidos',
+#                 'eco_efic_co2_emissions': 'Emissão de CO2',
+#                 'eco_efic_quant_residuos_solidos': 'Resíduos sólidos',
+#                 'eco_efic_quant_poluentes_emitidos': 'Poluentes emitidos',
+#                 'eco_efic_quantidade_energia_padrao_calorias': 'Quantidade de energia (calorias)',
+#                 'eco_efic_quant_consumida_energia_acordo_tipo': 'Quantidade de energia consumida'
+#             }
 
 color_palette = {
     'Manufacturing': 'red',
@@ -70,7 +73,9 @@ eco_base = {'efluentes': 'eco_efic_quant_efluentes_liquidos',
             'poluentes_atm': 'eco_efic_quant_poluentes_emitidos',
             'residuos_solidos1': 'eco_efic_quant_residuos_solidos',
             'residuos_solidos2': 'eco_efic_quant_residuos_solidos',
-            'emissoes': 'eco_efic_quant_consumida_energia_acordo_tipo'
+            'emissoes': ['eco_efic_quant_consumida_energia_acordo_tipo',
+             'eco_efic_quantidade_energia_padrao_calorias',
+             'eco_efic_co2_emissions']
             }
 
 
@@ -81,8 +86,6 @@ def calcular_num_firms_region(base):
         num_firms[key] = base[key].groupby(by=['estado', 'mun', 'isic_12']).agg(
             'size').reset_index()
         
-        print(key, base[key].columns)
-    input()
     # for key in num_firms:
     #     data = pd.DataFrame(columns=['Municipio', 'Setor', 'Numero de empresas','Mediana_Ecoeficiencia'])
     #     eco_efi = eco_base[key]
@@ -194,7 +197,6 @@ def get_medians(base):
                         median_data = pd.concat([median_data, pd.DataFrame(
                             {'ISIC_12': setor, indicadores[key]: total, 'Ecoeficiência': mediana}, index=[0])]).reset_index(drop=True)
                 median_data = median_data.sort_values(by='Ecoeficiência').reset_index(drop=True)
-                print('\n', median_data)
                 median_data.to_csv(os.path.join('output', f'mediana_por_setor_{key}.csv'))
 
 def indicators_boxplot(base, region=None):
@@ -231,31 +233,52 @@ def calcular_ecoficiencia_indicator(base, region=None):
         if region:
             num = base[key][(base[key]['massa_salarial'] > 0) &
              (base[key]['region'] == region) &
-             (base[key]['ano'] >= year)]['massa_salarial']
+             (base[key]['ano'] >= year) &
+             (base[key]['massa_salarial'].notnull())]['massa_salarial']
         else:
-            num = base[key][(base[key]['massa_salarial'] > 0) &
-             (base[key]['ano'] >= year)]['massa_salarial']
+            num = base[key][(base[key]['massa_salarial'].notnull()) &
+                            (base[ key]['massa_salarial'] > 0) &
+                            (base[key]['ano'] >= year)]['massa_salarial']
     
-        num = num.dropna().reset_index(drop=True)
         
         # base[key]['massa_salarial'] = base[key]['massa_salarial'].dropna().reset_index(drop=True)
         for indicator in chaves:
             if indicator != 'perc_efficiency_treatment':
                 if indicator in base[key]:
-
                     # -> valores acima de zero (retirando null's)
-                    den = base[key][(base[key][indicator] > 0) & (base[key]['ano'] >= year)][indicator]
-                    den = den.dropna().reset_index(drop=True)
-                    
+                    den = base[key][(base[key][indicator].notnull()) &
+                                    (base[key][indicator] > 2) &
+                                    (base[key]['ano'] >= year)][indicator]
+
                     # eco eficiência label
                     base[key][f'eco_efic_{indicator}'] = num / den
     return base
 
+def calcular_ecoficiencia_co2(base):
 
+    key = 'emissoes'
+    v = {}
+
+    co2 = {2013: 898501000, 2014: 785954000, 2015: 881353000,
+           2016: 881859000, 2017: 796443000, 2018: 801146000,
+           2019: 1021979000, 2020: 1081876000}
+    
+    for year in co2.keys():
+        num = base[key][(base[key]['massa_salarial'].notnull()) &
+                        (base[key]['massa_salarial'] > 0) &
+                        (base[key]['ano'] == year)]['massa_salarial'].sum()
+        
+        if year not in v.keys():
+            v[year] = []
+        v[year].append(num / co2[year])
+
+    df = pd.DataFrame.from_dict(v)
+    df.to_csv('eco_efficiency_co2.csv')
+    
 def plot_graphs(base: pd.DataFrame, key, indicador, region=None):
     
     title_plot = f'Ecoeficiência / Ano \n {ind_keys[indicador]}'
-    title = f'lineplot_{key}_{indicador}.png'
+    title = f'lineplot_{key}_{indicador}.pdf'
 
     plt.figure(figsize=(16, 7))
     palette = sns.color_palette("husl", 12)
@@ -279,25 +302,146 @@ def plot_graphs(base: pd.DataFrame, key, indicador, region=None):
     plt.gca().spines['bottom'].set_visible(False)
     plt.gca().spines['left'].set_visible(False)
     plt.tick_params(axis='both', which='both', bottom=False, top=False, left=False, right=False) 
-    plt.xticks(base['ano'].unique(), rotation=45)
     plt.subplots_adjust(left=0.05)
+    plt.xticks(base['ano'].unique(), rotation=45)
     plt.legend(list(base['isic_12'].unique()), loc='upper left', bbox_to_anchor=(.97, 1))
     plt.title(title_plot)
     plt.savefig(os.path.join('figures', title))
+
+def create_custom_legend(cmap, values, labels, ax, legend_title):
+    patches = []
+    for value, label in zip(values, labels):
+        color = cmap(value)
+        patch = mpatches.Patch(color=color, label=label)
+        patches.append(patch)
+    ax.legend(handles=patches, loc='lower left', title=legend_title,
+        fontsize='medium', frameon=False, prop={'size': 10}, title_fontsize='xx-large',
+        edgecolor='black')
+        
+def maps_generator(base):
+    
+    import geobr
+    import matplotlib.pyplot as plt
+
+    res = {'Sudeste': 'Sudeste',
+           'Nordeste': 'Nordeste',
+           'Sul': 'Sul',
+           'Centro-oeste': 'Centro Oeste',
+           'Norte': 'Norte'}
+
+    plt.rcParams.update({"font.size": 5})
+    regions = geobr.read_region(year=2020)
+
+    # 'efluentes': 'eco_efic_quant_efluentes_liquidos'
+    ufs = list(regions['name_region'])
+
+    for key in base:
+        for indicator in base[key]:
+            if indicator.startswith('eco_efi'):
+
+                ecoindice = {'region': [], 'ecoefficiency': []}
+                fig, ax = plt.subplots(figsize=(7, 7))
+
+                plt.subplots_adjust(left=0.03, right=0.97, top=0.9, bottom=0.05)
+
+                for region in base[key]['region'].unique():
+
+                    temp = base[key][(base[key]['region'] == region)][indicator]
+
+                    ecoindice['region'].append(res[region])
+                    ecoindice['ecoefficiency'].append(temp.median())
+
+                tomerge = pd.DataFrame.from_dict(ecoindice)
+            
+                #cmap = plt.cm.Greens  # Use the same colormap as in your data plot
+                tomerge['ecoefficiency'] = (tomerge['ecoefficiency'] - tomerge['ecoefficiency'].min()) \
+                                            / (tomerge['ecoefficiency'].max() - tomerge['ecoefficiency'].min()) * 1.2
+
+                intervals = [.0, .2, .4, .6, .8, 1.2]
+                colors = ['#beffd2', '#74c58c', '#025f1e']
+
+                # Criar a norma de limite dos intervalos
+                # norm = BoundaryNorm(intervals, len(colors))
+                # # Criar o mapa de cores personalizado
+                # cmap = ListedColormap(colors)
+                labels = ['0.00 - 0.20', '0.21 - 0.40', '0.41 - 0.60',
+                        '0.61 - 0.80', '0.81 - 0.99', '1.01 - 1.20']
+
+                import matplotlib.cm as cm
+                create_custom_legend(cm.viridis, intervals, labels, ax, 'Eco-efficiency')
+                
+                df = regions.merge(tomerge, how='left', left_on='name_region', right_on='region')
+
+                df.boundary.plot(ax=ax, linewidth=.65, edgecolor='black')
+                ax.grid(True, linestyle='-', alpha=.5)
+                df.plot(ax=ax, column='ecoefficiency', cmap='viridis')
+                
+
+                for idx, row in regions.iterrows():
+                    plt.annotate(text=row['name_region'], xy=(row.geometry.centroid.x, row.geometry.centroid.y),
+                    color='black', fontsize=10, ha='center', va='center')
+
+                ax.set_title(f'Eco-eficciency - {ind_keys[indicator]}', fontsize=16)
+                plt.savefig(f'maps/map_{indicator}.png')
+                
+
+ind_keys = {'eco_efic_quant_efluentes_liquidos': 'Liquid Effluents',
+                'eco_efic_co2_emissions': 'CO2 Emissions',
+                'eco_efic_quant_residuos_solidos': 'Solid Waste',
+                'eco_efic_quant_poluentes_emitidos': 'Pollutants Emitted',
+                'eco_efic_quantidade_energia_padrao_calorias': 'Amount of energy (calories)',
+                'eco_efic_quant_consumida_energia_acordo_tipo': 'Amount of energy consumed',
+            }
+
+color_palette = {
+    'Manufacturing': 'red',
+    'Trade': 'purple',
+    'Utilities': 'green',
+    'Transport': 'grey',
+    'Mining': 'yellow',
+    'Government': 'tomato',
+    'Construction': 'orange',
+    'Business': 'midnightblue',
+    'Agriculture': 'navy',
+    'OtherServices': 'lawngreen',
+    'RealEstate': 'gold',
+    'Financial': 'pink'
+}
+
+eco_base = {'efluentes': 'eco_efic_quant_efluentes_liquidos',
+            'poluentes_atm': 'eco_efic_quant_poluentes_emitidos',
+            'residuos_solidos1': 'eco_efic_quant_residuos_solidos',
+            'residuos_solidos2': 'eco_efic_quant_residuos_solidos',
+            'emissoes': 'eco_efic_quantidade_energia_padrao_calorias'
+            
+            }
+
 
 if __name__ == '__main__':
     nome = 'base_final_isic'
     with open(nome, 'rb') as handler:
         b = pickle.load(handler)
 
+
     # Plot with ecoefficiency
     base2 = calcular_ecoficiencia_indicator(b)
-    #get_medians(base2)
-    indicators_boxplot(base2)
 
-    for region in ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']:
-        base3 = calcular_ecoficiencia_indicator(b, region=region)
-        indicators_boxplot(base3, region=region)
+    for key in base2:
+        base2[key] = base2[key][(base2[key][eco_base[key]].notnull()) &
+                               (base2[key][eco_base[key]] > 0)].reset_index()
+            
+
+    calcular_ecoficiencia_co2(base2)
+    # maps_generator(base2)
+
+
+
+    #get_medians(base2)
+    # indicators_boxplot(base2)
+
+    # for region in ['Sudeste', 'Norte', 'Sul', 'Centro-oeste', 'Nordeste']:
+    #     base3 = calcular_ecoficiencia_indicator(b, region=region)
+    #     indicators_boxplot(base3, region=region)
     
     # n_firms = calcular_num_firms_region(base2)
     # #mun_median(base=base2, mun_base=n_firms)

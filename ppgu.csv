@@ -1,0 +1,264 @@
+,CNAE,PP/GU
+0,Extração de petróleo e gás natural,Alto
+1,Extração e beneficiamento de xisto,Alto
+2,Extração e beneficiamento de areias betuminosas,Alto
+3,Atividades de apoio à extração de petróleo e gás natural,Alto
+4,"Britamento de pedras, exceto associado à extração",Médio
+5,"Aparelhamento de placas e execução de trabalhos em mármore, granito, ardósia e outras pedras",Médio
+6,Fabricação de vidro plano e de segurança,Médio
+7,Fabricação de embalagens de vidro,Médio
+8,Fabricação de artigos de vidro,Médio
+9,Fabricação de cimento,Médio
+10,Fabricação de artefatos de cimento para uso na construção,Médio
+11,Fabricação de artefatos de fibrocimento para uso na construção,Médio
+12,Preparação de massa de concreto e argamassa para construção,Médio
+13,"Fabricação de outros artefatos e produtos de concreto, cimento, fibrocimento, gesso e materiais semelhantes",Médio
+14,Fabricação de produtos cerâmicos refratários,Médio
+15,Fabricação de azulejos e pisos,Médio
+16,"Fabricação de artefatos de cerâmica e barro cozido para uso na construção, exceto azulejos e pisos",Médio
+17,Fabricação de material sanitário de cerâmica,Médio
+18,Fabricação de cal e gesso,Médio
+19,Fabricação de abrasivos,Médio
+20,Produção de ferroligas,Alto
+21,Produção de semi-acabados de aço,Alto
+22,"Produção de laminados planos de aço ao carbono, revestidos ou não",Alto
+23,Produção de laminados planos de aços especiais,Alto
+24,Produção de tubos de aço sem costura,Alto
+25,Fundição de ferro e aço,Alto
+26,Produção de arames de aço,Alto
+27,"Produção de relaminados, trefilados e perfilados de aço, exceto arames",Alto
+28,Produção de tubos de aço com costura,Alto
+29,Produção de outros tubos de ferro e aço,Alto
+30,Produção de forjados de aço,Alto
+31,Produção de alumínio e suas ligas em formas primárias,Alto
+32,Metalurgia do cobre,Alto
+33,Produção de zinco em formas primárias,Alto
+34,Metalurgia dos metais preciosos,Alto
+35,Produção de laminados de alumínio,Alto
+36,Produção de laminados de zinco,Alto
+37,Metalurgia do pó,Alto
+38,Fabricação de estruturas metálicas,Alto
+39,Fabricação de obras de caldeiraria pesada,Alto
+40,"Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",Alto
+41,"Fabricação de caldeiras geradoras de vapor, exceto para aquecimento central e para veículos",Alto
+42,Fabricação de esquadrias de metal,Alto
+43,Produção de artefatos estampados de metal,Alto
+44,Fabricação de artigos de cutelaria,Alto
+45,"Fabricação de artigos de serralheria, exceto esquadrias",Alto
+46,Fabricação de ferramentas,Alto
+47,"Fabricação de equipamento bélico pesado, exceto veículos militares de combate",Alto
+48,"Fabricação de armas de fogo, outras armas e munições",Alto
+49,Fabricação de embalagens metálicas,Alto
+50,Fabricação de produtos de trefilados de metal padronizados,Alto
+51,"Fabricação de produtos de trefilados de metal, exceto padronizados",Alto
+52,Fabricação de artigos de metal para uso doméstico e pessoal,Alto
+53,Serviço de corte e dobra de metais,Alto
+54,Fabricação de outros produtos de metal não especificados anteriormente,Alto
+55,Serviços de tratamento e revestimento em metais,Alto
+56,"Fabricação de motores e turbinas, peças e acessórios, exceto para aviões e veículos rodoviários",Médio
+57,"Fabricação de equipamentos hidráulicos e pneumáticos, peças e acessórios, exceto válvulas",Médio
+58,"Fabricação de válvulas, registros e dispositivos semelhantes, peças e acessórios",Médio
+59,"Fabricação de compressores para uso industrial, peças e acessórios",Médio
+60,"Fabricação de compressores para uso não industrial, peças e acessórios",Médio
+61,Fabricação de rolamentos para fins industriais,Médio
+62,"Fabricação de equipamentos de transmissão para fins industriais, exceto rolamentos",Médio
+63,"Fabricação de estufas e fornos elétricos para fins industriais, peças e acessórios",Médio
+64,"Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de pessoas, peças e acessórios",Médio
+65,"Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas, peças e acessórios",Médio
+66,"Fabricação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial, peças e acessórios",Médio
+67,Fabricação de aparelhos e equipamentos de ar condicionado para uso industrial,Médio
+68,"Fabricação de outras máquinas e equipamentos de uso geral não especificados anteriormente, peças e acessórios",Médio
+69,"Fabricação de tratores agrícolas, peças e acessórios",Médio
+70,"Fabricação de equipamentos para irrigação agrícola, peças e acessórios",Médio
+71,"Fabricação de máquinas e equipamentos para a agricultura e pecuária, peças e acessórios, exceto para irrigação",Médio
+72,"Fabricação de máquinas e equipamentos para a prospecção e extração de petróleo, peças e acessórios",Médio
+73,"Fabricação de outras máquinas e equipamentos para uso na extração mineral, peças e acessórios, exceto na extração de petróleo",Médio
+74,"Fabricação de tratores, peças e acessórios, exceto agrícolas",Médio
+75,"Fabricação de máquinas e equipamentos para terraplenagem, pavimentação e construção, peças e acessórios, exceto tratores",Médio
+76,"Fabricação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo, peças e acessórios",Médio
+77,"Fabricação de máquinas e equipamentos para a indústria têxtil, peças e acessórios",Médio
+78,"Fabricação de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados, peças e acessórios",Médio
+79,"Fabricação de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos, peças e acessórios",Médio
+80,"Fabricação de máquinas e equipamentos para a indústria do plástico, peças e acessórios",Médio
+81,"Fabricação de máquinas e equipamentos para uso industrial específico não especificados anteriormente, peças e acessórios",Médio
+82,"Fabricação de pilhas, baterias e acumuladores elétricos, exceto para veículos automotores",Médio
+83,Fabricação de baterias e acumuladores para veículos automotores,Médio
+84,Recondicionamento de baterias e acumuladores para veículos automotores,Médio
+85,Fabricação de componentes eletrônicos,Médio
+86,Fabricação de equipamentos de informática,Médio
+87,Fabricação de periféricos para equipamentos de informática,Médio
+88,"Fabricação de equipamentos transmissores de comunicação, peças e acessórios",Médio
+89,"Fabricação de aparelhos telefônicos e de outros equipamentos de comunicação, peças e acessórios",Médio
+90,"Fabricação de eletrodos, contatos e outros artigos de carvão e grafita para uso elétrico, eletroímãs e isoladores",Médio
+91,"Fabricação de geradores de corrente contínua e alternada, peças e acessórios",Médio
+92,"Fabricação de transformadores, indutores, conversores, sincronizadores e semelhantes, peças e acessórios",Médio
+93,"Fabricação de motores elétricos, peças e acessórios",Médio
+94,Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica,Médio
+95,Fabricação de material elétrico para instalações em circuito de consumo,Médio
+96,"Fabricação de fios, cabos e condutores elétricos isolados",Médio
+97,Fabricação de luminárias e outros equipamentos de iluminação,Médio
+98,Fabricação de equipamentos para sinalização e alarme,Médio
+99,Fabricação de outros equipamentos e aparelhos elétricos não especificados anteriormente,Médio
+100,"Fabricação de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo",Médio
+101,"Fabricação de aparelhos e equipamentos de medida, teste e controle",Médio
+102,Fabricação de cronômetros e relógios,Médio
+103,Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação,Médio
+104,"Fabricação de aparelhos fotográficos e cinematográficos, peças e acessórios",Médio
+105,"Fabricação de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico, peças e acessórios",Médio
+106,"Fabricação de aparelhos elétricos de uso pessoal, peças e acessórios",Médio
+107,"Fabricação de outros aparelhos eletrodomésticos não especificados anteriormente, peças e acessórios",Médio
+108,Fabricação de lâmpadas,Médio
+109,"Fabricação de automóveis, camionetas e utilitários",Médio
+110,"Fabricação de chassis com motor para automóveis, camionetas e utilitários",Médio
+111,"Fabricação de motores para automóveis, camionetas e utilitários",Médio
+112,Fabricação de caminhões e ônibus,Médio
+113,Fabricação de motores para caminhões e ônibus,Médio
+114,"Fabricação de cabines, carrocerias e reboques para caminhões",Médio
+115,Fabricação de carrocerias para ônibus,Médio
+116,"Fabricação de cabines, carrocerias e reboques para outros veículos automotores, exceto caminhões e ônibus",Médio
+117,Fabricação de peças e acessórios para o sistema motor de veículos automotores,Médio
+118,Fabricação de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores,Médio
+119,Fabricação de peças e acessórios para o sistema de freios de veículos automotores,Médio
+120,Fabricação de peças e acessórios para o sistema de direção e suspensão de veículos automotores,Médio
+121,"Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias",Médio
+122,Fabricação de bancos e estofados para veículos automotores,Médio
+123,Fabricação de outras peças e acessórios para veículos automotores não especificadas anteriormente,Médio
+124,Recondicionamento e recuperação de motores para veículos automotores,Médio
+125,"Fabricação de locomotivas, vagões e outros materiais rodantes",Médio
+126,Fabricação de peças e acessórios para veículos ferroviários,Médio
+127,Fabricação de motocicletas,Médio
+128,Fabricação de peças e acessórios para motocicletas,Médio
+129,Fabricação de aeronaves,Médio
+130,"Fabricação de turbinas, motores e outros componentes e peças para aeronaves",Médio
+131,Construção de embarcações de grande porte,Médio
+132,Construção de embarcações para esporte e lazer,Médio
+133,Manutenção e reparação de embarcações e estruturas flutuantes,Médio
+134,Manutenção e reparação de embarcações para esporte e lazer,Médio
+135,"Fabricação de madeira laminada e de chapas de madeira compensada, prensada e aglomerada",Médio
+136,Fabricação de outros artigos de carpintaria para construção,Médio
+137,Fabricação de móveis com predominância de madeira,Médio
+138,Fabricação de celulose e outras pastas para a fabricação de papel,Alto
+139,Fabricação de papel,Alto
+140,Fabricação de embalagens de papel,Alto
+141,Fabricação de fraldas descartáveis,Alto
+142,Fabricação de absorventes higiênicos,Alto
+143,Reforma de pneumáticos usados,Pequeno
+144,Curtimento e outras preparações de couro,Alto
+145,Fabricação de artefatos de couro não especificados anteriormente,Alto
+146,Fabricação de linhas para costurar e bordar,Médio
+147,Fabricação de tecidos de malha,Médio
+148,"Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário",Médio
+149,"Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário",Médio
+150,"Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário",Médio
+151,Fabricação de laminados planos e tubulares de material plástico,Pequeno
+152,"Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material",Pequeno
+153,Fabricação de embalagens de material plástico,Pequeno
+154,Fabricação de tubos e acessórios de material plástico para uso na construção,Pequeno
+155,Fabricação de artefatos de material plástico para usos industriais,Pequeno
+156,"Fabricação de artefatos de material plástico para uso na construção, exceto tubos e acessórios",Pequeno
+157,Fabricação de artefatos de material plástico para outros usos não especificados anteriormente,Pequeno
+158,"Fabricação de móveis de outros materiais, exceto madeira e metal",Pequeno
+159,Processamento industrial do fumo,Médio
+160,Fabricação de cigarros,Médio
+161,Fabricação de cigarrilhas e charutos,Médio
+162,Fabricação de filtros para cigarros,Médio
+163,"Fabricação de outros produtos do fumo, exceto cigarros, cigarrilhas e charutos",Médio
+164,Coquerias,Alto
+165,"Fabricação de outros produtos derivados do petróleo, exceto produtos do refino",Alto
+166,Fabricação de cloro e álcalis,Alto
+167,Fabricação de intermediários para fertilizantes,Alto
+168,Fabricação de gases industriais,Alto
+169,Elaboração de combustíveis nucleares,Alto
+170,Fabricação de outros produtos químicos inorgânicos não especificados anteriormente,Alto
+171,"Fabricação de intermediários para plastificantes, resinas e fibras",Alto
+172,Fabricação de produtos químicos orgânicos não especificados anteriormente,Alto
+173,Fabricação de adesivos e selantes,Alto
+174,Fabricação de aditivos de uso industrial,Alto
+175,Fabricação de catalisadores,Alto
+176,"Fabricação de chapas, filmes, papéis e outros materiais e produtos químicos para fotografia",Alto
+177,Fabricação de outros produtos químicos não especificados anteriormente,Alto
+178,Fabricação de produtos do refino de petróleo,Alto
+179,Formulação de combustíveis,Alto
+180,Fabricação de produtos petroquímicos básicos,Alto
+181,Produção de gás; processamento de gás natural,Alto
+182,"Fabricação de pólvoras, explosivos e detonantes",Alto
+183,Fabricação de artigos pirotécnicos,Alto
+184,Fabricação de fósforos de segurança,Alto
+185,Fabricação de desinfestantes domissanitários,Alto
+186,Fabricação de produtos de limpeza e polimento,Alto
+187,"Fabricação de tintas, vernizes, esmaltes e lacas",Alto
+188,Fabricação de tintas de impressão,Alto
+189,"Fabricação de impermeabilizantes, solventes e produtos afins",Alto
+190,Fabricação de defensivos agrícolas,Alto
+191,Fabricação de produtos farmoquímicos,Alto
+192,Fabricação de medicamentos alopáticos para uso humano,Alto
+193,Fabricação de medicamentos homeopáticos para uso humano,Alto
+194,Fabricação de medicamentos fitoterápicos para uso humano,Alto
+195,Fabricação de medicamentos para uso veterinário,Alto
+196,Fabricação de preparações farmacêuticas,Alto
+197,Fabricação de sabões e detergentes sintéticos,Alto
+198,"Fabricação de velas, inclusive decorativas",Alto
+199,"Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal",Alto
+200,Fabricação de álcool,Alto
+201,Frigorífico - abate de bovinos,Médio
+202,Frigorífico - abate de ovinos e caprinos,Médio
+203,Frigorífico - abate de bufalinos,Médio
+204,Abate de aves,Médio
+205,Abate de pequenos animais,Médio
+206,Frigorífico - abate de suínos,Médio
+207,Matadouro - abate de suínos sob contrato,Médio
+208,Fabricação de produtos de carne,Médio
+209,Preparação de subprodutos do abate,Médio
+210,Fabricação de conservas de frutas,Médio
+211,Fabricação de conservas de palmito,Médio
+212,"Fabricação de conservas de legumes e outros vegetais, exceto palmito",Médio
+213,"Fabricação de sucos concentrados de frutas, hortaliças e legumes",Médio
+214,"Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados",Médio
+215,Preparação do leite,Médio
+216,Fabricação de laticínios,Médio
+217,Fabricação de sorvetes e outros gelados comestíveis,Médio
+218,Fabricação de açúcar em bruto,Médio
+219,Fabricação de açúcar de cana refinado,Médio
+220,Fabricação de açúcar de cereais (dextrose) e de beterraba,Médio
+221,"Fabricação de óleos vegetais em bruto, exceto óleo de milho",Médio
+222,"Fabricação de óleos vegetais refinados, exceto óleo de milho",Médio
+223,Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais,Médio
+224,Fabricação de óleo de milho em bruto,Médio
+225,Fabricação de produtos derivados do cacau e de chocolates,Médio
+226,Fabricação de fermentos e leveduras,Médio
+227,Fabricação de alimentos para animais,Médio
+228,Fabricação de vinho,Médio
+229,Fabricação de vinagres,Médio
+230,"Fabricação de malte, inclusive malte uísque",Médio
+231,Fabricação de cervejas e chopes,Médio
+232,"Fabricação de produtos para infusão (chá, mate, etc.)",Médio
+233,Fabricação de águas envasadas,Médio
+234,Fabricação de refrigerantes,Médio
+235,Fabricação de chá mate e outros chás prontos para consumo,Médio
+236,"Fabricação de refrescos, xaropes e pós para refrescos, exceto refrescos de frutas",Médio
+237,Fabricação de outras bebidas não-alcoólicas não especificadas anteriormente,Médio
+238,Fabricação de aguardente de cana-de-açúcar,Médio
+239,Fabricação de outras aguardentes e bebidas destiladas,Médio
+240,Geração de energia elétrica,Médio
+241,Usinas de compostagem,Médio
+242,Transporte ferroviário de carga,Alto
+243,Transporte rodoviário de produtos perigosos,Alto
+244,"Transporte por navegação interior de carga, municipal, exceto travessia",Alto
+245,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",Alto
+246,Transporte dutoviário,Alto
+247,Operação dos aeroportos e campos de aterrissagem,Alto
+248,Transporte aéreo de carga,Alto
+249,Extração de madeira em florestas nativas,Médio
+250,Produção de carvão vegetal - florestas nativas,Médio
+251,Pesca de peixes em água salgada,Médio
+252,Pesca de crustáceos e moluscos em água salgada,Médio
+253,Coleta de outros produtos marinhos,Médio
+254,Pesca de peixes em água doce,Médio
+255,Pesca de crustáceos e moluscos em água doce,Médio
+256,Coleta de outros produtos aquáticos de água doce,Médio
+257,"Atividades de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental",Médio
+258,Extração de madeira em florestas plantadas,Médio
+259,Produção de carvão vegetal - florestas plantadas,Médio
+260,Coleta de palmito em florestas nativas,Médio
+261,Transmissão de energia elétrica,-
+262,Distribuição de energia elétrica,-

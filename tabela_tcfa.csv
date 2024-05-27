@@ -1,0 +1,274 @@
+CÓDIGO;DESCRIÇÃO;TCFA
+1-1;Pesquisa mineral com guia de utilização;SIM
+1-2;Lavra a céu aberto, inclusive de aluvião, com ou sem beneficiamento;SIM
+1-3;Lavra subterrânea com ou sem beneficiamento;SIM
+1-4;Lavra garimpeira;SIM
+1-5;Perfuração de poços e produção de petróleo e gás natural;SIM
+1-6;Pesquisa mineral sem guia de utilização;NÃO
+1-7;Lavra garimpeira – uso de mercúrio metálico;SIM*
+2-1;Beneficiamento de minerais não metálicos, não associados a extração;SIM
+2-2;Fabricação e elaboração de produtos minerais não metálicos tais como produção de material cerâmico, cimento, gesso, amianto, vidro e similares;SIM
+3-1;Fabricação de aço e de produtos siderúrgicos.;SIM
+3-2;Produção de fundidos de ferro e aço, forjados, arames, relaminados com ou sem tratamento de superfície, inclusive galvanoplastia;SIM
+3-3;Metalurgia dos metais não-ferrosos, em formas primárias e secundárias, inclusive ouro;SIM
+3-4;Produção de laminados, ligas, artefatos de metais não-ferrosos com ou sem tratamento de superfície, inclusive galvanoplastia;SIM
+3-5;Relaminação de metais não-ferrosos, inclusive ligas;SIM
+3-6;Produção de soldas e anodos;SIM
+3-7;Metalurgia de metais preciosos;SIM
+3-8;Metalurgia do pó, inclusive peças moldadas;SIM
+3-9;Fabricação de estruturas metálicas com ou sem tratamento de superfície, inclusive galvanoplastia;SIM
+3-10;Fabricação de artefatos de ferro, aço e de metais não-ferrosos com ou sem tratamento de superfície, inclusive galvanoplastia;SIM
+3-11;Têmpera e cementação de aço, recozimento de arames, tratamento de superfície;SIM
+3-12;Metalurgia dos metais não-ferrosos, em formas primárias e secundárias, inclusive ouro - uso de mercúrio metálico;SIM*
+4-1;Fabricação de máquinas, aparelhos, peças, utensílios e acessórios com e sem tratamento térmico ou de superfície;SIM
+4-2;Fabricação de máquinas, aparelhos, peças, utensílios e acessórios com e sem tratamento térmico ou de superfície – fabricação de motosserras;SIM*
+5-1;Fabricação de pilhas, baterias e outros acumuladores;SIM
+5-2;Fabricação de material elétrico, eletrônico e equipamentos para telecomunicação e informática;SIM
+5-3;Fabricação de aparelhos elétricos e eletrodomésticos;SIM
+5-4;;SIM*
+6-1;Fabricação e montagem de veículos rodoviários e ferroviários, peças e acessórios;SIM
+6-2;Fabricação e montagem de aeronaves;SIM
+6-3;Fabricação e reparo de embarcações e estruturas flutuantes;SIM
+7-1;Serraria e desdobramento de madeira;SIM
+7-2;Preservação de madeira;SIM
+7-3;Fabricação de chapas, placas de madeira aglomerada, prensada e compensada;SIM
+7-4;Fabricação de estruturas de madeira e móveis;SIM
+7-5;Preservação de madeira - usina, sob pressão;SIM*
+7-6;Preservação de madeira - usina piloto, pesquisa;SIM*
+7-7;Preservação de madeira - usina, sem pressão;SIM*
+8-1;Fabricação de celulose e pasta mecânica;SIM
+8-2;Fabricação de papel e papelão;SIM
+8-3;Fabricação de artefatos de papel, papelão, cartolina, cartão e fibra prensada;SIM
+9-1;Beneficiamento de borracha natural;SIM
+9-3;Fabricação de laminados e fios de borracha;SIM
+9-4;Fabricação de espuma de borracha e de artefatos de espuma de borracha, inclusive látex;SIM
+9-5;Fabricação de câmara de ar;SIM
+9-6;Fabricação de pneumáticos;SIM
+9-7;Recondicionamento de pneumáticos;SIM
+10-1;Secagem e salga de couros e peles;SIM
+10-2;Curtimento e outras preparações de couros e peles;SIM
+10-3;Fabricação de artefatos diversos de couros e peles;SIM
+10-4;Fabricação de cola animal;SIM
+11-1;Beneficiamento de fibras têxteis, vegetais, de origem animal e sintéticos;SIM
+11-2;Fabricação e acabamento de fios e tecidos;SIM
+11-3;Tingimento, estamparia e outros acabamentos em peças do vestuário e artigos diversos de tecidos;SIM
+11-4;Fabricação de calçados e componentes para calçados;SIM
+12-1;Fabricação de laminados plásticos;SIM
+12-2;Fabricação de artefatos de material plástico;SIM
+13-1;Fabricação de cigarros, charutos, cigarrilhas e outras atividades de beneficiamento do fumo;SIM
+14-1;Usinas de produção de concreto;SIM
+14-2;Usinas de produção de asfalto;SIM
+15-1;Produção de substâncias e fabricação de produtos químicos;SIM
+15-2;Fabricação de produtos derivados do processamento de petróleo, de rochas betuminosas e da madeira;SIM
+15-3;Fabricação de combustíveis não derivados de petróleo;SIM
+15-4;Produção de óleos, gorduras, ceras, vegetais e animais, óleos essenciais, vegetais e produtos similares, da destilação da madeira;SIM
+15-5;Fabricação de resinas e de fibras e fios artificiais e sintéticos e de borracha e látex sintéticos;SIM
+15-6;Fabricação de pólvora, explosivos, detonantes, munição para caça e desporto, fósforo de segurança e artigos pirotécnicos;SIM
+15-7;Recuperação e refino de solventes, óleos minerais, vegetais e animais;SIM
+15-8;Fabricação de concentrados aromáticos naturais, artificiais e sintéticos;SIM
+15-9;Fabricação de preparados para limpeza e polimento, desinfetantes, inseticidas, germicidas e fungicidas;SIM
+15-10;Fabricação de tintas, esmaltes, lacas, vernizes, impermeabilizantes, solventes e secantes;SIM
+15-11;Fabricação de fertilizantes e agroquímicos;SIM
+15-12;Fabricação de produtos farmacêuticos e veterinários;SIM
+15-13;Fabricação de sabões, detergentes e velas;SIM
+15-14;Fabricação de perfumarias e cosméticos;SIM
+15-15;Produção de álcool etílico, metanol e similares;SIM
+15-17;Produção de substâncias e fabricação de produtos químicos - fabricação de preservativos de madeira;SIM*
+15-18;Fabricação de produtos derivados do processamento de petróleo – Resolução CONAMA nº 362/2005;SIM*
+15-19;Produção de óleos – Resolução CONAMA nº 362/2005;SIM*
+15-20;Produção de substâncias e fabricação de produtos químicos - uso de mercúrio metálico;SIM*
+15-21;Produção de substâncias e fabricação de produtos químicos - fabricação, formulação e /ou manipulação de produtos remediadores físico-químicos;SIM*
+15-22;Fabricação de preparados para limpeza e polimento, desinfetantes, inseticidas, germicidas e fungicidas - saneantes de uso domissanitário;SIM*
+16-1;Beneficiamento, moagem, torrefação e fabricação de produtos alimentares;SIM
+16-2;Matadouros, abatedouros, frigoríficos, charqueadas e derivados de origem animal;SIM
+16-3;Fabricação de conservas;SIM
+16-4;Preparação de pescados e fabricação de conservas de pescados;SIM
+16-5;Beneficiamento e industrialização de leite e derivados;SIM
+16-6;Fabricação e refinação de açúcar;SIM
+16-7;Refino e preparação de óleo e gorduras vegetais;SIM
+16-8;Produção de manteiga, cacau, gorduras de origem animal para alimentação;SIM
+16-9;Fabricação de fermentos e leveduras;SIM
+16-10;Fabricação de rações balanceadas e de alimentos preparados para animais;SIM
+16-11;Fabricação de vinhos e vinagre;SIM
+16-12;Fabricação de cervejas, chopes e maltes;SIM
+16-13;Fabricação de bebidas não-alcoólicas, bem como engarrafamento e gaseificação e águas minerais;SIM
+16-14;Fabricação de bebidas alcoólicas;SIM
+16-15;Matadouros, abatedouros, frigoríficos, charqueadas e derivados de origem animal - fauna silvestre;SIM*
+16-16;Fabricação e/ou manipulação de produtos bioestimuladores;NÃO
+17-1;Produção de energia termoelétrica;SIM
+17-2;Tratamento e destinação de resíduos industriais líquidos e sólidos;SIM
+17-3;Disposição de resíduos especiais tais como: de agroquímicos e suas embalagens usadas e de serviço de saúde e similares;SIM
+17-4;Destinação de resíduos de esgotos sanitários e de resíduos sólidos urbanos, inclusive aqueles provenientes de fossas;SIM
+17-5;Dragagem e derrocamentos em corpos d'água;SIM
+17-6;Recuperação de áreas contaminadas ou degradadas;SIM
+17-7;Interceptores, emissários, estação elevatória e tratamento de esgoto sanitário;NÃO
+17-8;Estações de tratamento de água;NÃO
+17-9;Transmissão de energia elétrica;NÃO
+17-10;Geração de energia hidrelétrica;NÃO
+17-11;Irradiação para esterilização, descontaminação e modificação;NÃO
+17-12;Aplicação de agrotóxicos e afins;NÃO
+17-13;Tratamento e destinação de resíduos industriais líquidos e sólidos - pneumáticos inservíveis;SIM*
+17-15;Prestação de serviços de controle de pragas domésticas com aplicação de produtos químicos;NÃO
+17-17;Distribuição de energia elétrica;NÃO
+17-20;Controle mecânico, químico e biológico e destinação de plantas aquáticas;NÃO
+17-52;Geração de energia eólica;NÃO
+17-53;Tratamento e destinação de resíduos industriais líquidos e sólidos - destinação de pilhas e baterias;SIM*
+17-56;Tratamento e destinação de resíduos industriais líquidos e sólidos – substância controlada pelo Protocolo de Montreal;SIM*
+17-57;Tratamento e destinação de resíduos industriais líquidos e sólidos - operações de recuperação e aproveitamento energético de resíduos sólidos;SIM*
+17-58;Tratamento e destinação de resíduos industriais líquidos e sólidos - operações de disposição final de resíduos sólidos;SIM*
+17-59;Tratamento e destinação de resíduos industriais líquidos e sólidos - operações de tratamento de resíduos sólidos;SIM*
+17-60;Tratamento e destinação de resíduos industriais líquidos e sólidos – reciclagem de resíduos sólidos, exceto recuperação e aproveitamento energético;SIM*
+18-1;Transporte de cargas perigosas;SIM
+18-2;Transporte por dutos;SIM
+18-3;Marinas, portos e aeroportos;SIM
+18-4;Terminais de minério, petróleo e derivados e produtos químicos;SIM
+18-5;Depósitos de produtos químicos e produtos perigosos;SIM
+18-6;Comércio de combustíveis e derivados de petróleo;SIM
+18-7;Comércio de produtos químicos e produtos perigosos;SIM
+18-8;Comércio de produtos químicos e produtos perigosos - mercúrio metálico;SIM*
+18-10;Comércio de produtos químicos e produtos perigosos – produtos e substâncias controladas pelo Protocolo de Montreal, inclusive importação e exportação;SIM*
+18-11;Transporte de produtos florestais;NÃO
+18-13;Comércio de produtos químicos e produtos perigosos – Resolução CONAMA nº 362/2005;SIM*
+18-14;Transporte de cargas perigosas – Resolução CONAMA nº 362/2005;SIM*
+18-15;Transporte ferroviário;NÃO
+18-17;;SIM*
+18-18;Comércio de produtos químicos e produtos perigosos - fertilizantes;SIM*
+18-19;Importação de eletrodoméstico – Resolução CONAMA nº 20/1994;NÃO
+18-20;Transporte de cargas perigosas – Protocolo de Montreal;SIM*
+18-21;Operação de rodovia;NÃO
+18-22;Operação de hidrovia;NÃO
+18-25;Aeródromos, exceto aeroportos;NÃO
+18-27;Transporte aquaviário;NÃO
+18-54;Comércio de combustíveis e derivados de petróleo - Gás GLP;SIM*
+18-63;Transporte de carga perigosa - marítimo;SIM*
+18-64;Titularidade de registro e/ou importador de produtos remediadores;NÃO
+18-66;Comércio de produtos químicos e produtos perigosos - agrotóxicos, seus componentes e afins;SIM*
+18-67;Comércio de motosserra;NÃO
+18-68;Importação de motosserra;NÃO
+18-69;Importação de veículos para uso próprio;NÃO
+18-70;Importação de pneus e similares;NÃO
+18-74;Transporte de cargas perigosas - transporte de resíduos controlados ou perigosos;SIM*
+18-75;;SIM*
+1º;da Resolução Conama nº;401/2008
+18-76;Tratamento e destinação de resíduos industriais líquidos e sólidos - reciclagem de resíduos sólidos, exceto recuperação e aproveitamento energético;SIM*
+18-77;Importação de resíduos controlados - Resolução Conama nº 452/2012;NÃO
+18-78;Importação para fins comerciais de veículos automotores;NÃO
+18-79;Comércio de produtos químicos e produtos perigosos – exportação de resíduos controlados pela Convenção de Basiléia;SIM*
+18-80;Depósito de produtos químicos e produtos perigosos – depósito e armazenamento de resíduos perigosos;SIM*
+18-81;;SIM*
+1º;da Resolução Conama;401/2008
+18-82;Comércio de produtos químicos e produtos perigosos – importação de lâmpadas fluorescentes, de vapor de sódio e mercúrio e de luz mista;SIM*
+19-1;Complexos turísticos e de lazer, inclusive parques temáticos.;SIM
+20-1;Silvicultura;SIM
+20-2;Exploração econômica da madeira ou lenha e subprodutos florestais;SIM
+20-4;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre;SIM
+20-5;Utilização do patrimônio genético natural;SIM
+20-6;Exploração de recursos aquáticos vivos;SIM
+20-9;Consumo de madeira, lenha ou carvão vegetal;NÃO
+20-10;Centro de triagem da fauna silvestre;NÃO
+20-12;Manutenção de fauna silvestre;NÃO
+20-13;Criação de passeriformes silvestres nativos;NÃO
+20-15;Importação ou exportação de fauna silvestre exótica;NÃO
+20-16;Federações, associações e clubes de criadores de passeriformes;NÃO
+20-17;Atividade agrícola e pecuária;NÃO
+20-18;Projetos de assentamento de colonização;NÃO
+20-19;Promoção de eventos esportivos de pesca amadora;NÃO
+20-21;Importação ou exportação de fauna nativa brasileira;SIM
+20-22;Importação ou exportação de flora nativa brasileira;SIM
+20-23;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre - criação comercial;SIM*
+20-24;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre - comércio de partes produtos e subprodutos;SIM*
+20-25;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre - jardim zoológico;SIM*
+20-26;Introdução de espécies exóticas, exceto para melhoramento genético vegetal e uso na agricultura;SIM
+20-27;Pesca amadora;NÃO
+20-28;Manejo de fauna exótica invasora;NÃO
+20-29;Manejo de fauna nativa em desequilíbrio;NÃO
+20-30;Manejo de fauna sinantrópica;NÃO
+20-31;Silvicultura - reserva florestal para fins de reposição florestal;SIM*
+20-32;Comércio de materiais de construção que comercializa subprodutos florestais, até cem metros cúbicos ano;NÃO
+20-33;Exploração econômica da madeira ou lenha e subprodutos florestais - comércio atacadista;SIM*
+20-34;Exploração econômica da madeira ou lenha e subprodutos florestais – comércio varejista;SIM*
+20-35;;SIM
+20-36;Introdução de espécies exóticas para melhoramento genético vegetal e uso na agricultura;NÃO
+20-37;;SIM
+20-41;Utilização do patrimônio genético natural - coleta de material biológico com finalidade científica ou didática;SIM*
+20-42;Exploração econômica da madeira ou lenha e subprodutos florestais - instalação e manutenção de empreendimentos;SIM*
+20-43;Manutenção de área protegida;NÃO
+20-44;Centro de reabilitação da fauna silvestre nativa;NÃO
+20-45;Criação científica de fauna silvestre para fins de pesquisa;NÃO
+20-46;Criação científica de fauna silvestre para fins de conservação;NÃO
+20-47;Manutenção de RPPN;NÃO
+20-48;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre - comércio de pescados;SIM*
+20-49;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre - comércio de peixes ornamentais;SIM*
+20;– 50 Comércio de móveis compostos, no todo ou em parte, por madeiras de espécies nativas;NÃO
+20;– 51 Comércio de móveis compostos, no todo ou em parte, por madeiras de espécies exóticas;NÃO
+20-52;Comércio de móveis compostos, no todo ou em parte, por painéis de madeira industrializada, tais como MDF, compensado ou aglomerado;NÃO
+20-53;Queima controlada da palha de cana-de-açúcar;NÃO
+20-54;Exploração de recursos aquáticos vivos – aquicultura;SIM*
+20-55;Consumo de madeira, lenha e carvão vegetal - construção de edifícios;NÃO
+20-56;Imóvel rural sem atividade produtiva - exclusivo lazer, APP, unidade de conservação e similares;NÃO
+20-57;Formulação e/ou manipulação de produtos biorremediadores;NÃO
+20-58;Coleção biológica;NÃO
+20-60;Silvicultura - florestamento ou reflorestamento com espécies nativas;SIM*
+20-61;Silvicultura - florestamento ou reflorestamento com espécies exóticas;SIM*
+20-62;Exploração econômica da madeira ou lenha e subprodutos florestais - produção de carvão vegetal em florestas plantadas;SIM*
+20-63;Exploração econômica da madeira ou lenha e subprodutos florestais - coleta em florestas nativas de castanhas, látex, palmito e produtos não madeireiros;SIM*
+20-64;Utilização do patrimônio genético natural - flora, fauna, pesca e micro-organismos para fins de pesquisa, manipulação e alteração genética;SIM*
+20-65;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre – revenda de animais vivos;SIM*
+20-66;Atividade de criação e exploração econômica de fauna exótica e de fauna silvestre - criação comercial;SIM*
+20-67;Exploração econômica da madeira ou lenha e subprodutos florestais - extração de madeira em florestas nativas;SIM*
+20-68;Exploração econômica da madeira ou lenha e subprodutos florestais - produção de carvão vegetal em florestas nativas;SIM*
+20-69;Consumo de madeira, lenha e carvão vegetal - indústria alimentícia;NÃO
+20-70;Consumo de madeira, lenha e carvão vegetal - esmagadora de grãos;NÃO
+20-71;Consumo de madeira, lenha e carvão vegetal - indústria siderúrgica;NÃO
+20-72;Consumo de madeira, lenha e carvão vegetal - frigorífico;NÃO
+20-73;Consumo de madeira, lenha e carvão vegetal - panificadora;NÃO
+20-74;Consumo de madeira, lenha e carvão vegetal - laticínio;NÃO
+20-75;Consumo de madeira, lenha e carvão vegetal - restaurante e pizzaria;NÃO
+20-76;Consumo de madeira, lenha e carvão vegetal - hotelaria;NÃO
+20-77;Consumo de madeira, lenha e carvão vegetal - cerâmica;NÃO
+20-78;Consumo de madeira, lenha e carvão vegetal - indústria da borracha;NÃO
+20-79;Exploração econômica da madeira ou lenha e subprodutos florestais - armazenamento de produtos/subprodutos florestais;SIM*
+20;– 80 Exploração de carvão vegetal de espécies exóticas;NÃO
+21-1;Reparação de aparelhos de refrigeração;NÃO
+21-3;Utilização de substâncias controladas pelo Protocolo de Montreal;NÃO
+21-4;Análises laboratoriais;NÃO
+21-5;Experimentação com agroquímicos;NÃO
+21-24;Experimentação com agroquímicos – utilização de estação experimental;NÃO
+21-25;Análises laboratoriais – uso de mercúrio metálico;NÃO
+21-26;Utilização de mercúrio metálico para fins de amalgamação dentária;NÃO
+21-27;Uso próprio de motosserra ou para empréstimo a terceiros;NÃO
+21-28;Instalação de gás natural em veículos automotores – Resolução CONAMA nº 291/2001;NÃO
+21-29;Troca de óleo lubruficante – Resolução Conama 362/2005;NÃO
+22-1;Rodovias, ferrovias, hidrovias, metropolitanos;NÃO
+22-2;Construção de barragens e diques;NÃO
+22-3;Construção de canais para drenagem;NÃO
+22-4;Retificação do curso de água;NÃO
+22-5;Abertura de barras, embocaduras e canais;NÃO
+22-6;Transposição de bacias hidrográficos;NÃO
+22-7;Construção de obras de arte;NÃO
+22-8;Outras construções;NÃO
+22-9;Sondagem e perfuração de poços tubulares (artesianos);NÃO
+23-1;Usina hidroelétrica;NÃO
+23-2;Pequena central hidroelétrica;NÃO
+23-3;Usina termoelétrica;NÃO
+23-5;Linha de transmissão;NÃO
+23-6;Duto;NÃO
+23-7;Rodovia;NÃO
+23-8;Ferrovia;NÃO
+23-9;Hidrovia;NÃO
+23-10;Ponte;NÃO
+23-11;Porto;NÃO
+23-12;Mineração;NÃO
+23-13;Empreendimento militar;NÃO
+23-15;Outras atividades sujeitas a licenciamento não especificadas anteriormente;NÃO
+23-16;Petróleo - aquisição de dados;NÃO
+23-17;Petróleo - perfuração;NÃO
+23-18;Petróleo - produção;NÃO
+23-19;Nuclear - transporte;NÃO
+23-20;Nuclear - geração de energia;NÃO
+23-21;Nuclear - indústrias;NÃO
+23-22;Nuclear - centros de pesquisa;NÃO
+23-23;Exploração de calcário marinho;NÃO
+23-24;Dragagem;NÃO
+23-25;Parque eólico;NÃO
+23-26;Recursos hídricos;NÃO

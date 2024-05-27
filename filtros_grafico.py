@@ -87,7 +87,7 @@ indicadores_t = dict(zip(
 def count_unique_firms(base):
     num_firms = dict()
     for key in base:
-        num_firms[key] = base[key].groupby(by=['ano', 'region', 'massa_salarial']).agg('size').reset_index()
+        num_firms[key] = base[key].groupby(by=['ano', 'region', '   _salarial']).agg('size').reset_index()
         num_firms[key][0] = 1
         num_firms[key] = num_firms[key].groupby(by=['ano', 'region']).agg('size').reset_index()
     return num_firms
@@ -157,9 +157,9 @@ def plot_boxplot(data, x='isic_12', y='quant_tonelada',
     if co2:
         title += f'_{co2}'
     # Made file path more flexible on different operational systems.
-    title += '.png'
+    title += '.eps'
 
-    plt.savefig(os.path.join('plots_td', title))
+    plt.savefig(os.path.join('plots_td', title), format='eps')
     #plt.show()
     plt.close()
     return des_data
@@ -176,7 +176,7 @@ def plot_graphs(base: pd.DataFrame, region=None, key=None):
     if key:
         title += f'_{key}'
     
-    title += '.png'
+    title += '.pdf'
     
     plt.figure(figsize=(12, 6))
 
@@ -247,7 +247,6 @@ def gera_plots(data, csv_description=None):
     new_data = new_data[(new_data[indicador] > 0) &
                         (new_data['ano'] >= year)]
     new_data = new_data.reset_index(drop=True)
-
 
     plot_boxplot(new_data, y=indicador, number=number,
                  ylabel='Massa salarial', title='Massa salarial / Setores econômicos',
@@ -425,14 +424,18 @@ if __name__ == '__main__':
     with open(nome, 'rb') as handler:
         b = pickle.load(handler)
     
-     # Init dataframe to csv
-    csv_description = pd.DataFrame(columns=['box_plot',
-                                            'Média',
-                                            'Mediana',
-                                            'Máximo',
-                                            'Mínimo' ])
+    from ecoefficiency import calcular_ecoficiencia_indicator
+    b = calcular_ecoficiencia_indicator(b)
+    print(b['emissoes'][(b['emissoes']['eco_efic_co2_emissions'].notnull()) &
+                        (b['emissoes']['ano'] == 2017)])
+    #  # Init dataframe to csv
+    # csv_description = pd.DataFrame(columns=['box_plot',
+    #                                         'Média',
+    #                                         'Mediana',
+    #                                         'Máximo',
+    #                                         'Mínimo' ])
 
-    csv_description = gera_plots(b, csv_description=csv_description)
-    csv_description = description_per_sector(b, csv_description)
-    csv_description = csv_description.dropna().reset_index(drop=True)
-    csv_description.to_csv('descritivos.csv')
+    # csv_description = gera_plots(b, csv_description=csv_description)
+    # csv_description = description_per_sector(b, csv_description)
+    # csv_description = csv_description.dropna().reset_index(drop=True)
+    # csv_description.to_csv('descritivos.csv')

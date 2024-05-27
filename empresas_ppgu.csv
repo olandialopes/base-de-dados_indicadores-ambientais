@@ -1,0 +1,591 @@
+,CNAE,PP/GU,N° de empresas
+0,Extração de petróleo e gás natural,Alto,"0    1863
+Name: N° de empresas, dtype: int64"
+1,Extração e beneficiamento de xisto,Alto,"1    6
+Name: N° de empresas, dtype: int64"
+2,Extração e beneficiamento de areias betuminosas,Alto,"2    46
+Name: N° de empresas, dtype: int64"
+3,Atividades de apoio à extração de petróleo e gás natural,Alto,"3    1804
+Name: N° de empresas, dtype: int64"
+4,"Britamento de pedras, exceto associado à extração",Médio,"4    6463
+Name: N° de empresas, dtype: int64"
+5,"Aparelhamento de placas e execução de trabalhos em mármore, granito, ardósia e outras pedras",Médio,"5    37475
+Name: N° de empresas, dtype: int64"
+6,Fabricação de vidro plano e de segurança,Médio,"6    1310
+Name: N° de empresas, dtype: int64"
+7,Fabricação de embalagens de vidro,Médio,"7    183
+Name: N° de empresas, dtype: int64"
+8,Fabricação de artigos de vidro,Médio,"8    6397
+Name: N° de empresas, dtype: int64"
+9,Fabricação de cimento,Médio,"9    1255
+Name: N° de empresas, dtype: int64"
+10,Fabricação de artefatos de cimento para uso na construção,Médio,"10    17663
+Name: N° de empresas, dtype: int64"
+11,Fabricação de artefatos de fibrocimento para uso na construção,Médio,"11    556
+Name: N° de empresas, dtype: int64"
+12,Preparação de massa de concreto e argamassa para construção,Médio,"12    4855
+Name: N° de empresas, dtype: int64"
+13,"Fabricação de outros artefatos e produtos de concreto, cimento, fibrocimento, gesso e materiais semelhantes",Médio,"13    31793
+Name: N° de empresas, dtype: int64"
+14,Fabricação de produtos cerâmicos refratários,Médio,"14    1620
+Name: N° de empresas, dtype: int64"
+15,Fabricação de azulejos e pisos,Médio,"15    542
+Name: N° de empresas, dtype: int64"
+16,"Fabricação de artefatos de cerâmica e barro cozido para uso na construção, exceto azulejos e pisos",Médio,"16    32114
+Name: N° de empresas, dtype: int64"
+17,Fabricação de material sanitário de cerâmica,Médio,"17    81
+Name: N° de empresas, dtype: int64"
+18,Fabricação de cal e gesso,Médio,"18    2608
+Name: N° de empresas, dtype: int64"
+19,Fabricação de abrasivos,Médio,"19    131
+Name: N° de empresas, dtype: int64"
+20,Produção de ferroligas,Alto,"20    822
+Name: N° de empresas, dtype: int64"
+21,Produção de semi-acabados de aço,Alto,"21    129
+Name: N° de empresas, dtype: int64"
+22,"Produção de laminados planos de aço ao carbono, revestidos ou não",Alto,"22    601
+Name: N° de empresas, dtype: int64"
+23,Produção de laminados planos de aços especiais,Alto,"23    71
+Name: N° de empresas, dtype: int64"
+24,Produção de tubos de aço sem costura,Alto,"24    121
+Name: N° de empresas, dtype: int64"
+25,Fundição de ferro e aço,Alto,"25    4690
+Name: N° de empresas, dtype: int64"
+26,Produção de arames de aço,Alto,"26    488
+Name: N° de empresas, dtype: int64"
+27,"Produção de relaminados, trefilados e perfilados de aço, exceto arames",Alto,"27    875
+Name: N° de empresas, dtype: int64"
+28,Produção de tubos de aço com costura,Alto,"28    592
+Name: N° de empresas, dtype: int64"
+29,Produção de outros tubos de ferro e aço,Alto,"29    452
+Name: N° de empresas, dtype: int64"
+30,Produção de forjados de aço,Alto,"30    723
+Name: N° de empresas, dtype: int64"
+31,Produção de alumínio e suas ligas em formas primárias,Alto,"31    1424
+Name: N° de empresas, dtype: int64"
+32,Metalurgia do cobre,Alto,"32    145
+Name: N° de empresas, dtype: int64"
+33,Produção de zinco em formas primárias,Alto,"33    404
+Name: N° de empresas, dtype: int64"
+34,Metalurgia dos metais preciosos,Alto,"34    527
+Name: N° de empresas, dtype: int64"
+35,Produção de laminados de alumínio,Alto,"35    641
+Name: N° de empresas, dtype: int64"
+36,Metalurgia do cobre,Alto,"32    145
+Name: N° de empresas, dtype: int64"
+37,Produção de laminados de zinco,Alto,"36    30
+Name: N° de empresas, dtype: int64"
+38,Produção de laminados de alumínio,Alto,"35    641
+Name: N° de empresas, dtype: int64"
+39,Metalurgia do cobre,Alto,"32    145
+Name: N° de empresas, dtype: int64"
+40,Produção de laminados de zinco,Alto,"36    30
+Name: N° de empresas, dtype: int64"
+41,Metalurgia dos metais preciosos,Alto,"34    527
+Name: N° de empresas, dtype: int64"
+42,Metalurgia do pó,Alto,"37    180
+Name: N° de empresas, dtype: int64"
+43,Fabricação de estruturas metálicas,Alto,"38    20669
+Name: N° de empresas, dtype: int64"
+44,Fabricação de obras de caldeiraria pesada,Alto,"39    2322
+Name: N° de empresas, dtype: int64"
+45,"Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",Alto,"40    2277
+Name: N° de empresas, dtype: int64"
+46,"Fabricação de caldeiras geradoras de vapor, exceto para aquecimento central e para veículos",Alto,"41    360
+Name: N° de empresas, dtype: int64"
+47,Fabricação de esquadrias de metal,Alto,"42    77891
+Name: N° de empresas, dtype: int64"
+48,Produção de artefatos estampados de metal,Alto,"43    16674
+Name: N° de empresas, dtype: int64"
+49,Fabricação de artigos de cutelaria,Alto,"44    2630
+Name: N° de empresas, dtype: int64"
+50,"Fabricação de artigos de serralheria, exceto esquadrias",Alto,"45    177905
+Name: N° de empresas, dtype: int64"
+51,Fabricação de ferramentas,Alto,"46    15902
+Name: N° de empresas, dtype: int64"
+52,"Fabricação de equipamento bélico pesado, exceto veículos militares de combate",Alto,"47    475
+Name: N° de empresas, dtype: int64"
+53,"Fabricação de armas de fogo, outras armas e munições",Alto,"48    104
+Name: N° de empresas, dtype: int64"
+54,Fabricação de embalagens metálicas,Alto,"49    1249
+Name: N° de empresas, dtype: int64"
+55,Fabricação de produtos de trefilados de metal padronizados,Alto,"50    5636
+Name: N° de empresas, dtype: int64"
+56,"Fabricação de produtos de trefilados de metal, exceto padronizados",Alto,"51    2930
+Name: N° de empresas, dtype: int64"
+57,Fabricação de artigos de metal para uso doméstico e pessoal,Alto,"52    7339
+Name: N° de empresas, dtype: int64"
+58,Serviço de corte e dobra de metais,Alto,"53    2265
+Name: N° de empresas, dtype: int64"
+59,Fabricação de outros produtos de metal não especificados anteriormente,Alto,"54    26327
+Name: N° de empresas, dtype: int64"
+60,Serviços de tratamento e revestimento em metais,Alto,"55    6214
+Name: N° de empresas, dtype: int64"
+61,"Fabricação de motores e turbinas, peças e acessórios, exceto para aviões e veículos rodoviários",Médio,"56    632
+Name: N° de empresas, dtype: int64"
+62,"Fabricação de equipamentos hidráulicos e pneumáticos, peças e acessórios, exceto válvulas",Médio,"57    1553
+Name: N° de empresas, dtype: int64"
+63,"Fabricação de válvulas, registros e dispositivos semelhantes, peças e acessórios",Médio,"58    1297
+Name: N° de empresas, dtype: int64"
+64,"Fabricação de compressores para uso industrial, peças e acessórios",Médio,"59    193
+Name: N° de empresas, dtype: int64"
+65,"Fabricação de compressores para uso não industrial, peças e acessórios",Médio,"60    21
+Name: N° de empresas, dtype: int64"
+66,Fabricação de rolamentos para fins industriais,Médio,"61    64
+Name: N° de empresas, dtype: int64"
+67,"Fabricação de equipamentos de transmissão para fins industriais, exceto rolamentos",Médio,"62    854
+Name: N° de empresas, dtype: int64"
+68,"Fabricação de estufas e fornos elétricos para fins industriais, peças e acessórios",Médio,"63    306
+Name: N° de empresas, dtype: int64"
+69,"Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de pessoas, peças e acessórios",Médio,"64    445
+Name: N° de empresas, dtype: int64"
+70,"Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas, peças e acessórios",Médio,"65    1761
+Name: N° de empresas, dtype: int64"
+71,"Fabricação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial, peças e acessórios",Médio,"66    3913
+Name: N° de empresas, dtype: int64"
+72,Fabricação de aparelhos e equipamentos de ar condicionado para uso industrial,Médio,"67    100
+Name: N° de empresas, dtype: int64"
+73,"Fabricação de outras máquinas e equipamentos de uso geral não especificados anteriormente, peças e acessórios",Médio,"68    11607
+Name: N° de empresas, dtype: int64"
+74,"Fabricação de tratores agrícolas, peças e acessórios",Médio,"69    292
+Name: N° de empresas, dtype: int64"
+75,"Fabricação de equipamentos para irrigação agrícola, peças e acessórios",Médio,"70    328
+Name: N° de empresas, dtype: int64"
+76,"Fabricação de máquinas e equipamentos para a agricultura e pecuária, peças e acessórios, exceto para irrigação",Médio,"71    6646
+Name: N° de empresas, dtype: int64"
+77,"Fabricação de máquinas e equipamentos para a prospecção e extração de petróleo, peças e acessórios",Médio,"72    235
+Name: N° de empresas, dtype: int64"
+78,"Fabricação de outras máquinas e equipamentos para uso na extração mineral, peças e acessórios, exceto na extração de petróleo",Médio,"73    560
+Name: N° de empresas, dtype: int64"
+79,"Fabricação de tratores, peças e acessórios, exceto agrícolas",Médio,"74    80
+Name: N° de empresas, dtype: int64"
+80,"Fabricação de máquinas e equipamentos para terraplenagem, pavimentação e construção, peças e acessórios, exceto tratores",Médio,"75    467
+Name: N° de empresas, dtype: int64"
+81,"Fabricação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo, peças e acessórios",Médio,"76    3140
+Name: N° de empresas, dtype: int64"
+82,"Fabricação de máquinas e equipamentos para a indústria têxtil, peças e acessórios",Médio,"77    537
+Name: N° de empresas, dtype: int64"
+83,"Fabricação de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados, peças e acessórios",Médio,"78    934
+Name: N° de empresas, dtype: int64"
+84,"Fabricação de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos, peças e acessórios",Médio,"79    426
+Name: N° de empresas, dtype: int64"
+85,"Fabricação de máquinas e equipamentos para a indústria do plástico, peças e acessórios",Médio,"80    504
+Name: N° de empresas, dtype: int64"
+86,"Fabricação de máquinas e equipamentos para uso industrial específico não especificados anteriormente, peças e acessórios",Médio,"81    7961
+Name: N° de empresas, dtype: int64"
+87,"Fabricação de pilhas, baterias e acumuladores elétricos, exceto para veículos automotores",Médio,"82    263
+Name: N° de empresas, dtype: int64"
+88,Fabricação de baterias e acumuladores para veículos automotores,Médio,"83    568
+Name: N° de empresas, dtype: int64"
+89,Recondicionamento de baterias e acumuladores para veículos automotores,Médio,"84    102
+Name: N° de empresas, dtype: int64"
+90,Fabricação de componentes eletrônicos,Médio,"85    4709
+Name: N° de empresas, dtype: int64"
+91,Fabricação de equipamentos de informática,Médio,"86    1999
+Name: N° de empresas, dtype: int64"
+92,Fabricação de periféricos para equipamentos de informática,Médio,"87    1613
+Name: N° de empresas, dtype: int64"
+93,"Fabricação de equipamentos transmissores de comunicação, peças e acessórios",Médio,"88    1066
+Name: N° de empresas, dtype: int64"
+94,"Fabricação de aparelhos telefônicos e de outros equipamentos de comunicação, peças e acessórios",Médio,"89    793
+Name: N° de empresas, dtype: int64"
+95,"Fabricação de eletrodos, contatos e outros artigos de carvão e grafita para uso elétrico, eletroímãs e isoladores",Médio,"90    162
+Name: N° de empresas, dtype: int64"
+96,"Fabricação de geradores de corrente contínua e alternada, peças e acessórios",Médio,"91    1009
+Name: N° de empresas, dtype: int64"
+97,"Fabricação de transformadores, indutores, conversores, sincronizadores e semelhantes, peças e acessórios",Médio,"92    1258
+Name: N° de empresas, dtype: int64"
+98,"Fabricação de motores elétricos, peças e acessórios",Médio,"93    440
+Name: N° de empresas, dtype: int64"
+99,Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica,Médio,"94    2826
+Name: N° de empresas, dtype: int64"
+100,Fabricação de material elétrico para instalações em circuito de consumo,Médio,"95    1408
+Name: N° de empresas, dtype: int64"
+101,"Fabricação de fios, cabos e condutores elétricos isolados",Médio,"96    2060
+Name: N° de empresas, dtype: int64"
+102,Fabricação de luminárias e outros equipamentos de iluminação,Médio,"97    4116
+Name: N° de empresas, dtype: int64"
+103,Fabricação de equipamentos para sinalização e alarme,Médio,"98    801
+Name: N° de empresas, dtype: int64"
+104,Fabricação de outros equipamentos e aparelhos elétricos não especificados anteriormente,Médio,"99    4190
+Name: N° de empresas, dtype: int64"
+105,"Fabricação de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo",Médio,"100    1741
+Name: N° de empresas, dtype: int64"
+106,"Fabricação de aparelhos e equipamentos de medida, teste e controle",Médio,"101    3261
+Name: N° de empresas, dtype: int64"
+107,Fabricação de cronômetros e relógios,Médio,"102    403
+Name: N° de empresas, dtype: int64"
+108,Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação,Médio,"103    885
+Name: N° de empresas, dtype: int64"
+109,"Fabricação de aparelhos fotográficos e cinematográficos, peças e acessórios",Médio,"104    128
+Name: N° de empresas, dtype: int64"
+110,"Fabricação de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico, peças e acessórios",Médio,"105    591
+Name: N° de empresas, dtype: int64"
+111,"Fabricação de aparelhos elétricos de uso pessoal, peças e acessórios",Médio,"106    100
+Name: N° de empresas, dtype: int64"
+112,"Fabricação de outros aparelhos eletrodomésticos não especificados anteriormente, peças e acessórios",Médio,"107    1452
+Name: N° de empresas, dtype: int64"
+113,Fabricação de lâmpadas,Médio,"108    293
+Name: N° de empresas, dtype: int64"
+114,"Fabricação de automóveis, camionetas e utilitários",Médio,"109    519
+Name: N° de empresas, dtype: int64"
+115,"Fabricação de chassis com motor para automóveis, camionetas e utilitários",Médio,"110    33
+Name: N° de empresas, dtype: int64"
+116,"Fabricação de motores para automóveis, camionetas e utilitários",Médio,"111    36
+Name: N° de empresas, dtype: int64"
+117,Fabricação de caminhões e ônibus,Médio,"112    140
+Name: N° de empresas, dtype: int64"
+118,Fabricação de motores para caminhões e ônibus,Médio,"113    11
+Name: N° de empresas, dtype: int64"
+119,"Fabricação de cabines, carrocerias e reboques para caminhões",Médio,"114    4067
+Name: N° de empresas, dtype: int64"
+120,Fabricação de carrocerias para ônibus,Médio,"115    116
+Name: N° de empresas, dtype: int64"
+121,"Fabricação de cabines, carrocerias e reboques para outros veículos automotores, exceto caminhões e ônibus",Médio,"116    2331
+Name: N° de empresas, dtype: int64"
+122,Fabricação de peças e acessórios para o sistema motor de veículos automotores,Médio,"117    1183
+Name: N° de empresas, dtype: int64"
+123,Fabricação de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores,Médio,"118    349
+Name: N° de empresas, dtype: int64"
+124,Fabricação de peças e acessórios para o sistema de freios de veículos automotores,Médio,"119    402
+Name: N° de empresas, dtype: int64"
+125,Fabricação de peças e acessórios para o sistema de direção e suspensão de veículos automotores,Médio,"120    705
+Name: N° de empresas, dtype: int64"
+126,"Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias",Médio,"121    1366
+Name: N° de empresas, dtype: int64"
+127,Fabricação de bancos e estofados para veículos automotores,Médio,"122    3831
+Name: N° de empresas, dtype: int64"
+128,Fabricação de outras peças e acessórios para veículos automotores não especificadas anteriormente,Médio,"123    6779
+Name: N° de empresas, dtype: int64"
+129,Recondicionamento e recuperação de motores para veículos automotores,Médio,"124    10888
+Name: N° de empresas, dtype: int64"
+130,"Fabricação de locomotivas, vagões e outros materiais rodantes",Médio,"125    141
+Name: N° de empresas, dtype: int64"
+131,Fabricação de peças e acessórios para veículos ferroviários,Médio,"126    149
+Name: N° de empresas, dtype: int64"
+132,Fabricação de motocicletas,Médio,"127    400
+Name: N° de empresas, dtype: int64"
+133,Fabricação de peças e acessórios para motocicletas,Médio,"128    316
+Name: N° de empresas, dtype: int64"
+134,Fabricação de aeronaves,Médio,"129    428
+Name: N° de empresas, dtype: int64"
+135,"Fabricação de turbinas, motores e outros componentes e peças para aeronaves",Médio,"130    67
+Name: N° de empresas, dtype: int64"
+136,Construção de embarcações de grande porte,Médio,"131    854
+Name: N° de empresas, dtype: int64"
+137,Construção de embarcações para esporte e lazer,Médio,"132    1542
+Name: N° de empresas, dtype: int64"
+138,Manutenção e reparação de embarcações e estruturas flutuantes,Médio,"133    2164
+Name: N° de empresas, dtype: int64"
+139,Manutenção e reparação de embarcações para esporte e lazer,Médio,"134    5786
+Name: N° de empresas, dtype: int64"
+140,"Fabricação de madeira laminada e de chapas de madeira compensada, prensada e aglomerada",Médio,"135    4851
+Name: N° de empresas, dtype: int64"
+141,Fabricação de outros artigos de carpintaria para construção,Médio,"136    38459
+Name: N° de empresas, dtype: int64"
+142,Fabricação de móveis com predominância de madeira,Médio,"137    262601
+Name: N° de empresas, dtype: int64"
+143,Fabricação de celulose e outras pastas para a fabricação de papel,Alto,"138    453
+Name: N° de empresas, dtype: int64"
+144,Fabricação de papel,Alto,"139    2177
+Name: N° de empresas, dtype: int64"
+145,Fabricação de embalagens de papel,Alto,"140    8107
+Name: N° de empresas, dtype: int64"
+146,Fabricação de fraldas descartáveis,Alto,"141    3770
+Name: N° de empresas, dtype: int64"
+147,Fabricação de absorventes higiênicos,Alto,"142    535
+Name: N° de empresas, dtype: int64"
+148,Reforma de pneumáticos usados,Pequeno,"143    5719
+Name: N° de empresas, dtype: int64"
+149,Curtimento e outras preparações de couro,Alto,"144    4728
+Name: N° de empresas, dtype: int64"
+150,Fabricação de artefatos de couro não especificados anteriormente,Alto,"145    21594
+Name: N° de empresas, dtype: int64"
+151,Fabricação de linhas para costurar e bordar,Médio,"146    387
+Name: N° de empresas, dtype: int64"
+152,Fabricação de tecidos de malha,Médio,"147    8054
+Name: N° de empresas, dtype: int64"
+153,"Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário",Médio,"148    33530
+Name: N° de empresas, dtype: int64"
+154,"Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário",Médio,"149    759
+Name: N° de empresas, dtype: int64"
+155,"Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário",Médio,"150    39642
+Name: N° de empresas, dtype: int64"
+156,Fabricação de laminados planos e tubulares de material plástico,Pequeno,"151    2025
+Name: N° de empresas, dtype: int64"
+157,"Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material",Pequeno,"152    20421
+Name: N° de empresas, dtype: int64"
+158,Fabricação de embalagens de material plástico,Pequeno,"153    16743
+Name: N° de empresas, dtype: int64"
+159,Fabricação de tubos e acessórios de material plástico para uso na construção,Pequeno,"154    793
+Name: N° de empresas, dtype: int64"
+160,Fabricação de artefatos de material plástico para usos industriais,Pequeno,"155    5483
+Name: N° de empresas, dtype: int64"
+161,"Fabricação de artefatos de material plástico para uso na construção, exceto tubos e acessórios",Pequeno,"156    2865
+Name: N° de empresas, dtype: int64"
+162,Fabricação de artefatos de material plástico para outros usos não especificados anteriormente,Pequeno,"157    24260
+Name: N° de empresas, dtype: int64"
+163,"Fabricação de móveis de outros materiais, exceto madeira e metal",Pequeno,"158    11965
+Name: N° de empresas, dtype: int64"
+164,Processamento industrial do fumo,Médio,"159    136
+Name: N° de empresas, dtype: int64"
+165,Fabricação de cigarros,Médio,"160    1030
+Name: N° de empresas, dtype: int64"
+166,Fabricação de cigarrilhas e charutos,Médio,"161    170
+Name: N° de empresas, dtype: int64"
+167,Fabricação de filtros para cigarros,Médio,"162    33
+Name: N° de empresas, dtype: int64"
+168,"Fabricação de outros produtos do fumo, exceto cigarros, cigarrilhas e charutos",Médio,"163    1417
+Name: N° de empresas, dtype: int64"
+169,Coquerias,Alto,"164    90
+Name: N° de empresas, dtype: int64"
+170,"Fabricação de outros produtos derivados do petróleo, exceto produtos do refino",Alto,"165    326
+Name: N° de empresas, dtype: int64"
+171,Fabricação de cloro e álcalis,Alto,"166    114
+Name: N° de empresas, dtype: int64"
+172,Fabricação de intermediários para fertilizantes,Alto,"167    195
+Name: N° de empresas, dtype: int64"
+173,Fabricação de gases industriais,Alto,"168    736
+Name: N° de empresas, dtype: int64"
+174,Elaboração de combustíveis nucleares,Alto,"169    6
+Name: N° de empresas, dtype: int64"
+175,Fabricação de outros produtos químicos inorgânicos não especificados anteriormente,Alto,"170    789
+Name: N° de empresas, dtype: int64"
+176,"Fabricação de intermediários para plastificantes, resinas e fibras",Alto,"171    297
+Name: N° de empresas, dtype: int64"
+177,Fabricação de produtos químicos orgânicos não especificados anteriormente,Alto,"172    3982
+Name: N° de empresas, dtype: int64"
+178,Fabricação de adesivos e selantes,Alto,"173    1015
+Name: N° de empresas, dtype: int64"
+179,Fabricação de aditivos de uso industrial,Alto,"174    1913
+Name: N° de empresas, dtype: int64"
+180,Fabricação de catalisadores,Alto,"175    50
+Name: N° de empresas, dtype: int64"
+181,"Fabricação de chapas, filmes, papéis e outros materiais e produtos químicos para fotografia",Alto,"176    191
+Name: N° de empresas, dtype: int64"
+182,Fabricação de outros produtos químicos não especificados anteriormente,Alto,"177    8187
+Name: N° de empresas, dtype: int64"
+183,Fabricação de produtos do refino de petróleo,Alto,"178    569
+Name: N° de empresas, dtype: int64"
+184,Formulação de combustíveis,Alto,"179    40
+Name: N° de empresas, dtype: int64"
+185,"Fabricação de outros produtos derivados do petróleo, exceto produtos do refino",Alto,"165    326
+Name: N° de empresas, dtype: int64"
+186,Fabricação de produtos petroquímicos básicos,Alto,"180    289
+Name: N° de empresas, dtype: int64"
+187,Fabricação de produtos químicos orgânicos não especificados anteriormente,Alto,"172    3982
+Name: N° de empresas, dtype: int64"
+188,Produção de gás; processamento de gás natural,Alto,"181    272
+Name: N° de empresas, dtype: int64"
+189,Fabricação de produtos químicos orgânicos não especificados anteriormente,Alto,"172    3982
+Name: N° de empresas, dtype: int64"
+190,Fabricação de aditivos de uso industrial,Alto,"174    1913
+Name: N° de empresas, dtype: int64"
+191,Fabricação de outros produtos químicos não especificados anteriormente,Alto,"177    8187
+Name: N° de empresas, dtype: int64"
+192,"Fabricação de pólvoras, explosivos e detonantes",Alto,"182    359
+Name: N° de empresas, dtype: int64"
+193,Fabricação de artigos pirotécnicos,Alto,"183    317
+Name: N° de empresas, dtype: int64"
+194,Fabricação de fósforos de segurança,Alto,"184    13
+Name: N° de empresas, dtype: int64"
+195,Fabricação de desinfestantes domissanitários,Alto,"185    1996
+Name: N° de empresas, dtype: int64"
+196,Fabricação de produtos de limpeza e polimento,Alto,"186    12775
+Name: N° de empresas, dtype: int64"
+197,"Fabricação de tintas, vernizes, esmaltes e lacas",Alto,"187    5262
+Name: N° de empresas, dtype: int64"
+198,Fabricação de tintas de impressão,Alto,"188    247
+Name: N° de empresas, dtype: int64"
+199,"Fabricação de impermeabilizantes, solventes e produtos afins",Alto,"189    660
+Name: N° de empresas, dtype: int64"
+200,Fabricação de defensivos agrícolas,Alto,"190    650
+Name: N° de empresas, dtype: int64"
+201,Fabricação de produtos farmoquímicos,Alto,"191    755
+Name: N° de empresas, dtype: int64"
+202,Fabricação de medicamentos alopáticos para uso humano,Alto,"192    2313
+Name: N° de empresas, dtype: int64"
+203,Fabricação de medicamentos homeopáticos para uso humano,Alto,"193    215
+Name: N° de empresas, dtype: int64"
+204,Fabricação de medicamentos fitoterápicos para uso humano,Alto,"194    152
+Name: N° de empresas, dtype: int64"
+205,Fabricação de medicamentos para uso veterinário,Alto,"195    902
+Name: N° de empresas, dtype: int64"
+206,Fabricação de preparações farmacêuticas,Alto,"196    139
+Name: N° de empresas, dtype: int64"
+207,Fabricação de sabões e detergentes sintéticos,Alto,"197    10760
+Name: N° de empresas, dtype: int64"
+208,"Fabricação de velas, inclusive decorativas",Alto,"198    6375
+Name: N° de empresas, dtype: int64"
+209,"Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal",Alto,"199    12316
+Name: N° de empresas, dtype: int64"
+210,Fabricação de álcool,Alto,"201    1889
+Name: N° de empresas, dtype: int64"
+211,Fabricação de cloro e álcalis,Alto,"166    114
+Name: N° de empresas, dtype: int64"
+212,Frigorífico - abate de bovinos,Médio,"200    8896
+Name: N° de empresas, dtype: int64"
+213,Frigorífico - abate de ovinos e caprinos,Médio,"202    189
+Name: N° de empresas, dtype: int64"
+214,Frigorífico - abate de bufalinos,Médio,"203    17
+Name: N° de empresas, dtype: int64"
+215,Abate de aves,Médio,"204    9059
+Name: N° de empresas, dtype: int64"
+216,Abate de pequenos animais,Médio,"205    344
+Name: N° de empresas, dtype: int64"
+217,Frigorífico - abate de suínos,Médio,"206    1032
+Name: N° de empresas, dtype: int64"
+218,Matadouro - abate de suínos sob contrato,Médio,"207    44
+Name: N° de empresas, dtype: int64"
+219,Fabricação de produtos de carne,Médio,"208    19036
+Name: N° de empresas, dtype: int64"
+220,Preparação de subprodutos do abate,Médio,"209    1311
+Name: N° de empresas, dtype: int64"
+221,Fabricação de conservas de frutas,Médio,"210    19577
+Name: N° de empresas, dtype: int64"
+222,Fabricação de conservas de palmito,Médio,"211    574
+Name: N° de empresas, dtype: int64"
+223,"Fabricação de conservas de legumes e outros vegetais, exceto palmito",Médio,"212    6146
+Name: N° de empresas, dtype: int64"
+224,"Fabricação de sucos concentrados de frutas, hortaliças e legumes",Médio,"213    6520
+Name: N° de empresas, dtype: int64"
+225,"Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados",Médio,"214    6107
+Name: N° de empresas, dtype: int64"
+226,Preparação do leite,Médio,"215    3463
+Name: N° de empresas, dtype: int64"
+227,Fabricação de laticínios,Médio,"216    26522
+Name: N° de empresas, dtype: int64"
+228,Fabricação de sorvetes e outros gelados comestíveis,Médio,"217    20731
+Name: N° de empresas, dtype: int64"
+229,Fabricação de açúcar em bruto,Médio,"218    2843
+Name: N° de empresas, dtype: int64"
+230,Fabricação de açúcar de cana refinado,Médio,"219    358
+Name: N° de empresas, dtype: int64"
+231,Fabricação de açúcar de cereais (dextrose) e de beterraba,Médio,"220    4
+Name: N° de empresas, dtype: int64"
+232,"Fabricação de óleos vegetais em bruto, exceto óleo de milho",Médio,"221    1596
+Name: N° de empresas, dtype: int64"
+233,"Fabricação de óleos vegetais refinados, exceto óleo de milho",Médio,"222    566
+Name: N° de empresas, dtype: int64"
+234,Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais,Médio,"223    139
+Name: N° de empresas, dtype: int64"
+235,Fabricação de óleo de milho em bruto,Médio,"224    5
+Name: N° de empresas, dtype: int64"
+236,Fabricação de produtos derivados do cacau e de chocolates,Médio,"225    24214
+Name: N° de empresas, dtype: int64"
+237,Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais,Médio,"223    139
+Name: N° de empresas, dtype: int64"
+238,Fabricação de fermentos e leveduras,Médio,"226    134
+Name: N° de empresas, dtype: int64"
+239,Fabricação de alimentos para animais,Médio,"227    9943
+Name: N° de empresas, dtype: int64"
+240,Fabricação de vinho,Médio,"228    2316
+Name: N° de empresas, dtype: int64"
+241,Fabricação de vinagres,Médio,"229    8042
+Name: N° de empresas, dtype: int64"
+242,"Fabricação de malte, inclusive malte uísque",Médio,"230    247
+Name: N° de empresas, dtype: int64"
+243,Fabricação de cervejas e chopes,Médio,"231    3852
+Name: N° de empresas, dtype: int64"
+244,"Fabricação de sucos concentrados de frutas, hortaliças e legumes",Médio,"213    6520
+Name: N° de empresas, dtype: int64"
+245,"Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados",Médio,"214    6107
+Name: N° de empresas, dtype: int64"
+246,"Fabricação de produtos para infusão (chá, mate, etc.)",Médio,"232    2401
+Name: N° de empresas, dtype: int64"
+247,Fabricação de águas envasadas,Médio,"233    3319
+Name: N° de empresas, dtype: int64"
+248,Fabricação de refrigerantes,Médio,"234    2414
+Name: N° de empresas, dtype: int64"
+249,Fabricação de chá mate e outros chás prontos para consumo,Médio,"235    136
+Name: N° de empresas, dtype: int64"
+250,"Fabricação de refrescos, xaropes e pós para refrescos, exceto refrescos de frutas",Médio,"236    1373
+Name: N° de empresas, dtype: int64"
+251,Fabricação de outras bebidas não-alcoólicas não especificadas anteriormente,Médio,"237    801
+Name: N° de empresas, dtype: int64"
+252,Fabricação de aguardente de cana-de-açúcar,Médio,"238    7013
+Name: N° de empresas, dtype: int64"
+253,Fabricação de outras aguardentes e bebidas destiladas,Médio,"239    1853
+Name: N° de empresas, dtype: int64"
+254,Geração de energia elétrica,Médio,"240    19403
+Name: N° de empresas, dtype: int64"
+255,Usinas de compostagem,Médio,"241    546
+Name: N° de empresas, dtype: int64"
+256,Transporte ferroviário de carga,Alto,"242    551
+Name: N° de empresas, dtype: int64"
+257,Transporte rodoviário de produtos perigosos,Alto,"243    26141
+Name: N° de empresas, dtype: int64"
+258,"Transporte por navegação interior de carga, municipal, exceto travessia",Alto,"244    2770
+Name: N° de empresas, dtype: int64"
+259,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",Alto,"245    2118
+Name: N° de empresas, dtype: int64"
+260,Transporte dutoviário,Alto,"246    384
+Name: N° de empresas, dtype: int64"
+261,Operação dos aeroportos e campos de aterrissagem,Alto,"247    1310
+Name: N° de empresas, dtype: int64"
+262,Transporte ferroviário de carga,Alto,"242    551
+Name: N° de empresas, dtype: int64"
+263,Transporte rodoviário de produtos perigosos,Alto,"243    26141
+Name: N° de empresas, dtype: int64"
+264,"Transporte por navegação interior de carga, municipal, exceto travessia",Alto,"244    2770
+Name: N° de empresas, dtype: int64"
+265,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",Alto,"245    2118
+Name: N° de empresas, dtype: int64"
+266,Transporte ferroviário de carga,Alto,"242    551
+Name: N° de empresas, dtype: int64"
+267,Transporte rodoviário de produtos perigosos,Alto,"243    26141
+Name: N° de empresas, dtype: int64"
+268,"Transporte por navegação interior de carga, municipal, exceto travessia",Alto,"244    2770
+Name: N° de empresas, dtype: int64"
+269,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",Alto,"245    2118
+Name: N° de empresas, dtype: int64"
+270,Transporte ferroviário de carga,Alto,"242    551
+Name: N° de empresas, dtype: int64"
+271,Transporte rodoviário de produtos perigosos,Alto,"243    26141
+Name: N° de empresas, dtype: int64"
+272,"Transporte por navegação interior de carga, municipal, exceto travessia",Alto,"244    2770
+Name: N° de empresas, dtype: int64"
+273,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",Alto,"245    2118
+Name: N° de empresas, dtype: int64"
+274,Transporte aéreo de carga,Alto,"248    468
+Name: N° de empresas, dtype: int64"
+275,Extração de madeira em florestas nativas,Médio,"249    1236
+Name: N° de empresas, dtype: int64"
+276,Produção de carvão vegetal - florestas nativas,Médio,"250    1505
+Name: N° de empresas, dtype: int64"
+277,Pesca de peixes em água salgada,Médio,"251    3893
+Name: N° de empresas, dtype: int64"
+278,Pesca de crustáceos e moluscos em água salgada,Médio,"252    511
+Name: N° de empresas, dtype: int64"
+279,Coleta de outros produtos marinhos,Médio,"253    42
+Name: N° de empresas, dtype: int64"
+280,Pesca de peixes em água doce,Médio,"254    6044
+Name: N° de empresas, dtype: int64"
+281,Pesca de crustáceos e moluscos em água doce,Médio,"255    8
+Name: N° de empresas, dtype: int64"
+282,Coleta de outros produtos aquáticos de água doce,Médio,"256    71
+Name: N° de empresas, dtype: int64"
+283,"Atividades de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental",Médio,"257    4257
+Name: N° de empresas, dtype: int64"
+284,Extração de madeira em florestas plantadas,Médio,"258    13387
+Name: N° de empresas, dtype: int64"
+285,Produção de carvão vegetal - florestas plantadas,Médio,"259    6904
+Name: N° de empresas, dtype: int64"
+286,Extração de madeira em florestas plantadas,Médio,"258    13387
+Name: N° de empresas, dtype: int64"
+287,Produção de carvão vegetal - florestas plantadas,Médio,"259    6904
+Name: N° de empresas, dtype: int64"
+288,Coleta de palmito em florestas nativas,Médio,"260    107
+Name: N° de empresas, dtype: int64"
+289,Operação dos aeroportos e campos de aterrissagem,-,"247    1310
+Name: N° de empresas, dtype: int64"
+290,Operação dos aeroportos e campos de aterrissagem,-,"247    1310
+Name: N° de empresas, dtype: int64"
+291,Transmissão de energia elétrica,-,"261    2880
+Name: N° de empresas, dtype: int64"
+292,Geração de energia elétrica,-,"240    19403
+Name: N° de empresas, dtype: int64"
+293,Geração de energia elétrica,-,"240    19403
+Name: N° de empresas, dtype: int64"
+294,Distribuição de energia elétrica,-,"262    5066
+Name: N° de empresas, dtype: int64"

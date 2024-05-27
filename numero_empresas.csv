@@ -1,0 +1,745 @@
+,Descrição,N° de empresas
+0,Extração de petróleo e gás natural,1863
+1,Extração e beneficiamento de xisto,6
+2,Extração e beneficiamento de areias betuminosas,46
+3,Atividades de apoio à extração de petróleo e gás natural,1804
+4,"Britamento de pedras, exceto associado à extração",6463
+5,"Aparelhamento de pedras para a construção, exceto associado à extração",0
+6,"Aparelhamento de placas e execução de trabalhos em mármore, granito, ardósia e outras pedras",37475
+7,Fabricação de vidro plano e de segurança,1310
+8,Fabricação de embalagens de vidro,183
+9,Fabricação de artigos de vidro,6397
+10,Fabricação de cimento,1255
+11,"Fabricação de estruturas pré moldadas de concreto armado, em série e sob encomenda",0
+12,Fabricação de artefatos de cimento para uso na construção,17663
+13,Fabricação de artefatos de fibrocimento para uso na construção,556
+14,Fabricação de casas pré moldadas de concreto,0
+15,Preparação de massa de concreto e argamassa para construção,4855
+16,"Fabricação de outros artefatos e produtos de concreto, cimento, fibrocimento, gesso e materiais semelhantes",31793
+17,Fabricação de produtos cerâmicos refratários,1620
+18,Fabricação de azulejos e pisos,542
+19,"Fabricação de artefatos de cerâmica e barro cozido para uso na construção, exceto azulejos e pisos",32114
+20,Fabricação de material sanitário de cerâmica,81
+21,Fabricação de produtos cerâmicos não refratários não especificados anteriormente,0
+22,Fabricação de cal e gesso,2608
+23,Fabricação de abrasivos,131
+24,Fabricação de outros produtos de minerais não metálicos não especificados anteriormente,0
+25,Produção de ferro gusa,0
+26,Produção de ferroligas,822
+27,Produção de semi-acabados de aço,129
+28,"Produção de laminados planos de aço ao carbono, revestidos ou não",601
+29,Produção de laminados planos de aços especiais,71
+30,Produção de tubos de aço sem costura,121
+31,"Produção de laminados de aço, exceto tubos",0
+32,Fundição de ferro e aço,4690
+33,Produção de arames de aço,488
+34,"Produção de relaminados, trefilados e perfilados de aço, exceto arames",875
+35,Produção de tubos de aço com costura,592
+36,Produção de outros tubos de ferro e aço,452
+37,Produção de forjados de aço,723
+38,Produção de alumínio e suas ligas em formas primárias,1424
+39,Metalurgia do cobre,145
+40,Produção de zinco em formas primárias,404
+41,Metalurgia de outros metais não ferrosos e suas ligas não especificados anteriormente,0
+42,Metalurgia dos metais preciosos,527
+43,Fundição de metais não ferrosos e suas ligas,0
+44,Produção de laminados de alumínio,641
+45,Metalurgia do cobre,145
+46,Produção de laminados de zinco,30
+47,Metalurgia de outros metais não ferrosos e suas ligas não especificados anteriormente,0
+48,Produção de forjados de metais não ferrosos e suas ligas,0
+49,Produção de laminados de alumínio,641
+50,Metalurgia do cobre,145
+51,Produção de laminados de zinco,30
+52,Metalurgia de outros metais não ferrosos e suas ligas não especificados anteriormente,0
+53,Produção de ânodos e cátodos,0
+54,"Produção de solda em barras, fios, tubos e varetas",0
+55,"Produção de eletrodos para solda elétrica, exceto de grafita",0
+56,"Fabricação de fios, varetas, tubos, eletrodos e artefatos semelhantes para soldagem",0
+57,Metalurgia dos metais preciosos,527
+58,Metalurgia do pó,180
+59,Fabricação de estruturas metálicas,20669
+60,Serviço de confecção de armações metálicas para a construção,0
+61,Fabricação de obras de caldeiraria pesada,2322
+62,"Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",2277
+63,"Fabricação de caldeiras geradoras de vapor, exceto para aquecimento central e para veículos",360
+64,Fabricação de esquadrias de metal,77891
+65,Produção de artefatos estampados de metal,16674
+66,Fabricação de artigos de cutelaria,2630
+67,"Fabricação de artigos de serralheria, exceto esquadrias",177905
+68,Fabricação de ferramentas,15902
+69,"Fabricação de equipamento bélico pesado, exceto veículos militares de combate",475
+70,"Fabricação de armas de fogo, outras armas e munições",104
+71,Fabricação de embalagens metálicas,1249
+72,Fabricação de produtos de trefilados de metal padronizados,5636
+73,"Fabricação de produtos de trefilados de metal, exceto padronizados",2930
+74,Fabricação de artigos de metal para uso doméstico e pessoal,7339
+75,Serviço de corte e dobra de metais,2265
+76,Fabricação de outros produtos de metal não especificados anteriormente,26327
+77,Serviços de tratamento e revestimento em metais,6214
+78,"Fabricação de motores e turbinas, peças e acessórios, exceto para aviões e veículos rodoviários",632
+79,"Fabricação de equipamentos hidráulicos e pneumáticos, peças e acessórios, exceto válvulas",1553
+80,"Fabricação de válvulas, registros e dispositivos semelhantes, peças e acessórios",1297
+81,"Fabricação de compressores para uso industrial, peças e acessórios",193
+82,"Fabricação de compressores para uso não industrial, peças e acessórios",21
+83,Fabricação de rolamentos para fins industriais,64
+84,"Fabricação de equipamentos de transmissão para fins industriais, exceto rolamentos",854
+85,"Fabricação de fornos industriais, aparelhos e equipamentos não elétricos para instalações térmicas, peças e acessórios",0
+86,"Fabricação de estufas e fornos elétricos para fins industriais, peças e acessórios",306
+87,"Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de pessoas, peças e acessórios",445
+88,"Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas, peças e acessórios",1761
+89,"Fabricação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial, peças e acessórios",3913
+90,Fabricação de aparelhos e equipamentos de ar condicionado para uso industrial,100
+91,Fabricação de aparelhos e equipamentos de ar condicionado para uso não industrial,0
+92,"Fabricação de máquinas de escrever, calcular e outros equipamentos não eletrônicos para escritório, peças e acessórios",0
+93,"Fabricação de outras máquinas e equipamentos de uso geral não especificados anteriormente, peças e acessórios",11607
+94,"Fabricação de tratores agrícolas, peças e acessórios",292
+95,"Fabricação de equipamentos para irrigação agrícola, peças e acessórios",328
+96,"Fabricação de máquinas e equipamentos para a agricultura e pecuária, peças e acessórios, exceto para irrigação",6646
+97,"Fabricação de máquinas ferramenta, peças e acessórios",0
+98,"Fabricação de máquinas e equipamentos para a prospecção e extração de petróleo, peças e acessórios",235
+99,"Fabricação de outras máquinas e equipamentos para uso na extração mineral, peças e acessórios, exceto na extração de petróleo",560
+100,"Fabricação de tratores, peças e acessórios, exceto agrícolas",80
+101,"Fabricação de máquinas e equipamentos para terraplenagem, pavimentação e construção, peças e acessórios, exceto tratores",467
+102,"Fabricação de máquinas para a indústria metalúrgica, peças e acessórios, exceto máquinas ferramenta",0
+103,"Fabricação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo, peças e acessórios",3140
+104,"Fabricação de máquinas e equipamentos para a indústria têxtil, peças e acessórios",537
+105,"Fabricação de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados, peças e acessórios",934
+106,"Fabricação de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos, peças e acessórios",426
+107,"Fabricação de máquinas e equipamentos para a indústria do plástico, peças e acessórios",504
+108,"Fabricação de máquinas e equipamentos para uso industrial específico não especificados anteriormente, peças e acessórios",7961
+109,Fabricação de motosserras,0
+110,"Fabricação de pilhas, baterias e acumuladores elétricos, exceto para veículos automotores",263
+111,Fabricação de baterias e acumuladores para veículos automotores,568
+112,Recondicionamento de baterias e acumuladores para veículos automotores,102
+113,Fabricação de componentes eletrônicos,4709
+114,Fabricação de equipamentos de informática,1999
+115,Fabricação de periféricos para equipamentos de informática,1613
+116,"Fabricação de equipamentos transmissores de comunicação, peças e acessórios",1066
+117,"Fabricação de aparelhos telefônicos e de outros equipamentos de comunicação, peças e acessórios",793
+118,"Fabricação de eletrodos, contatos e outros artigos de carvão e grafita para uso elétrico, eletroímãs e isoladores",162
+119,"Fabricação de geradores de corrente contínua e alternada, peças e acessórios",1009
+120,"Fabricação de transformadores, indutores, conversores, sincronizadores e semelhantes, peças e acessórios",1258
+121,"Fabricação de motores elétricos, peças e acessórios",440
+122,Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica,2826
+123,Fabricação de material elétrico para instalações em circuito de consumo,1408
+124,"Fabricação de fios, cabos e condutores elétricos isolados",2060
+125,Fabricação de luminárias e outros equipamentos de iluminação,4116
+126,Fabricação de equipamentos para sinalização e alarme,801
+127,Fabricação de outros equipamentos e aparelhos elétricos não especificados anteriormente,4190
+128,"Fabricação de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo",1741
+129,"Fabricação de aparelhos e equipamentos de medida, teste e controle",3261
+130,Fabricação de cronômetros e relógios,403
+131,Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação,885
+132,"Fabricação de aparelhos fotográficos e cinematográficos, peças e acessórios",128
+133,"Fabricação de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico, peças e acessórios",591
+134,"Fabricação de aparelhos elétricos de uso pessoal, peças e acessórios",100
+135,"Fabricação de outros aparelhos eletrodomésticos não especificados anteriormente, peças e acessórios",1452
+136,Fabricação de lâmpadas,293
+137,"Fabricação de automóveis, camionetas e utilitários",519
+138,"Fabricação de chassis com motor para automóveis, camionetas e utilitários",33
+139,"Fabricação de motores para automóveis, camionetas e utilitários",36
+140,Fabricação de caminhões e ônibus,140
+141,Fabricação de motores para caminhões e ônibus,11
+142,"Fabricação de cabines, carrocerias e reboques para caminhões",4067
+143,Fabricação de carrocerias para ônibus,116
+144,"Fabricação de cabines, carrocerias e reboques para outros veículos automotores, exceto caminhões e ônibus",2331
+145,Fabricação de peças e acessórios para o sistema motor de veículos automotores,1183
+146,Fabricação de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores,349
+147,Fabricação de peças e acessórios para o sistema de freios de veículos automotores,402
+148,Fabricação de peças e acessórios para o sistema de direção e suspensão de veículos automotores,705
+149,"Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias",1366
+150,Fabricação de bancos e estofados para veículos automotores,3831
+151,Fabricação de outras peças e acessórios para veículos automotores não especificadas anteriormente,6779
+152,Recondicionamento e recuperação de motores para veículos automotores,10888
+153,"Fabricação de locomotivas, vagões e outros materiais rodantes",141
+154,Fabricação de peças e acessórios para veículos ferroviários,149
+155,Fabricação de motocicletas,400
+156,Fabricação de peças e acessórios para motocicletas,316
+157,"Serviço de motores de veículos rodoviários (reconstrução, recuperação)",0
+158,"Motores de veículos rodoviários, recuperados, remanufaturados, recondicionados ou reconstruídos",0
+159,"Serviço de reconstrução, remanufaturamento e serviços semelhantes em motores de veículos rodoviários;",0
+160,Serviço de recuperação de motores de veículos rodoviários,0
+161,Fabricação de aeronaves,428
+162,"Fabricação de turbinas, motores e outros componentes e peças para aeronaves",67
+163,Construção de embarcações de grande porte,854
+164,"Construção de embarcações para uso comercial e para usos especiais, exceto grande porte",0
+165,Construção de embarcações para esporte e lazer,1542
+166,Manutenção e reparação de embarcações e estruturas flutuantes,2164
+167,Manutenção e reparação de embarcações para esporte e lazer,5786
+168,Serrarias com desdobramento de madeira,0
+169,Serrarias sem desdobramento de madeira,0
+170,Serrarias sem desdobramento de madeira,0
+171,Serrarias com desdobramento de madeira,0
+172,"Fabricação de madeira laminada e de chapas de madeira compensada, prensada e aglomerada",4851
+173,Fabricação de casa de madeira pré fabricada,0
+174,Fabricação de esquadrias de madeira e de peças para instalações industriais e comerciais,0
+175,Fabricação de outros artigos de carpintaria para construção,38459
+176,Fabricação de móveis com predominância de madeira,262601
+177,Fabricação de celulose e outras pastas para a fabricação de papel,453
+178,Fabricação de papel,2177
+179,Fabricação de cartolina e papel cartão,0
+180,"Fabricação de cartuchos e cilindros de papelão ondulado para embalagem, impressos ou não",0
+181,Fabricação de chapas de papelão ondulado,0
+182,Fabricação de face simples de papelão ondulado,0
+183,Fabricação de papelão ondulado,0
+184,Fabricação de embalagens de papel,8107
+185,Fabricação de embalagens de cartolina e papel cartão,0
+186,Fabricação de produtos de papel para uso doméstico e higiênico sanitário não especificados anteriormente,0
+187,"Fabricação de acessórios para embalagens de papelão ondulado, impressos ou não",0
+188,"Fabricação de caixas de papelão ondulado, impressas ou não",0
+189,"Fabricação de embalagens de papelão ondulado, impressas ou não",0
+190,"Fabricação de formulários contínuos, impressos ou não",0
+191,Fabricação de agendas,0
+192,"Fabricação de artefatos de papel para aparelhos registradores, inclusive bobinas",0
+193,Fabricação de artefatos de papel-cartão gomado ou adesivo em tiras ou em rolos,0
+194,"Fabricação de artefatos de papel, papelão, cartolina ou papel-cartão para escritório",0
+195,"Fabricação de artefatos diversos de papel utilizados para escrita ou impressão, impressos, estampados ou perfurados",0
+196,"Fabricação de artefatos impressos de papelaria, não especificados",0
+197,"Fabricação de artigos diversos para correspondência (aerogramas, bilhetes-postais ou outros artigos para correspondência)",0
+198,Fabricação de bobinas de papel para máquinas,0
+199,Fabricação de cadernos e cadernetas escolares,0
+200,"Fabricação de classificadores, guias, fichas e separadores de papelão ou cartolina, para arquivos",0
+201,Fabricação de envelopes de papel impressos ou não,0
+202,Fabricação de estêncil para mimeógrafo,0
+203,"Fabricação de etiquetas adesivas de papel, impressas ou não",0
+204,"Fabricação de etiquetas de papel não adesivas (TAG), impressas ou não",0
+205,Fabricação de fitas adesivas de papel,0
+206,Fabricação de livros de escrituração contábil e fiscal,0
+207,Fabricação de notas promissórias,0
+208,Fabricação de papel almaço,0
+209,Fabricação de papel autocopiativo (com corantes microencapsulados),0
+210,Fabricação de papel carbono,0
+211,Fabricação de papel milimetrado,0
+212,Fabricação de papel para cartas,0
+213,Fabricação de papel para mimeógrafo em resma,0
+214,"Fabricação de papel para oficio, cartas e semelhantes",0
+215,"Fabricação de papel quadriculado, milimetrado e semelhantes",0
+216,"Fabricação de pastas de cartolina para escritório, com ou sem ferragens",0
+217,Fabricação de fraldas descartáveis,3770
+218,Fabricação de absorventes higiênicos,535
+219,"Fabricação de artefatos de papel, papelão ondulado, cartolina ou papel-cartão de acabamento especial para revestimentos",0
+220,Fabricação de artigos de fibra prensada ou isolante,0
+221,Fabricação de bandeirolas de papel,0
+222,"Bandejas, travessas, pratos, copos e artigos semelhantes de papel ou papel-cartão",0
+223,"Fabricação de blocos e chapas filtrantes, de pasta de papel",0
+224,Fabricação de canudos de papel para refresco,0
+225,"Fabricação de carretéis, bobinas e suportes semelhantes de papel, papel-cartão e pasta de papel",0
+226,"Fabricação de confetes, serpentinas e semelhantes",0
+227,Fabricação de copos de papel ou de papel-cartão,0
+228,Fabricação de embalagens diversas de pasta de celulose,0
+229,Fabricação de flâmulas e bandeirolas de papel,0
+230,Fabricação de papel estampado ou fantasia,0
+231,Fabricação de papel impregnado ou revestido,0
+232,"Fabricação de papel para cigarros, cortado em dimensões próprias, em folhas, tubos ou rolos",0
+233,"Fabricação de peças ou acessórios para máquinas ou equipamentos de transporte de papel, papelão ondulado, cartolina ou papel-cartão",0
+234,Fabricação de polpa de madeira ou de pasta mecânica moldada em artigos diversos,0
+235,Fabricação de revestimentos de matérias têxteis para paredes,0
+236,Fabricação de revestimentos para pavimentos com suporte de papel ou de pepal-cartão,0
+237,"Fabricação de álbuns de papel-cartão para fotografias, amostras ou coleções",0
+238,"Fabricação de borracha vegetal, sólida, beneficiada (lavagem, centrifugação, prensagem em blocos, granulação, etc.)",0
+239,"Centrifugação, coagulação, vulcanização e outros beneficiamentos de látex vegetal",0
+240,Fabricação de fios de borracha,0
+241,Fabricação de laminados de borracha,0
+242,Fabricação de artefatos de espuma de borracha,0
+243,Fabricação de espuma de borracha,0
+244,"Fabricação de câmaras de ar para pneumáticos de automóveis, caminhões, ônibus, aeronaves, motocicletas, bicicletas e outros veículos",0
+245,Fabricação de câmaras de ar para pneus,0
+246,Fabricação de câmaras de ar para pneus de veículos ou de máquinas,0
+247,"Fabricação de partes de pneus (borracha de ligação, camelbacks, etc)",0
+248,Fabricação de pneumáticos para tratores e máquinas,0
+249,Fabricação de pneumáticos para veículos,0
+250,"Fabricação de pneus para automóveis, caminhões, ônibus, aeronaves, bicicletas, motocicletas e outros veículos",0
+251,Fabricação de pneus para tratores e máquinas,0
+252,Fabricação de pneus,0
+253,"Fabricação de protetores, bandas de rodagem, amovíveis para pneumáticos (camelbacks) e “flaps” de borracha",0
+254,Reforma de pneumáticos usados,5719
+255,Produção de couros de bovinos secos ou salgados,0
+256,Secagem e salga de couros e peles de bovinos,0
+257,Secagem e salga de couros e peles de equinos,0
+258,Secagem e salga de couros e peles de caprinos,0
+259,Produção de couros e peles de bufalinos secos e/ou salgados,0
+260,Secagem e salga de couro de bufalinos,0
+261,Salga de couros e peles de suínos (porcos),0
+262,Curtimento e outras preparações de couro,4728
+263,Fabricação de artefatos de couro não especificados anteriormente,21594
+264,Fabricação de artigos de couro para viagem,0
+265,Fabricação de bolsas de couro,0
+266,"Fabricação de bolsas de qualquer material (couro, plástico, etc) (3)",0
+267,Fabricação de bolsas e mochilas de qualquer material (3),0
+268,"Fabricação de carteiras para ou documentos, porta-níqueis, cigarreiras, etc., de couro natural ou artificial ou de outras matérias têxteis (3)",0
+269,"Fabricação de malas, valises e outros artefatos para viagem, de qualquer material (3)",0
+270,"Fabricação de mochilas, escolares ou não, de qualquer material (3)",0
+271,"Fabricação de necessaire, estojo (3)",0
+272,Fabricação de pastas de couro,0
+273,Fabricação de cola animal,0
+274,"Beneficiamento de (em estabelecimento não agrícola) algodão cardado, penteado, etc.",0
+275,Descaroçamento de (em estabelecimento não agrícola) algodão,0
+276,Produção de algodão cardado ou penteado,0
+277,Fabricação de algodão em pasta,0
+278,Fabricação de algodão em pluma,0
+279,Desperdícios do beneficiamento do algodão,0
+280,"Fabricação de fibra de algodão moldada, para estofamento (mantas de línteres, etc.)",0
+281,Beneficiamento de fibras de algodão (em estabelecimento não agrícola),0
+282,Produção de fibras de algodão beneficiadas,0
+283,Resíduos do beneficiamento da fibra de algodão,0
+284,Beneficiamento de crina vegetal,0
+285,"Beneficiamento de crinas, pelos e cerdas",0
+286,Obtenção de desperdícios de lã,0
+287,Obtenção de desperdícios de seda,0
+288,"Estopas ou outros resíduos do beneficiamento de fibras têxteis naturais, exceto algodão",0
+289,Produção de fibra de lã lavada,0
+290,Beneficiamento de fibras de coco,0
+291,Fabricação de fibras de cânhamo beneficiadas,0
+292,Beneficiamento de fibras de juta,0
+293,Beneficiamento de fibras de linho,0
+294,Beneficiamento de fibras de malva,0
+295,Beneficiamento de fibras de rami,0
+296,Beneficiamento de fibras de sisal (agave),0
+297,Beneficiamento de fibras têxteis vegetais (exceto algodão),0
+298,Fabricação de lanolina,0
+299,"Fabricação de lã (cardada, penteada, tops, etc)",0
+300,Beneficiamento de lã,0
+301,Produção de pelos finos e grosseiros,0
+302,"Obtenção de resíduos da fiação de fibras têxteis naturais, exceto algodão",0
+303,Obtenção de resíduos de lã,0
+304,Obtenção de resíduos de seda,0
+305,Produção de seda crua não fiada,0
+306,Produção de suarda,0
+307,Obtenção de subprodutos resultantes do beneficiamento de fibras têxteis,0
+308,"Fabricação de fibras sintéticas descontínuas cardadas, penteadas ou preparadas de outro modo para fiação",0
+309,Fiação de algodão,0
+310,Serviço de fiação de algodão,0
+311,"Fabricação de fio de algodão cru ou acabado (beneficiado), inclusive mescla",0
+312,Fabricação de fios de algodão retorcidos ou retorcidos múltiplos,0
+313,Fabricação de fios de algodão singelos (simples),0
+314,"Fabricação de fios de algodão, beneficiados ou não",0
+315,"Obtenção de resíduos (estopas, desperdícios) da fiação de algodão",0
+316,Fiação de caroá,0
+317,Fiação de cânhamo,0
+318,"Fabricação de fio de juta cru ou acabado (beneficiado), inclusive mescla",0
+319,"Fabricação de fio de linho cru ou acabado (beneficiado), inclusive mescla",0
+320,"Fabricação de fio de lã cru ou acabado (beneficiado), inclusive mescla",0
+321,"Fabricação de fio de rami cru ou acabado (beneficiado), inclusive mescla",0
+322,"Fabricação de fio de seda cru ou acabado (beneficiado), inclusive mescla",0
+323,"Fabricação de fio de sisal (agave) cru ou acabado (beneficiado), inclusive mescla",0
+324,"Fabricação de fios caroá, beneficiados ou não",0
+325,Fabricação de fios de papel,0
+326,Fiação de juta,0
+327,Fiação de linho,0
+328,Fiação de lã,0
+329,Fiação de rami,0
+330,Fiação de seda,0
+331,Fiação de sisal,0
+332,"Fabricação de desperdícios da fiação de fibras artificiais ou sintéticas, descontínuas",0
+333,O serviço de fiação de fibras artificiais ou sintéticas,0
+334,"Fabricação de fio de fibras artificiais cru ou acabado (beneficiado), inclusive mesclas",0
+335,"Fabricação de fio de fibras sintéticas cru ou acabado (beneficiado), inclusive mescla",0
+336,"Fabricação de fios de filamentos artificiais ou sintéticos (exceto linhas para costurar), acondicionados para venda a varejo",0
+337,"Fabricação de fios de nylon (náilon) ou de outras poliamidas, de poliéster ou de outros filamentos sintéticos",0
+338,Resíduos da fiação de fibras artificiais ou sintéticas,0
+339,Fabricação de linhas de algodão para costurar e bordar,0
+340,Fabricação de linhas de fios artificiais ou sintéticos para costurar e bordar,0
+341,Fabricação de linhas de linho e rami para costurar e bordar,0
+342,Fabricação de linhas de lã para costurar e bordar,0
+343,Fabricação de linhas de seda animal para costurar e bordar,0
+344,Fabricação de linhas para costurar e bordar,387
+345,Fabricação de linhas para crochê,0
+346,"Confecção de artefatos de tecidos de algodão para cama, mesa ou banho (quando integrada à tecelagem)",0
+347,Confecção de artefatos de tecidos de algodão para copa e cozinha (quando integrada à tecelagem),0
+348,Confecção de (quando integrada a tecelagem) artefatos de tecidos de algodão para uso doméstico,0
+349,"Confecção de cobertores, mantas ou edredons de algodão (quando integrada à tecelagem)",0
+350,Confecção de colchas de algodão (quando integrada à tecelagem),0
+351,Confecção de lençóis e/ou fronhas de tecidos de algodão (quando integrada à tecelagem),0
+352,"Confecção de roupas de cama, mesa ou banho de tecidos de algodão (quando integrada à tecelagem)",0
+353,Confecção de sacos de algodão para embalagem (quando integrada à tecelagem),0
+354,Serviço de tecelagem plana de algodão,0
+355,"Fabricação de tecido algodão tintos ou estampados, inclusive mescla",0
+356,Fabricação de tecido de índigo,0
+357,Fabricação de tecidos atoalhados (felpudos) de algodão,0
+358,Fabricação de tecidos de algodão tipo gaze,0
+359,"Fabricação de tecidos planos de algodão, inclusive mesclas, crus ou acabados (beneficiados)",0
+360,Fabricação de tecidos rendados de algodão,0
+361,Fabricação de tecidos tufados,0
+362,"Confecção de toalhas de banho de tecidos de algodão, quando integrada a tecelagem",0
+363,Confecção de toalhas de banho ou de rosto de tecidos de algodão (quando integrada à tecelagem),0
+364,Confecção de toalhas de mesa ou de cozinha de tecidos de algodão (quando integrada à tecelagem),0
+365,Fabricação de veludos e pelúcias de algodão,0
+366,Confecção de artefatos de tecidos de fibras naturais (exceto algodão) para uso doméstico (quando integrada a tecelagem),0
+367,"Confecção de artefatos de tecidos fibras naturais (exceto algodão), para banho, cama e mesa, copa e cozinha (quando integrada a tecelagem)",0
+368,Tecelagem de caroá,0
+369,"Confecção de cobertores, mantas e edredons de fibras naturais (exceto algodão) (quando integrada a tecelagem)",0
+370,Confecção de colchas de fibras naturais (exceto algodão) (quando integrada a tecelagem),0
+371,Tecelagem de cânhamo,0
+372,Tecelagem de fibras têxteis naturais,0
+373,"Confecção de fronhas de tecidos de fibras naturais (exceto algodão), quando integrada a tecelagem",0
+374,Tecelagem de juta,0
+375,Confecção de lençóis ou fronhas de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem),0
+376,Tecelagem de linho,0
+377,Tecelagem de lã,0
+378,Tecelagem de malva,0
+379,Tecelagem de rami,0
+380,"Confecção de roupas de cama, banho, mesa, copa ou cozinha de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem)",0
+381,Confecção de sacos de juta ou de outras fibras têxteis naturais para embalagem (quando integrada a tecelagem),0
+382,Tecelagem de seda,0
+383,Serviço de tecelagem de fios de fibras têxteis naturais,0
+384,Fabricação de tecido de cetim,0
+385,"Fabricação de tecido de juta, cru ou acabado (beneficiado), inclusive mesclas",0
+386,"Fabricação de tecido de linho, cru ou acabado (beneficiado), inclusive mescla",0
+387,"Fabricação de tecido de lã, cru ou acabado (beneficiado), inclusive mescla",0
+388,"Fabricação de tecido de rami, cru ou acabado (beneficiado), inclusive mescla",0
+389,"Fabricação de tecido de seda, cru ou acabado (beneficiado), inclusive mescla",0
+390,"Fabricação de tecido de sisal (agave), cru ou acabado (beneficiado), inclusive mescla",0
+391,Fabricação de tecidos de crina,0
+392,"Fabricação de tecidos de pelos grosseiros ou de crina, puros ou mistos",0
+393,Fabricação de tecidos rendados de fibras naturais (exceto algodão),0
+394,Fabricação de telas de juta,0
+395,Confecção de toalhas de banho ou de rosto de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem),0
+396,Confecção de toalhas de mesa ou de cozinha de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem),0
+397,Veludos e pelúcias de matérias têxteis naturais - exceto algodão,0
+398,Confecção de artefatos de tecidos artificiais ou sintéticos para uso doméstico (quando integrada a tecelagem),0
+399,"Confecção de artefatos de tecidos artificiais ou sintéticos, para banho, cama e mesa, copa e cozinha (quando integrada a tecelagem)",0
+400,"Confecção de artefatos de tecidos de fibras artificiais ou sintéticas, para copa e cozinha, quando integrada a tecelagem",0
+401,"Confecção de cobertores, mantas e edredons de tecidos de fibras artificiais ou sintéticas (quando integrada a tecelagem)",0
+402,Confecção de colchas de fibras artificiais ou sintéticas (quando integrada a tecelagem),0
+403,Tecelagem de fios de filamentos contínuos artificiais ou sintéticas,0
+404,"Confecção de lençóis ou fronhas de tecidos de fibras artificiais ou sintéticas, quando integrada a tecelagem",0
+405,Fabricação de mantas de fibras artificiais ou sintéticas agulhadas e/ou prensadas,0
+406,"Confecção de roupas de cama, mesa ou banho de tecidos de fibras artificiais ou sintéticas (quando integrada a tecelagem)",0
+407,"Confecção de sacos de fios de ráfia, polipropileno e outros materiais plásticos têxteis (quando integrada a tecelagem)",0
+408,"Fabricação de sacos, inclusive contentores flexíveis (big-bags) para embalagem, de matérias têxteis artificiais ou sintéticas, quando integrados à tecelagem",0
+409,Fabricação de tecido de fibra de vidro,0
+410,Fabricação de tecido de fios de ráfia ou lâminas sintéticas,0
+411,Fabricação de tecido de poliéster,0
+412,Fabricação de tecido viscose,0
+413,Fabricação de tecidos de fibras sintéticas descontínuas,0
+414,"Fabricação de tecidos de filamentos contínuos e de fios de fibras artificiais ou sintéticas, crus ou acabados (beneficiados), inclusive mescla",0
+415,"Fabricação de tecidos de filamentos de aramida e/ou de poliamida de alta tenacidade, sem fio de borracha",0
+416,Fabricação de Atividade tecidos rendados de fibras sintéticas,0
+417,Confecção de toalhas de banho ou de rosto de tecidos artificiais ou sintéticos (quando integrada a tecelagem),0
+418,Confecção de toalhas de mesa ou de cozinha de tecidos artificiais ou sintéticos (quando integrada a tecelagem),0
+419,Fabricação de veludos e pelúcias de fibras artificiais ou sintéticas,0
+420,"Fabricação de tecidos de malha de algodão com elastômero, circular",0
+421,"Fabricação de tecidos de malha de algodão, circular",0
+422,"Fabricação de tecidos de malha de fibras artificiais ou sintéticas, circular",0
+423,"Fabricação de tecidos de malha de matérias têxteis naturais, circular",0
+424,"Fabricação de tecidos de malha-urdidura ou de outros tipos, de algodão",0
+425,"Fabricação de tecidos de malha-urdidura ou de outros tipos, de fibras artificiais ou sintéticas",0
+426,"Fabricação de tecidos de malha-urdidura ou de outros tipos, de matérias têxteis naturais",0
+427,Fabricação de tecidos de malha,8054
+428,Fabricação de velas para barcos,0
+429,Fabricação de tecidos com fios metalizados,0
+430,Fabricação de tecidos de acabamento especial - colagem em tecidos com material plástico e outros materiais,0
+431,"Fabricação de feltros combinados com matérias diversas, inclusive artefatos, para usos técnicos",0
+432,Fabricação de tecidos impermeáveis,0
+433,Fabricação de tecidos para telas de desenhos e pinturas,0
+434,Fabricação de tecidos revestidos ou impregnados,0
+435,"Fabricação de tecidos revestidos ou impregnados, inclusive as entretelas",0
+436,Fabricação de telas para pneumáticos fabricadas com fios sintéticos ou artificiais de alta tenacidade,0
+437,Fabricação de telas para pneumáticos,0
+438,Fabricação de tendas,0
+439,Fabricação de toldos,0
+440,Fabricação de redes de proteção contra derramamento de petróleo no mar,0
+441,"Fabricação de tecido não-tecido ou falsos tecidos, de fibras naturais, artificiais ou sintéticas, mesmo acabados",0
+442,Fabricação de tecidos antibacterianos,0
+443,Fabricação de painéis de lona,0
+444,Fabricação de pano-couro e oleados,0
+445,"Fabricação de pastas, tontisses, nós e bolotas de fibras têxteis",0
+446,"Fabricação de mechas para candeeiro, isqueiros, velas e semelhantes, de materiais têxteis",0
+447,Fabricação de lonas e encerados,0
+448,Fabricação de cortinas painéis,0
+449,"Fabricação de entretelas beneficiadas (plastificadas, laminadas ou costuradas, etc)",0
+450,"Fabricação de entretelas de fios naturais, artificiais ou sintéticos",0
+451,Fabricação de feltros,0
+452,"Fabricação de fibra moldada para estofamento (mantas de crina, fibras de coco, etc.)",0
+453,Fabricação de aeroteto (toldos de lona),0
+454,Fabricação de filós,0
+455,Fabricação de fios e cordas de borracha recobertos de têxteis,0
+456,Fabricação de fios elásticos recobertos,0
+457,Fabricação de fios têxteis metalizados,0
+458,Fabricação de redes tecidas de plástico para embalagens,0
+459,Fabricação de rendas e bordados manuais,0
+460,Fabricação de rendas,0
+461,Fabricação de tecidos bordados,0
+462,Fabricação de tecidos elásticos,0
+463,Fabricação de tules e filós,0
+464,"Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário",33530
+465,"Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário",759
+466,"Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário",39642
+467,Fabricação de botas de couro,0
+468,Fabricação de calçados de couro para esportes (exceto tênis ou quedis),0
+469,Fabricação de calçados de couro para segurança industrial,0
+470,"Fabricação de calçados de couro, infantis",0
+471,"Fabricação de calçados de couro, n.e.",0
+472,"Fabricação de chinelos e alpercatas de couro, femininos",0
+473,"Fabricação de chinelos e alpercatas de couro, infantis",0
+474,"Fabricação de chinelos e alpercatas de couro, masculinos",0
+475,Fabricação de chuteiras,0
+476,"Fabricação de sandálias de couro, feminino",0
+477,"Fabricação de sandálias de couro, masculino",0
+478,"Fabricação de sapatos de couro, femininos",0
+479,"Fabricação de sapatos de couro, masculino",0
+480,Fabricação de sapatênis de couro,0
+481,Serviços de customização em calçados de couro,0
+482,Serviços de montagem e costura de calçados de couro,0
+483,Serviços de pesponto e outros acabamentos em calçados de couro,0
+484,Fabricação de tênis ou quedis de qualquer material,0
+485,Fabricação de calçados de material sintético montado,0
+486,Fabricação de calçados de plástico para adultos,0
+487,Fabricação de calçados de plástico para crianças,0
+488,Fabricação de calçados de plástico para esportes (exceto tênis),0
+489,Fabricação de calçados de plástico para segurança industrial,0
+490,Fabricação de chinelo de material de plástico moldado,0
+491,Fabricação de chinelos de material plástico,0
+492,Fabricação de chinelos de plástico para adultos,0
+493,Fabricação de chinelos de plástico para crianças,0
+494,Fabricação de sandálias de material plástico,0
+495,Fabricação de calçados de borracha para segurança industrial,0
+496,Fabricação de calçados de borracha,0
+497,Fabricação de calçados de tecidos,0
+498,Fabricação de calçados para segurança (exceto de couro e plástico),0
+499,Fabricação de chinelos de borracha para adultos,0
+500,Fabricação de chinelos de borracha para crianças,0
+501,"Fabricação de chinelos, sandálias e alpercatas de outros materiais (exceto couro e plástico)",0
+502,Fabricação de sandálias (chinelos) de borracha para adultos,0
+503,Fabricação de sandálias (chinelos) de borracha para crianças,0
+504,Fabricação de sandálias e alpercatas de lona e fibras,0
+505,Fabricação de tamancos,0
+506,Fabricação de cabedal de couro para calçados,0
+507,Fabricação de cepos e solados de madeira para calçados,0
+508,Fabricação de contrafortes e couraças para calçados,0
+509,Fabricação de contrafortes para calçados,0
+510,Fabricação de cortes de couro para calçados,0
+511,"Confecção de cortes, viras, contrafortes, trancinhas e outros acessórios para calçados",0
+512,Fabricação de palmilhas para calçados de qualquer material,0
+513,Fabricação de partes de borracha para calçados,0
+514,Fabricação de partes de couro para calçados,0
+515,Fabricação de partes de material plástico para calçados,0
+516,Fabricação de partes de material sintético para calçados,0
+517,Fabricação de partes de tecidos para calçados,0
+518,Fabricação de saltos de borracha para calçados,0
+519,Fabricação de saltos de cortiça para calçados,0
+520,Fabricação de saltos de couro para calçados,0
+521,Fabricação de saltos de madeira para calçados,0
+522,"Fabricação de saltos e solados de couro para calçados, forrados ou não",0
+523,Fabricação de saltos e solados de plástico para calçados,0
+524,Fabricação de solados de borracha,0
+525,Fabricação de solados de couro para calçados,0
+526,Fabricação de solados de madeira para calçados,0
+527,Fabricação de solas de borracha para calçados,0
+528,Fabricação de viras para calçados,0
+529,Fabricação de laminados planos e tubulares de material plástico,2025
+530,"Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material",20421
+531,Fabricação de embalagens de material plástico,16743
+532,Fabricação de tubos e acessórios de material plástico para uso na construção,793
+533,Fabricação de artefatos de material plástico para uso pessoal de doméstico,0
+534,Fabricação de artefatos de material plástico para usos industriais,5483
+535,"Fabricação de artefatos de material plástico para uso na construção, exceto tubos e acessórios",2865
+536,Fabricação de artefatos de material plástico para outros usos não especificados anteriormente,24260
+537,"Fabricação de móveis de outros materiais, exceto madeira e metal",11965
+538,Processamento industrial do fumo,136
+539,Fabricação de cigarros,1030
+540,Fabricação de cigarrilhas e charutos,170
+541,Fabricação de filtros para cigarros,33
+542,"Fabricação de outros produtos do fumo, exceto cigarros, cigarrilhas e charutos",1417
+543,"Preparação de Massa de concreto (cimento, areia, brita, água, aditivos, etc.) dosadas por usinas inclusive o transporte através de caminhões betoneiras ou por dutos até o local da construção",0
+544,Coquerias,90
+545,"Fabricação de outros produtos derivados do petróleo, exceto produtos do refino",326
+546,Fabricação de cloro e álcalis,114
+547,Fabricação de intermediários para fertilizantes,195
+548,Fabricação de gases industriais,736
+549,Elaboração de combustíveis nucleares,6
+550,Fabricação de outros produtos químicos inorgânicos não especificados anteriormente,789
+551,"Fabricação de intermediários para plastificantes, resinas e fibras",297
+552,Fabricação de produtos químicos orgânicos não especificados anteriormente,3982
+553,Fabricação de adesivos e selantes,1015
+554,Fabricação de aditivos de uso industrial,1913
+555,Fabricação de catalisadores,50
+556,"Fabricação de chapas, filmes, papéis e outros materiais e produtos químicos para fotografia",191
+557,Fabricação de outros produtos químicos não especificados anteriormente,8187
+558,Fabricação de produtos do refino de petróleo,569
+559,Formulação de combustíveis,40
+560,"Fabricação de outros produtos derivados do petróleo, exceto produtos do refino",326
+561,Fabricação de produtos petroquímicos básicos,289
+562,Fabricação de produtos químicos orgânicos não especificados anteriormente,3982
+563,Produção de gás; processamento de gás natural,272
+564,Fabricação de produtos químicos orgânicos não especificados anteriormente,3982
+565,Fabricação de aditivos de uso industrial,1913
+566,Fabricação de outros produtos químicos não especificados anteriormente,8187
+567,"Fabricação de pólvoras, explosivos e detonantes",359
+568,Fabricação de artigos pirotécnicos,317
+569,Fabricação de fósforos de segurança,13
+570,Fabricação de munição para armas de fogo e para outras armas,0
+571,Fabricação de aromas e essências sintéticas,0
+572,Fabricação de aromas e fragrâncias sintéticas,0
+573,Fabricação de essências e concentrados aromáticos artificiais,0
+574,"Fabricação de misturas de substâncias aromáticas utilizadas como matéria básica para indústrias, exceto para as indústrias alimentar e de bebidas",0
+575,Fabricação de misturas de substâncias aromáticas utilizadas nas indústrias alimentar e de bebidas,0
+576,Fabricação de águas destiladas aromáticas,0
+577,Fabricação de aromas e fragrâncias sintéticas,0
+578,Fabricação de essências e fragrâncias sintéticas,0
+579,Fabricação de misturas de substâncias odoríferas para usos industriais,0
+580,Fabricação de desinfestantes domissanitários,1996
+581,Fabricação de produtos de limpeza e polimento,12775
+582,"Fabricação de tintas, vernizes, esmaltes e lacas",5262
+583,Fabricação de tintas de impressão,247
+584,"Fabricação de impermeabilizantes, solventes e produtos afins",660
+585,Fabricação de adubos e fertilizantes organominerais,0
+586,"Fabricação de adubos e fertilizantes, exceto organominerais",0
+587,Fabricação de defensivos agrícolas,650
+588,"Fabricação de intermediários para farmoquímicos, defensivos agrícolas e aditivos em geral (1)",0
+589,Fabricação de produtos farmoquímicos,755
+590,Fabricação de medicamentos alopáticos para uso humano,2313
+591,Fabricação de medicamentos homeopáticos para uso humano,215
+592,Fabricação de medicamentos fitoterápicos para uso humano,152
+593,Fabricação de medicamentos para uso veterinário,902
+594,Fabricação de preparações farmacêuticas,139
+595,Fabricação de sabões e detergentes sintéticos,10760
+596,"Fabricação de velas, inclusive decorativas",6375
+597,"Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal",12316
+598,Fabricação de álcool,1889
+599,Fabricação de metanol (álcool metílico),0
+600,Produção de creosoto de madeira,0
+601,Fabricação de óleo de creosoto,0
+602,"Fabricação de óleos e produtos da destilação do alcatrão de hulha e de outros alcatrões minerais (benzóis, naftaleno, creosoto, toluóis, xilóis) (1)",0
+603,Fabricação de preparações químicas para tratamento da madeira,0
+604,Fabricação de cloro e álcalis,114
+605,Fabricação de dispersantes,0
+606,Recuperação de óleo lubrificante queimado,0
+607,Produção de óleos lubrificantes recuperados (rerrefinados),0
+608,"Fabricação de óleos lubrificantes rerrefinados, com aditivos",0
+609,"Fabricação de óleos lubrificantes rerrefinados, sem aditivos",0
+610,"Recuperação, reciclagem, rerrefino de óleos lubrificantes usados",0
+611,Recuperação de óleo lubrificante queimado,0
+612,Produção de óleos lubrificantes recuperados (rerrefinados),0
+613,"Fabricação de óleos lubrificantes rerrefinados, com aditivos",0
+614,"Fabricação de óleos lubrificantes rerrefinados, sem aditivos",0
+615,"Recuperação, reciclagem, rerrefino de óleos lubrificantes usados",0
+616,Frigorífico - abate de bovinos,8896
+617,Frigorífico - abate de equinos,0
+618,Frigorífico - abate de ovinos e caprinos,189
+619,Frigorífico - abate de bufalinos,17
+620,"Matadouro - abate de reses sob contrato, exceto abate de suínos",0
+621,Abate de aves,9059
+622,Abate de pequenos animais,344
+623,Frigorífico - abate de suínos,1032
+624,Matadouro - abate de suínos sob contrato,44
+625,Fabricação de produtos de carne,19036
+626,Preparação de subprodutos do abate,1311
+627,Fabricação de conservas de frutas,19577
+628,Fabricação de conservas de palmito,574
+629,"Fabricação de conservas de legumes e outros vegetais, exceto palmito",6146
+630,"Fabricação de sucos concentrados de frutas, hortaliças e legumes",6520
+631,"Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados",6107
+632,Preparação do leite,3463
+633,Fabricação de laticínios,26522
+634,Fabricação de sorvetes e outros gelados comestíveis,20731
+635,Fabricação de açúcar em bruto,2843
+636,Fabricação de açúcar de cana refinado,358
+637,Fabricação de açúcar de cereais (dextrose) e de beterraba,4
+638,"Fabricação de óleos vegetais em bruto, exceto óleo de milho",1596
+639,"Fabricação de óleos vegetais refinados, exceto óleo de milho",566
+640,Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais,139
+641,Fabricação de óleo de milho em bruto,5
+642,Fabricação de óleo de milho refinado,0
+643,Fabricação de produtos derivados do cacau e de chocolates,24214
+644,Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais,139
+645,Fabricação de fermentos e leveduras,134
+646,Fabricação de alimentos para animais,9943
+647,Fabricação de vinho,2316
+648,Fabricação de vinagres,8042
+649,"Fabricação de malte, inclusive malte uísque",247
+650,Fabricação de cervejas e chopes,3852
+651,"Fabricação de sucos concentrados de frutas, hortaliças e legumes",6520
+652,"Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados",6107
+653,"Fabricação de produtos para infusão (chá, mate, etc.)",2401
+654,Fabricação de águas envasadas,3319
+655,Fabricação de refrigerantes,2414
+656,Fabricação de chá mate e outros chás prontos para consumo,136
+657,"Fabricação de refrescos, xaropes e pós para refrescos, exceto refrescos de frutas",1373
+658,Fabricação de outras bebidas não-alcoólicas não especificadas anteriormente,801
+659,Fabricação de aguardente de cana-de-açúcar,7013
+660,Fabricação de outras aguardentes e bebidas destiladas,1853
+661,Geração de energia elétrica,19403
+662,"Tratamento de esgoto por meio de processos físicos, químicos e biológicos, tais como: a diluição, seleção, filtragem e sedimentação",0
+663,Tratamento de águas residuais de indústrias para prevenção da poluição,0
+664,Operação de estações de tratamento de esgoto (ETE),0
+665,"Tratamento de esgoto por meio de processos físicos, químicos e biológicos, tais como: a diluição, seleção, filtragem e sedimentação",0
+666,Tratamento de águas residuais de indústrias para prevenção da poluição,0
+667,Usinas de compostagem,546
+668,Fabricação de briquetes de bagaço de cana ou de materiais semelhantes;,0
+669,Fabricação de briquetes de bagaço de cana ou de materiais semelhantes (biomassa);,0
+670,"Fabricação de briquetes, lenhas ou carvões ecológicos de resíduos de casca de coco ou outras fibras vegetais;",0
+671,"Fabricação de briquetes (pellets) a partir da secagem e compactação de biomassa (bagaço de cana-de-açúcar, casca de arroz ou de amendoim, bagaço de mandioca, pó ou cavacos de madeira e outros resíduos semelhantes).",0
+672,"Descontaminação do solo através combustão, pirólise ou incineração",0
+673,Descontaminação do solo através de dessorteação em reator,0
+674,"Descontaminação do solo através de landfarming, cometabolismo ou desnitrificação,",0
+675,Descontaminação do solo através de lavagem ou extração,0
+676,Descontaminação do solo através de processos de vitrificação ou eletrocinéticos,0
+677,Descontaminação do solo através de reatores biológicos,0
+678,"Descontaminação do solo ou água através de processos físicos, químicos, térmicos, biológicos, isolamento ou confinamento",0
+679,Limpeza de solo contaminado,0
+680,Transporte ferroviário de carga,551
+681,Transporte rodoviário de produtos perigosos,26141
+682,Transporte marítimo de cabotagem - carga,0
+683,Transporte marítimo de longo curso - carga,0
+684,"Transporte por navegação interior de carga, municipal, exceto travessia",2770
+685,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",2118
+686,Transporte dutoviário,384
+687,"A coleta e transporte de esgoto doméstico ou industrial e de águas pluviais por meio de redes de coletores, tanques e outros meios de transporte",0
+688,"Exploração de portos, terminais marítimos, atracadouros",0
+689,Exploração dos aeroportos e campos de aterrissagem,0
+690,Operação dos aeroportos e campos de aterrissagem,1310
+691,Serviços de operação em terminais ferroviários,0
+692,Serviços de operação em terminais rodoviários,0
+693,Serviços de operações de terminais,0
+694,Serviços de gestão e operação de terminais aquaviários de carga,0
+695,Transporte ferroviário de carga,551
+696,Transporte rodoviário de produtos perigosos,26141
+697,Transporte marítimo de cabotagem - carga,0
+698,Transporte marítimo de longo curso - carga,0
+699,"Transporte por navegação interior de carga, municipal, exceto travessia",2770
+700,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",2118
+701,Transporte ferroviário de carga,551
+702,Transporte rodoviário de produtos perigosos,26141
+703,Transporte marítimo de cabotagem – carga,0
+704,Transporte marítimo de longo curso - carga,0
+705,"Transporte por navegação interior de carga, municipal, exceto travessia",2770
+706,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",2118
+707,Transporte ferroviário de carga,551
+708,Transporte rodoviário de produtos perigosos,26141
+709,Transporte marítimo de cabotagem - carga,0
+710,Transporte marítimo de longo curso - carga,0
+711,"Transporte por navegação interior de carga, municipal, exceto travessia",2770
+712,"Transporte por navegação de travessia intermunicipal, interestadual e internacional",2118
+713,Transporte aéreo de carga,468
+714,Exploração de parque temático,0
+715,Extração de madeira em florestas nativas,1236
+716,Produção de carvão vegetal - florestas nativas,1505
+717,Pesca de peixes em água salgada,3893
+718,Pesca de crustáceos e moluscos em água salgada,511
+719,Coleta de outros produtos marinhos,42
+720,Pesca de peixes em água doce,6044
+721,Pesca de crustáceos e moluscos em água doce,8
+722,Coleta de outros produtos aquáticos de água doce,71
+723,Criação de outros animais não especificados anteriormente (6),0
+724,"Criação de aves, exceto galináceos (7)",0
+725,"Atividades de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental",4257
+726,Extração de madeira em florestas plantadas,13387
+727,Produção de carvão vegetal - florestas plantadas,6904
+728,Extração de madeira em florestas plantadas,13387
+729,Produção de carvão vegetal - florestas plantadas,6904
+730,Coleta de palmito em florestas nativas,107
+731,Coleta de produtos não madeireiros não especificados anteriormente em florestas nativas,0
+732,Exploração de aeroportos e campos de aterrissagem,0
+733,Operação de campo de pouso de aeronaves,0
+734,Operação de campos de aterrissagem,0
+735,Operação dos aeroportos e campos de aterrissagem,1310
+736,Exploração de aeroportos e campos de aterrissagem,0
+737,Operação de campo de pouso de aeronaves,0
+738,Operação de campos de aterrissagem,0
+739,Operação dos aeroportos e campos de aterrissagem,1310
+740,Transmissão de energia elétrica,2880
+741,Geração de energia elétrica,19403
+742,Geração de energia elétrica,19403
+743,Distribuição de energia elétrica,5066

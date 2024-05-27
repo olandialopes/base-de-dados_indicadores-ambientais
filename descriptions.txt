@@ -1,0 +1,745 @@
+Extração de petróleo e gás natural/Alto
+Extração e beneficiamento de xisto/Alto
+Extração e beneficiamento de areias betuminosas/Alto
+Atividades de apoio à extração de petróleo e gás natural/Alto
+Britamento de pedras, exceto associado à extração/Médio
+Aparelhamento de pedras para a construção, exceto associado à extração/Médio
+Aparelhamento de placas e execução de trabalhos em mármore, granito, ardósia e outras pedras/Médio
+Fabricação de vidro plano e de segurança/Médio
+Fabricação de embalagens de vidro/Médio
+Fabricação de artigos de vidro/Médio
+Fabricação de cimento/Médio
+Fabricação de estruturas pré moldadas de concreto armado, em série e sob encomenda/Médio
+Fabricação de artefatos de cimento para uso na construção/Médio
+Fabricação de artefatos de fibrocimento para uso na construção/Médio
+Fabricação de casas pré moldadas de concreto/Médio
+Preparação de massa de concreto e argamassa para construção/Médio
+Fabricação de outros artefatos e produtos de concreto, cimento, fibrocimento, gesso e materiais semelhantes/Médio
+Fabricação de produtos cerâmicos refratários/Médio
+Fabricação de azulejos e pisos/Médio
+Fabricação de artefatos de cerâmica e barro cozido para uso na construção, exceto azulejos e pisos/Médio
+Fabricação de material sanitário de cerâmica/Médio
+Fabricação de produtos cerâmicos não refratários não especificados anteriormente/Médio
+Fabricação de cal e gesso/Médio
+Fabricação de abrasivos/Médio
+Fabricação de outros produtos de minerais não metálicos não especificados anteriormente/Médio
+Produção de ferro gusa/Alto
+Produção de ferroligas/Alto
+Produção de semi-acabados de aço/Alto
+Produção de laminados planos de aço ao carbono, revestidos ou não/Alto
+Produção de laminados planos de aços especiais/Alto
+Produção de tubos de aço sem costura/Alto
+Produção de laminados de aço, exceto tubos/Alto
+Fundição de ferro e aço/Alto
+Produção de arames de aço/Alto
+Produção de relaminados, trefilados e perfilados de aço, exceto arames/Alto
+Produção de tubos de aço com costura/Alto
+Produção de outros tubos de ferro e aço/Alto
+Produção de forjados de aço/Alto
+Produção de alumínio e suas ligas em formas primárias/Alto
+Metalurgia do cobre/Alto
+Produção de zinco em formas primárias/Alto
+Metalurgia de outros metais não ferrosos e suas ligas não especificados anteriormente/Alto
+Metalurgia dos metais preciosos/Alto
+Fundição de metais não ferrosos e suas ligas/Alto
+Produção de laminados de alumínio/Alto
+Metalurgia do cobre/Alto
+Produção de laminados de zinco/Alto
+Metalurgia de outros metais não ferrosos e suas ligas não especificados
+			anteriormente/Alto
+Produção de forjados de metais não ferrosos e suas ligas/Alto
+Produção de laminados de alumínio/Alto
+Metalurgia do cobre/Alto
+Produção de laminados de zinco/Alto
+Metalurgia de outros metais não ferrosos e suas ligas não especificados anteriormente/Alto
+Produção de ânodos e cátodos/Alto
+Produção de solda em barras, fios, tubos e varetas/Alto
+Produção de eletrodos para solda elétrica, exceto de grafita/Alto
+Fabricação de fios, varetas, tubos, eletrodos e artefatos semelhantes para soldagem/Alto
+Metalurgia dos metais preciosos/Alto
+Metalurgia do pó/Alto
+Fabricação de estruturas metálicas/Alto
+Serviço de confecção de armações metálicas para a construção/Alto
+Fabricação de obras de caldeiraria pesada/Alto
+Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central/Alto
+Fabricação de caldeiras geradoras de vapor, exceto para aquecimento central e para veículos/Alto
+Fabricação de esquadrias de metal/Alto
+Produção de artefatos estampados de metal/Alto
+Fabricação de artigos de cutelaria/Alto
+Fabricação de artigos de serralheria, exceto esquadrias/Alto
+Fabricação de ferramentas/Alto
+Fabricação de equipamento bélico pesado, exceto veículos militares de combate/Alto
+Fabricação de armas de fogo, outras armas e munições/Alto
+Fabricação de embalagens metálicas/Alto
+Fabricação de produtos de trefilados de metal padronizados/Alto
+Fabricação de produtos de trefilados de metal, exceto padronizados/Alto
+Fabricação de artigos de metal para uso doméstico e pessoal/Alto
+Serviço de corte e dobra de metais/Alto
+Fabricação de outros produtos de metal não especificados anteriormente/Alto
+Serviços de tratamento e revestimento em metais/Alto
+Fabricação de motores e turbinas, peças e acessórios, exceto para aviões e veículos rodoviários/Médio
+Fabricação de equipamentos hidráulicos e pneumáticos, peças e acessórios, exceto válvulas/Médio
+Fabricação de válvulas, registros e dispositivos semelhantes, peças e acessórios/Médio
+Fabricação de compressores para uso industrial, peças e acessórios/Médio
+Fabricação de compressores para uso não industrial, peças e acessórios/Médio
+Fabricação de rolamentos para fins industriais/Médio
+Fabricação de equipamentos de transmissão para fins industriais, exceto rolamentos/Médio
+Fabricação de fornos industriais, aparelhos e equipamentos não elétricos para instalações térmicas, peças e acessórios/Médio
+Fabricação de estufas e fornos elétricos para fins industriais, peças e acessórios/Médio
+Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de pessoas, peças e acessórios/Médio
+Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas, peças e acessórios/Médio
+Fabricação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial, peças e acessórios/Médio
+Fabricação de aparelhos e equipamentos de ar condicionado para uso industrial/Médio
+Fabricação de aparelhos e equipamentos de ar condicionado para uso não industrial/Médio
+Fabricação de máquinas de escrever, calcular e outros equipamentos não eletrônicos para escritório, peças e acessórios/Médio
+Fabricação de outras máquinas e equipamentos de uso geral não especificados anteriormente, peças e acessórios/Médio
+Fabricação de tratores agrícolas, peças e acessórios/Médio
+Fabricação de equipamentos para irrigação agrícola, peças e acessórios/Médio
+Fabricação de máquinas e equipamentos para a agricultura e pecuária, peças e acessórios, exceto para irrigação/Médio
+Fabricação de máquinas ferramenta, peças e acessórios/Médio
+Fabricação de máquinas e equipamentos para a prospecção e extração de petróleo, peças e acessórios/Médio
+Fabricação de outras máquinas e equipamentos para uso na extração mineral, peças e acessórios, exceto na extração de petróleo/Médio
+Fabricação de tratores, peças e acessórios, exceto agrícolas/Médio
+Fabricação de máquinas e equipamentos para terraplenagem, pavimentação e construção, peças e acessórios, exceto tratores/Médio
+Fabricação de máquinas para a indústria metalúrgica, peças e acessórios, exceto máquinas ferramenta/Médio
+Fabricação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo, peças e acessórios/Médio
+Fabricação de máquinas e equipamentos para a indústria têxtil, peças e acessórios/Médio
+Fabricação de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados, peças e acessórios/Médio
+Fabricação de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos, peças e acessórios/Médio
+Fabricação de máquinas e equipamentos para a indústria do plástico, peças e acessórios/Médio
+Fabricação de máquinas e equipamentos para uso industrial específico não especificados anteriormente, peças e acessórios/Médio
+Fabricação de motosserras/Médio
+Fabricação de pilhas, baterias e acumuladores elétricos, exceto para veículos automotores/Médio
+Fabricação de baterias e acumuladores para veículos automotores/Médio
+Recondicionamento de baterias e acumuladores para veículos automotores/Médio
+Fabricação de componentes eletrônicos/Médio
+Fabricação de equipamentos de informática/Médio
+Fabricação de periféricos para equipamentos de informática/Médio
+Fabricação de equipamentos transmissores de comunicação, peças e acessórios/Médio
+Fabricação de aparelhos telefônicos e de outros equipamentos de comunicação, peças e acessórios/Médio
+Fabricação de eletrodos, contatos e outros artigos de carvão e grafita para uso elétrico, eletroímãs e isoladores/Médio
+Fabricação de geradores de corrente contínua e alternada, peças e acessórios/Médio
+Fabricação de transformadores, indutores, conversores, sincronizadores e semelhantes, peças e acessórios/Médio
+Fabricação de motores elétricos, peças e acessórios/Médio
+Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica/Médio
+Fabricação de material elétrico para instalações em circuito de consumo/Médio
+Fabricação de fios, cabos e condutores elétricos isolados/Médio
+Fabricação de luminárias e outros equipamentos de iluminação/Médio
+Fabricação de equipamentos para sinalização e alarme/Médio
+Fabricação de outros equipamentos e aparelhos elétricos não especificados anteriormente/Médio
+Fabricação de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo/Médio
+Fabricação de aparelhos e equipamentos de medida, teste e controle/Médio
+Fabricação de cronômetros e relógios/Médio
+Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação/Médio
+Fabricação de aparelhos fotográficos e cinematográficos, peças e acessórios/Médio
+Fabricação de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico, peças e acessórios/Médio
+Fabricação de aparelhos elétricos de uso pessoal, peças e acessórios/Médio
+Fabricação de outros aparelhos eletrodomésticos não especificados anteriormente, peças e acessórios/Médio
+Fabricação de lâmpadas/Médio
+Fabricação de automóveis, camionetas e utilitários/Médio
+Fabricação de chassis com motor para automóveis, camionetas e utilitários/Médio
+Fabricação de motores para automóveis, camionetas e utilitários/Médio
+Fabricação de caminhões e ônibus/Médio
+Fabricação de motores para caminhões e ônibus/Médio
+Fabricação de cabines, carrocerias e reboques para caminhões/Médio
+Fabricação de carrocerias para ônibus/Médio
+Fabricação de cabines, carrocerias e reboques para outros veículos automotores, exceto caminhões e ônibus/Médio
+Fabricação de peças e acessórios para o sistema motor de veículos automotores/Médio
+Fabricação de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores/Médio
+Fabricação de peças e acessórios para o sistema de freios de veículos automotores/Médio
+Fabricação de peças e acessórios para o sistema de direção e suspensão de veículos automotores/Médio
+Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias/Médio
+Fabricação de bancos e estofados para veículos automotores/Médio
+Fabricação de outras peças e acessórios para veículos automotores não especificadas anteriormente/Médio
+Recondicionamento e recuperação de motores para veículos automotores/Médio
+Fabricação de locomotivas, vagões e outros materiais rodantes/Médio
+Fabricação de peças e acessórios para veículos ferroviários/Médio
+Fabricação de motocicletas/Médio
+Fabricação de peças e acessórios para motocicletas/Médio
+Serviço de motores de veículos rodoviários (reconstrução, recuperação)/Médio
+Motores de veículos rodoviários, recuperados, remanufaturados, recondicionados ou reconstruídos/Médio
+Serviço de reconstrução, remanufaturamento e serviços semelhantes em motores de veículos rodoviários;/Médio
+Serviço de recuperação de motores de veículos rodoviários/Médio
+Fabricação de aeronaves/Médio
+Fabricação de turbinas, motores e outros componentes e peças para aeronaves/Médio
+Construção de embarcações de grande porte/Médio
+Construção de embarcações para uso comercial e para usos especiais, exceto grande porte/Médio
+Construção de embarcações para esporte e lazer/Médio
+Manutenção e reparação de embarcações e estruturas flutuantes/Médio
+Manutenção e reparação de embarcações para esporte e lazer/Médio
+Serrarias com desdobramento de madeira/Médio
+Serrarias sem desdobramento de madeira/Médio
+Serrarias sem desdobramento de madeira/Médio
+Serrarias com desdobramento de madeira/Médio
+Fabricação de madeira laminada e de chapas de madeira compensada, prensada e aglomerada/Médio
+Fabricação de casa de madeira pré fabricada/Médio
+Fabricação de esquadrias de madeira e de peças para instalações industriais e comerciais/Médio
+Fabricação de outros artigos de carpintaria para construção/Médio
+Fabricação de móveis com predominância de madeira/Médio
+Fabricação de celulose e outras pastas para a fabricação de papel/Alto
+Fabricação de papel/Alto
+Fabricação de cartolina e papel cartão/Alto
+Fabricação de cartuchos e cilindros de papelão ondulado para embalagem, impressos ou não/Alto
+Fabricação de chapas de papelão ondulado/Alto
+Fabricação de face simples de papelão ondulado/Alto
+Fabricação de papelão ondulado/Alto
+Fabricação de embalagens de papel/Alto
+Fabricação de embalagens de cartolina e papel cartão/Alto
+Fabricação de produtos de papel para uso doméstico e higiênico sanitário não especificados anteriormente/Alto
+Fabricação de acessórios para embalagens de papelão ondulado, impressos ou não/Alto
+Fabricação de caixas de papelão ondulado, impressas ou não/Alto
+Fabricação de embalagens de papelão ondulado, impressas ou não/Alto
+Fabricação de formulários contínuos, impressos ou não/Alto
+Fabricação de agendas/Alto
+Fabricação de artefatos de papel para aparelhos registradores, inclusive bobinas/Alto
+Fabricação de artefatos de papel-cartão gomado ou adesivo em tiras ou em rolos/Alto
+Fabricação de artefatos de papel, papelão, cartolina ou papel-cartão para escritório/Alto
+Fabricação de artefatos diversos de papel utilizados para escrita ou impressão, impressos, estampados ou perfurados/Alto
+Fabricação de artefatos impressos de papelaria, não especificados/Alto
+Fabricação de artigos diversos para correspondência (aerogramas, bilhetes-postais ou outros artigos para correspondência)/Alto
+Fabricação de bobinas de papel para máquinas/Alto
+Fabricação de cadernos e cadernetas escolares/Alto
+Fabricação de classificadores, guias, fichas e separadores de papelão ou cartolina, para arquivos/Alto
+Fabricação de envelopes de papel impressos ou não/Alto
+Fabricação de estêncil para mimeógrafo/Alto
+Fabricação de etiquetas adesivas de papel, impressas ou não/Alto
+Fabricação de etiquetas de papel não adesivas (TAG), impressas ou não/Alto
+Fabricação de fitas adesivas de papel/Alto
+Fabricação de livros de escrituração contábil e fiscal/Alto
+Fabricação de notas promissórias/Alto
+Fabricação de papel almaço/Alto
+Fabricação de papel autocopiativo (com corantes microencapsulados)/Alto
+Fabricação de papel carbono/Alto
+Fabricação de papel milimetrado/Alto
+Fabricação de papel para cartas/Alto
+Fabricação de papel para mimeógrafo em resma/Alto
+Fabricação de papel para oficio, cartas e semelhantes/Alto
+Fabricação de papel quadriculado, milimetrado e semelhantes/Alto
+Fabricação de pastas de cartolina para escritório, com ou sem ferragens/Alto
+Fabricação de fraldas descartáveis/Alto
+Fabricação de absorventes higiênicos/Alto
+Fabricação de artefatos de papel, papelão ondulado, cartolina ou papel-cartão de acabamento especial para revestimentos/Alto
+Fabricação de artigos de fibra prensada ou isolante/Alto
+Fabricação de bandeirolas de papel/Alto
+Bandejas, travessas, pratos, copos e artigos semelhantes de papel ou papel-cartão/Alto
+Fabricação de blocos e chapas filtrantes, de pasta de papel/Alto
+Fabricação de canudos de papel para refresco/Alto
+Fabricação de carretéis, bobinas e suportes semelhantes de papel, papel-cartão e pasta de papel/Alto
+Fabricação de confetes, serpentinas e semelhantes/Alto
+Fabricação de copos de papel ou de papel-cartão/Alto
+Fabricação de embalagens diversas de pasta de celulose/Alto
+Fabricação de flâmulas e bandeirolas de papel/Alto
+Fabricação de papel estampado ou fantasia/Alto
+Fabricação de papel impregnado ou revestido/Alto
+Fabricação de papel para cigarros, cortado em dimensões próprias, em folhas, tubos ou rolos/Alto
+Fabricação de peças ou acessórios para máquinas ou equipamentos de transporte de papel, papelão ondulado, cartolina ou papel-cartão/Alto
+Fabricação de polpa de madeira ou de pasta mecânica moldada em artigos diversos/Alto
+Fabricação de revestimentos de matérias têxteis para paredes/Alto
+Fabricação de revestimentos para pavimentos com suporte de papel ou de pepal-cartão/Alto
+Fabricação de álbuns de papel-cartão para fotografias, amostras ou coleções/Alto
+Fabricação de borracha vegetal, sólida, beneficiada (lavagem, centrifugação, prensagem em blocos, granulação, etc.)/Pequeno
+Centrifugação, coagulação, vulcanização e outros beneficiamentos de látex vegetal/Pequeno
+Fabricação de fios de borracha/Pequeno
+Fabricação de laminados de borracha/Pequeno
+Fabricação de artefatos de espuma de borracha/Pequeno
+Fabricação de espuma de borracha/Pequeno
+Fabricação de câmaras de ar para pneumáticos de automóveis, caminhões, ônibus, aeronaves, motocicletas, bicicletas e outros veículos/Pequeno
+Fabricação de câmaras de ar para pneus/Pequeno
+Fabricação de câmaras de ar para pneus de veículos ou de máquinas/Pequeno
+Fabricação de partes de pneus (borracha de ligação, camelbacks, etc)/Pequeno
+Fabricação de pneumáticos para tratores e máquinas/Pequeno
+Fabricação de pneumáticos para veículos/Pequeno
+Fabricação de pneus para automóveis, caminhões, ônibus, aeronaves, bicicletas, motocicletas e outros veículos/Pequeno
+Fabricação de pneus para tratores e máquinas/Pequeno
+Fabricação de pneus/Pequeno
+Fabricação de protetores, bandas de rodagem, amovíveis para pneumáticos (camelbacks) e “flaps” de borracha/Pequeno
+Reforma de pneumáticos usados/Pequeno
+Produção de couros de bovinos secos ou salgados/Alto
+Secagem e salga de couros e peles de bovinos/Alto
+Secagem e salga de couros e peles de equinos/Alto
+Secagem e salga de couros e peles de caprinos/Alto
+Produção de couros e peles de bufalinos secos e/ou salgados/Alto
+Secagem e salga de couro de bufalinos/Alto
+Salga de couros e peles de suínos (porcos)/Alto
+Curtimento e outras preparações de couro/Alto
+Fabricação de artefatos de couro não especificados anteriormente/Alto
+Fabricação de artigos de couro para viagem/Alto
+Fabricação de bolsas de couro/Alto
+Fabricação de bolsas de qualquer material (couro, plástico, etc) (3)/Alto
+Fabricação de bolsas e mochilas de qualquer material (3)/Alto
+Fabricação de carteiras para ou documentos, porta-níqueis, cigarreiras, etc., de couro natural ou artificial ou de outras matérias têxteis (3)/Alto
+Fabricação de malas, valises e outros artefatos para viagem, de qualquer material (3)/Alto
+Fabricação de mochilas, escolares ou não, de qualquer material (3)/Alto
+Fabricação de necessaire, estojo (3)/Alto
+Fabricação de pastas de couro/Alto
+Fabricação de cola animal/Alto
+Beneficiamento de (em estabelecimento não agrícola) algodão cardado, penteado, etc./Médio
+Descaroçamento de (em estabelecimento não agrícola) algodão/Médio
+Produção de algodão cardado ou penteado/Médio
+Fabricação de algodão em pasta/Médio
+Fabricação de algodão em pluma/Médio
+Desperdícios do beneficiamento do algodão/Médio
+Fabricação de fibra de algodão moldada, para estofamento (mantas de línteres, etc.)/Médio
+Beneficiamento de fibras de algodão (em estabelecimento não agrícola)/Médio
+Produção de fibras de algodão beneficiadas/Médio
+Resíduos do beneficiamento da fibra de algodão/Médio
+Beneficiamento de crina vegetal/Médio
+Beneficiamento de crinas, pelos e cerdas/Médio
+Obtenção de desperdícios de lã/Médio
+Obtenção de desperdícios de seda/Médio
+Estopas ou outros resíduos do beneficiamento de fibras têxteis naturais, exceto algodão/Médio
+Produção de fibra de lã lavada/Médio
+Beneficiamento de fibras de coco/Médio
+Fabricação de fibras de cânhamo beneficiadas/Médio
+Beneficiamento de fibras de juta/Médio
+Beneficiamento de fibras de linho/Médio
+Beneficiamento de fibras de malva/Médio
+Beneficiamento de fibras de rami/Médio
+Beneficiamento de fibras de sisal (agave)/Médio
+Beneficiamento de fibras têxteis vegetais (exceto algodão)/Médio
+Fabricação de lanolina/Médio
+Fabricação de lã (cardada, penteada, tops, etc)/Médio
+Beneficiamento de lã/Médio
+Produção de pelos finos e grosseiros/Médio
+Obtenção de resíduos da fiação de fibras têxteis naturais, exceto algodão/Médio
+Obtenção de resíduos de lã/Médio
+Obtenção de resíduos de seda/Médio
+Produção de seda crua não fiada/Médio
+Produção de suarda/Médio
+Obtenção de subprodutos resultantes do beneficiamento de fibras têxteis/Médio
+Fabricação de fibras sintéticas descontínuas cardadas, penteadas ou preparadas de outro modo para fiação/Médio
+Fiação de algodão/Médio
+Serviço de fiação de algodão/Médio
+Fabricação de fio de algodão cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fios de algodão retorcidos ou retorcidos múltiplos/Médio
+Fabricação de fios de algodão singelos (simples)/Médio
+Fabricação de fios de algodão, beneficiados ou não/Médio
+Obtenção de resíduos (estopas, desperdícios) da fiação de algodão/Médio
+Fiação de caroá/Médio
+Fiação de cânhamo/Médio
+Fabricação de fio de juta cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fio de linho cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fio de lã cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fio de rami cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fio de seda cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fio de sisal (agave) cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fios caroá, beneficiados ou não/Médio
+Fabricação de fios de papel/Médio
+Fiação de juta/Médio
+Fiação de linho/Médio
+Fiação de lã/Médio
+Fiação de rami/Médio
+Fiação de seda/Médio
+Fiação de sisal/Médio
+Fabricação de desperdícios da fiação de fibras artificiais ou sintéticas, descontínuas/Médio
+O serviço de fiação de fibras artificiais ou sintéticas/Médio
+Fabricação de fio de fibras artificiais cru ou acabado (beneficiado), inclusive mesclas/Médio
+Fabricação de fio de fibras sintéticas cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de fios de filamentos artificiais ou sintéticos (exceto linhas para costurar), acondicionados para venda a varejo/Médio
+Fabricação de fios de nylon (náilon) ou de outras poliamidas, de poliéster ou de outros filamentos sintéticos/Médio
+Resíduos da fiação de fibras artificiais ou sintéticas/Médio
+Fabricação de linhas de algodão para costurar e bordar/Médio
+Fabricação de linhas de fios artificiais ou sintéticos para costurar e bordar/Médio
+Fabricação de linhas de linho e rami para costurar e bordar/Médio
+Fabricação de linhas de lã para costurar e bordar/Médio
+Fabricação de linhas de seda animal para costurar e bordar/Médio
+Fabricação de linhas para costurar e bordar/Médio
+Fabricação de linhas para crochê/Médio
+Confecção de artefatos de tecidos de algodão para cama, mesa ou banho (quando integrada à tecelagem)/Médio
+Confecção de artefatos de tecidos de algodão para copa e cozinha (quando integrada à tecelagem)/Médio
+Confecção de (quando integrada a tecelagem) artefatos de tecidos de algodão para uso doméstico/Médio
+Confecção de cobertores, mantas ou edredons de algodão (quando integrada à tecelagem)/Médio
+Confecção de colchas de algodão (quando integrada à tecelagem)/Médio
+Confecção de lençóis e/ou fronhas de tecidos de algodão (quando integrada à tecelagem)/Médio
+Confecção de roupas de cama, mesa ou banho de tecidos de algodão (quando integrada à tecelagem)/Médio
+Confecção de sacos de algodão para embalagem (quando integrada à tecelagem)/Médio
+Serviço de tecelagem plana de algodão/Médio
+Fabricação de tecido algodão tintos ou estampados, inclusive mescla/Médio
+Fabricação de tecido de índigo/Médio
+Fabricação de tecidos atoalhados (felpudos) de algodão/Médio
+Fabricação de tecidos de algodão tipo gaze/Médio
+Fabricação de tecidos planos de algodão, inclusive mesclas, crus ou acabados (beneficiados)/Médio
+Fabricação de tecidos rendados de algodão/Médio
+Fabricação de tecidos tufados/Médio
+Confecção de toalhas de banho de tecidos de algodão, quando integrada a tecelagem/Médio
+Confecção de toalhas de banho ou de rosto de tecidos de algodão (quando integrada à tecelagem)/Médio
+Confecção de toalhas de mesa ou de cozinha de tecidos de algodão (quando integrada à tecelagem)/Médio
+Fabricação de veludos e pelúcias de algodão/Médio
+Confecção de artefatos de tecidos de fibras naturais (exceto algodão) para uso doméstico (quando integrada a tecelagem)/Médio
+Confecção de artefatos de tecidos fibras naturais (exceto algodão), para banho, cama e mesa, copa e cozinha (quando integrada a tecelagem)/Médio
+Tecelagem de caroá/Médio
+Confecção de cobertores, mantas e edredons de fibras naturais (exceto algodão) (quando integrada a tecelagem)/Médio
+Confecção de colchas de fibras naturais (exceto algodão) (quando integrada a tecelagem)/Médio
+Tecelagem de cânhamo/Médio
+Tecelagem de fibras têxteis naturais/Médio
+Confecção de fronhas de tecidos de fibras naturais (exceto algodão), quando integrada a tecelagem/Médio
+Tecelagem de juta/Médio
+Confecção de lençóis ou fronhas de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem)/Médio
+Tecelagem de linho/Médio
+Tecelagem de lã/Médio
+Tecelagem de malva/Médio
+Tecelagem de rami/Médio
+Confecção de roupas de cama, banho, mesa, copa ou cozinha de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem)/Médio
+Confecção de sacos de juta ou de outras fibras têxteis naturais para embalagem (quando integrada a tecelagem)/Médio
+Tecelagem de seda/Médio
+Serviço de tecelagem de fios de fibras têxteis naturais/Médio
+Fabricação de tecido de cetim/Médio
+Fabricação de tecido de juta, cru ou acabado (beneficiado), inclusive mesclas/Médio
+Fabricação de tecido de linho, cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de tecido de lã, cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de tecido de rami, cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de tecido de seda, cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de tecido de sisal (agave), cru ou acabado (beneficiado), inclusive mescla/Médio
+Fabricação de tecidos de crina/Médio
+Fabricação de tecidos de pelos grosseiros ou de crina, puros ou mistos/Médio
+Fabricação de tecidos rendados de fibras naturais (exceto algodão)/Médio
+Fabricação de telas de juta/Médio
+Confecção de toalhas de banho ou de rosto de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem)/Médio
+Confecção de toalhas de mesa ou de cozinha de tecidos de fibras naturais (exceto algodão) (quando integrada a tecelagem)/Médio
+Veludos e pelúcias de matérias têxteis naturais - exceto algodão/Médio
+Confecção de artefatos de tecidos artificiais ou sintéticos para uso doméstico (quando integrada a tecelagem)/Médio
+Confecção de artefatos de tecidos artificiais ou sintéticos, para banho, cama e mesa, copa e cozinha (quando integrada a tecelagem)/Médio
+Confecção de artefatos de tecidos de fibras artificiais ou sintéticas, para copa e cozinha, quando integrada a tecelagem/Médio
+Confecção de cobertores, mantas e edredons de tecidos de fibras artificiais ou sintéticas (quando integrada a tecelagem)/Médio
+Confecção de colchas de fibras artificiais ou sintéticas (quando integrada a tecelagem)/Médio
+Tecelagem de fios de filamentos contínuos artificiais ou sintéticas/Médio
+Confecção de lençóis ou fronhas de tecidos de fibras artificiais ou sintéticas, quando integrada a tecelagem/Médio
+Fabricação de mantas de fibras artificiais ou sintéticas agulhadas e/ou prensadas/Médio
+Confecção de roupas de cama, mesa ou banho de tecidos de fibras artificiais ou sintéticas (quando integrada a tecelagem)/Médio
+Confecção de sacos de fios de ráfia, polipropileno e outros materiais plásticos têxteis (quando integrada a tecelagem)/Médio
+Fabricação de sacos, inclusive contentores flexíveis (big-bags) para embalagem, de matérias têxteis artificiais ou sintéticas, quando integrados à tecelagem/Médio
+Fabricação de tecido de fibra de vidro/Médio
+Fabricação de tecido de fios de ráfia ou lâminas sintéticas/Médio
+Fabricação de tecido de poliéster/Médio
+Fabricação de tecido viscose/Médio
+Fabricação de tecidos de fibras sintéticas descontínuas/Médio
+Fabricação de tecidos de filamentos contínuos e de fios de fibras artificiais ou sintéticas, crus ou acabados (beneficiados), inclusive mescla/Médio
+Fabricação de tecidos de filamentos de aramida e/ou de poliamida de alta tenacidade, sem fio de borracha/Médio
+Fabricação de Atividade tecidos rendados de fibras sintéticas/Médio
+Confecção de toalhas de banho ou de rosto de tecidos artificiais ou sintéticos (quando integrada a tecelagem)/Médio
+Confecção de toalhas de mesa ou de cozinha de tecidos artificiais ou sintéticos (quando integrada a tecelagem)/Médio
+Fabricação de veludos e pelúcias de fibras artificiais ou sintéticas/Médio
+Fabricação de tecidos de malha de algodão com elastômero, circular/Médio
+Fabricação de tecidos de malha de algodão, circular/Médio
+Fabricação de tecidos de malha de fibras artificiais ou sintéticas, circular/Médio
+Fabricação de tecidos de malha de matérias têxteis naturais, circular/Médio
+Fabricação de tecidos de malha-urdidura ou de outros tipos, de algodão/Médio
+Fabricação de tecidos de malha-urdidura ou de outros tipos, de fibras artificiais ou sintéticas/Médio
+Fabricação de tecidos de malha-urdidura ou de outros tipos, de matérias têxteis naturais/Médio
+Fabricação de tecidos de malha/Médio
+Fabricação de velas para barcos/Médio
+Fabricação de tecidos com fios metalizados/Médio
+Fabricação de tecidos de acabamento especial - colagem em tecidos com material plástico e outros materiais/Médio
+Fabricação de feltros combinados com matérias diversas, inclusive artefatos, para usos técnicos/Médio
+Fabricação de tecidos impermeáveis/Médio
+Fabricação de tecidos para telas de desenhos e pinturas/Médio
+Fabricação de tecidos revestidos ou impregnados/Médio
+Fabricação de tecidos revestidos ou impregnados, inclusive as entretelas/Médio
+Fabricação de telas para pneumáticos fabricadas com fios sintéticos ou artificiais de alta tenacidade/Médio
+Fabricação de telas para pneumáticos/Médio
+Fabricação de tendas/Médio
+Fabricação de toldos/Médio
+Fabricação de redes de proteção contra derramamento de petróleo no mar/Médio
+Fabricação de tecido não-tecido ou falsos tecidos, de fibras naturais, artificiais ou sintéticas, mesmo acabados/Médio
+Fabricação de tecidos antibacterianos/Médio
+Fabricação de painéis de lona/Médio
+Fabricação de pano-couro e oleados/Médio
+Fabricação de pastas, tontisses, nós e bolotas de fibras têxteis/Médio
+Fabricação de mechas para candeeiro, isqueiros, velas e semelhantes, de materiais têxteis/Médio
+Fabricação de lonas e encerados/Médio
+Fabricação de cortinas painéis/Médio
+Fabricação de entretelas beneficiadas (plastificadas, laminadas ou costuradas, etc)/Médio
+Fabricação de entretelas de fios naturais, artificiais ou sintéticos/Médio
+Fabricação de feltros/Médio
+Fabricação de fibra moldada para estofamento (mantas de crina, fibras de coco, etc.)/Médio
+Fabricação de aeroteto (toldos de lona)/Médio
+Fabricação de filós/Médio
+Fabricação de fios e cordas de borracha recobertos de têxteis/Médio
+Fabricação de fios elásticos recobertos/Médio
+Fabricação de fios têxteis metalizados/Médio
+Fabricação de redes tecidas de plástico para embalagens/Médio
+Fabricação de rendas e bordados manuais/Médio
+Fabricação de rendas/Médio
+Fabricação de tecidos bordados/Médio
+Fabricação de tecidos elásticos/Médio
+Fabricação de tules e filós/Médio
+Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário/Médio
+Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário/Médio
+Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário/Médio
+Fabricação de botas de couro/Médio
+Fabricação de calçados de couro para esportes (exceto tênis ou quedis)/Médio
+Fabricação de calçados de couro para segurança industrial/Médio
+Fabricação de calçados de couro, infantis/Médio
+Fabricação de calçados de couro, n.e./Médio
+Fabricação de chinelos e alpercatas de couro, femininos/Médio
+Fabricação de chinelos e alpercatas de couro, infantis/Médio
+Fabricação de chinelos e alpercatas de couro, masculinos/Médio
+Fabricação de chuteiras/Médio
+Fabricação de sandálias de couro, feminino/Médio
+Fabricação de sandálias de couro, masculino/Médio
+Fabricação de sapatos de couro, femininos/Médio
+Fabricação de sapatos de couro, masculino/Médio
+Fabricação de sapatênis de couro/Médio
+Serviços de customização em calçados de couro/Médio
+Serviços de montagem e costura de calçados de couro/Médio
+Serviços de pesponto e outros acabamentos em calçados de couro/Médio
+Fabricação de tênis ou quedis de qualquer material/Médio
+Fabricação de calçados de material sintético montado/Médio
+Fabricação de calçados de plástico para adultos/Médio
+Fabricação de calçados de plástico para crianças/Médio
+Fabricação de calçados de plástico para esportes (exceto tênis)/Médio
+Fabricação de calçados de plástico para segurança industrial/Médio
+Fabricação de chinelo de material de plástico moldado/Médio
+Fabricação de chinelos de material plástico/Médio
+Fabricação de chinelos de plástico para adultos/Médio
+Fabricação de chinelos de plástico para crianças/Médio
+Fabricação de sandálias de material plástico/Médio
+Fabricação de calçados de borracha para segurança industrial/Médio
+Fabricação de calçados de borracha/Médio
+Fabricação de calçados de tecidos/Médio
+Fabricação de calçados para segurança (exceto de couro e plástico)/Médio
+Fabricação de chinelos de borracha para adultos/Médio
+Fabricação de chinelos de borracha para crianças/Médio
+Fabricação de chinelos, sandálias e alpercatas de outros materiais (exceto couro e plástico)/Médio
+Fabricação de sandálias (chinelos) de borracha para adultos/Médio
+Fabricação de sandálias (chinelos) de borracha para crianças/Médio
+Fabricação de sandálias e alpercatas de lona e fibras/Médio
+Fabricação de tamancos/Médio
+Fabricação de cabedal de couro para calçados/Médio
+Fabricação de cepos e solados de madeira para calçados/Médio
+Fabricação de contrafortes e couraças para calçados/Médio
+Fabricação de contrafortes para calçados/Médio
+Fabricação de cortes de couro para calçados/Médio
+Confecção de cortes, viras, contrafortes, trancinhas e outros acessórios para calçados/Médio
+Fabricação de palmilhas para calçados de qualquer material/Médio
+Fabricação de partes de borracha para calçados/Médio
+Fabricação de partes de couro para calçados/Médio
+Fabricação de partes de material plástico para calçados/Médio
+Fabricação de partes de material sintético para calçados/Médio
+Fabricação de partes de tecidos para calçados/Médio
+Fabricação de saltos de borracha para calçados/Médio
+Fabricação de saltos de cortiça para calçados/Médio
+Fabricação de saltos de couro para calçados/Médio
+Fabricação de saltos de madeira para calçados/Médio
+Fabricação de saltos e solados de couro para calçados, forrados ou não/Médio
+Fabricação de saltos e solados de plástico para calçados/Médio
+Fabricação de solados de borracha/Médio
+Fabricação de solados de couro para calçados/Médio
+Fabricação de solados de madeira para calçados/Médio
+Fabricação de solas de borracha para calçados/Médio
+Fabricação de viras para calçados/Médio
+Fabricação de laminados planos e tubulares de material plástico/Pequeno
+Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material/Pequeno
+Fabricação de embalagens de material plástico/Pequeno
+Fabricação de tubos e acessórios de material plástico para uso na construção/Pequeno
+Fabricação de artefatos de material plástico para uso pessoal de doméstico/Pequeno
+Fabricação de artefatos de material plástico para usos industriais/Pequeno
+Fabricação de artefatos de material plástico para uso na construção, exceto tubos e acessórios/Pequeno
+Fabricação de artefatos de material plástico para outros usos não especificados anteriormente/Pequeno
+Fabricação de móveis de outros materiais, exceto madeira e metal/Pequeno
+Processamento industrial do fumo/Médio
+Fabricação de cigarros/Médio
+Fabricação de cigarrilhas e charutos/Médio
+Fabricação de filtros para cigarros/Médio
+Fabricação de outros produtos do fumo, exceto cigarros, cigarrilhas e charutos/Médio
+Preparação de Massa de concreto (cimento, areia, brita, água, aditivos, etc.) dosadas por usinas inclusive o transporte através de caminhões betoneiras ou por dutos até o local da construção/Pequeno
+Coquerias/Alto
+Fabricação de outros produtos derivados do petróleo, exceto produtos do refino/Alto
+Fabricação de cloro e álcalis/Alto
+Fabricação de intermediários para fertilizantes/Alto
+Fabricação de gases industriais/Alto
+Elaboração de combustíveis nucleares/Alto
+Fabricação de outros produtos químicos inorgânicos não especificados anteriormente/Alto
+Fabricação de intermediários para plastificantes, resinas e fibras/Alto
+Fabricação de produtos químicos orgânicos não especificados anteriormente/Alto
+Fabricação de adesivos e selantes/Alto
+Fabricação de aditivos de uso industrial/Alto
+Fabricação de catalisadores/Alto
+Fabricação de chapas, filmes, papéis e outros materiais e produtos químicos para fotografia/Alto
+Fabricação de outros produtos químicos não especificados anteriormente/Alto
+Fabricação de produtos do refino de petróleo/Alto
+Formulação de combustíveis/Alto
+Fabricação de outros produtos derivados do petróleo, exceto produtos do refino/Alto
+Fabricação de produtos petroquímicos básicos/Alto
+Fabricação de produtos químicos orgânicos não especificados anteriormente/Alto
+Produção de gás; processamento de gás natural/Alto
+Fabricação de produtos químicos orgânicos não especificados anteriormente/Alto
+Fabricação de aditivos de uso industrial/Alto
+Fabricação de outros produtos químicos não especificados anteriormente/Alto
+Fabricação de pólvoras, explosivos e detonantes/Alto
+Fabricação de artigos pirotécnicos/Alto
+Fabricação de fósforos de segurança/Alto
+Fabricação de munição para armas de fogo e para outras armas/Alto
+Fabricação de aromas e essências sintéticas/Alto
+Fabricação de aromas e fragrâncias sintéticas/Alto
+Fabricação de essências e concentrados aromáticos artificiais/Alto
+Fabricação de misturas de substâncias aromáticas utilizadas como matéria básica para indústrias, exceto para as indústrias alimentar e de bebidas/Alto
+Fabricação de misturas de substâncias aromáticas utilizadas nas indústrias alimentar e de bebidas/Alto
+Fabricação de águas destiladas aromáticas/Alto
+Fabricação de aromas e fragrâncias sintéticas/Alto
+Fabricação de essências e fragrâncias sintéticas/Alto
+Fabricação de misturas de substâncias odoríferas para usos industriais/Alto
+Fabricação de desinfestantes domissanitários/Alto
+Fabricação de produtos de limpeza e polimento/Alto
+Fabricação de tintas, vernizes, esmaltes e lacas/Alto
+Fabricação de tintas de impressão/Alto
+Fabricação de impermeabilizantes, solventes e produtos afins/Alto
+Fabricação de adubos e fertilizantes organominerais/Alto
+Fabricação de adubos e fertilizantes, exceto organominerais/Alto
+Fabricação de defensivos agrícolas/Alto
+Fabricação de intermediários para farmoquímicos, defensivos agrícolas e aditivos em geral (1)/Alto
+Fabricação de produtos farmoquímicos/Alto
+Fabricação de medicamentos alopáticos para uso humano/Alto
+Fabricação de medicamentos homeopáticos para uso humano/Alto
+Fabricação de medicamentos fitoterápicos para uso humano/Alto
+Fabricação de medicamentos para uso veterinário/Alto
+Fabricação de preparações farmacêuticas/Alto
+Fabricação de sabões e detergentes sintéticos/Alto
+Fabricação de velas, inclusive decorativas/Alto
+Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal/Alto
+Fabricação de álcool/Alto
+Fabricação de metanol (álcool metílico)/Alto
+Produção de creosoto de madeira/Alto
+Fabricação de óleo de creosoto/Alto
+Fabricação de óleos e produtos da destilação do alcatrão de hulha e de outros alcatrões minerais (benzóis, naftaleno, creosoto, toluóis, xilóis) (1)/Alto
+Fabricação de preparações químicas para tratamento da madeira/Alto
+Fabricação de cloro e álcalis/Alto
+Fabricação de dispersantes/Alto
+Recuperação de óleo lubrificante queimado/Alto
+Produção de óleos lubrificantes recuperados (rerrefinados)/Alto
+Fabricação de óleos lubrificantes rerrefinados, com aditivos/Alto
+Fabricação de óleos lubrificantes rerrefinados, sem aditivos/Alto
+Recuperação, reciclagem, rerrefino de óleos lubrificantes usados/Alto
+Recuperação de óleo lubrificante queimado/Alto
+Produção de óleos lubrificantes recuperados (rerrefinados)/Alto
+Fabricação de óleos lubrificantes rerrefinados, com aditivos/Alto
+Fabricação de óleos lubrificantes rerrefinados, sem aditivos/Alto
+Recuperação, reciclagem, rerrefino de óleos lubrificantes usados/Alto
+Frigorífico - abate de bovinos/Médio
+Frigorífico - abate de equinos/Médio
+Frigorífico - abate de ovinos e caprinos/Médio
+Frigorífico - abate de bufalinos/Médio
+Matadouro - abate de reses sob contrato, exceto abate de suínos/Médio
+Abate de aves/Médio
+Abate de pequenos animais/Médio
+Frigorífico - abate de suínos/Médio
+Matadouro - abate de suínos sob contrato/Médio
+Fabricação de produtos de carne/Médio
+Preparação de subprodutos do abate/Médio
+Fabricação de conservas de frutas/Médio
+Fabricação de conservas de palmito/Médio
+Fabricação de conservas de legumes e outros vegetais, exceto palmito/Médio
+Fabricação de sucos concentrados de frutas, hortaliças e legumes/Médio
+Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados/Médio
+Preparação do leite/Médio
+Fabricação de laticínios/Médio
+Fabricação de sorvetes e outros gelados comestíveis/Médio
+Fabricação de açúcar em bruto/Médio
+Fabricação de açúcar de cana refinado/Médio
+Fabricação de açúcar de cereais (dextrose) e de beterraba/Médio
+Fabricação de óleos vegetais em bruto, exceto óleo de milho/Médio
+Fabricação de óleos vegetais refinados, exceto óleo de milho/Médio
+Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais/Médio
+Fabricação de óleo de milho em bruto/Médio
+Fabricação de óleo de milho refinado/Médio
+Fabricação de produtos derivados do cacau e de chocolates/Médio
+Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais/Médio
+Fabricação de fermentos e leveduras/Médio
+Fabricação de alimentos para animais/Médio
+Fabricação de vinho/Médio
+Fabricação de vinagres/Médio
+Fabricação de malte, inclusive malte uísque/Médio
+Fabricação de cervejas e chopes/Médio
+Fabricação de sucos concentrados de frutas, hortaliças e legumes/Médio
+Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados/Médio
+Fabricação de produtos para infusão (chá, mate, etc.)/Médio
+Fabricação de águas envasadas/Médio
+Fabricação de refrigerantes/Médio
+Fabricação de chá mate e outros chás prontos para consumo/Médio
+Fabricação de refrescos, xaropes e pós para refrescos, exceto refrescos de frutas/Médio
+Fabricação de outras bebidas não-alcoólicas não especificadas anteriormente/Médio
+Fabricação de aguardente de cana-de-açúcar/Médio
+Fabricação de outras aguardentes e bebidas destiladas/Médio
+Geração de energia elétrica/Médio
+Tratamento de esgoto por meio de processos físicos, químicos e biológicos, tais como: a diluição, seleção, filtragem e sedimentação/Médio
+Tratamento de águas residuais de indústrias para prevenção da poluição/Médio
+Operação de estações de tratamento de esgoto (ETE)/Médio
+Tratamento de esgoto por meio de processos físicos, químicos e biológicos, tais como: a diluição, seleção, filtragem e sedimentação/Médio
+Tratamento de águas residuais de indústrias para prevenção da poluição/Médio
+Usinas de compostagem/Médio
+Fabricação de briquetes de bagaço de cana ou de materiais semelhantes;/Médio
+Fabricação de briquetes de bagaço de cana ou de materiais semelhantes (biomassa);/Médio
+Fabricação de briquetes, lenhas ou carvões ecológicos de resíduos de casca de coco ou outras fibras vegetais;/Médio
+Fabricação de briquetes (pellets) a partir da secagem e compactação de biomassa (bagaço de cana-de-açúcar, casca de arroz ou de amendoim, bagaço de mandioca, pó ou cavacos de madeira e outros resíduos semelhantes)./Médio
+Descontaminação do solo através combustão, pirólise ou incineração/Médio
+Descontaminação do solo através de dessorteação em reator/Médio
+Descontaminação do solo através de landfarming, cometabolismo ou desnitrificação,/Médio
+Descontaminação do solo através de lavagem ou extração/Médio
+Descontaminação do solo através de processos de vitrificação ou eletrocinéticos/Médio
+Descontaminação do solo através de reatores biológicos/Médio
+Descontaminação do solo ou água através de processos físicos, químicos, térmicos, biológicos, isolamento ou confinamento/Médio
+Limpeza de solo contaminado/Médio
+Transporte ferroviário de carga/Alto
+Transporte rodoviário de produtos perigosos/Alto
+Transporte marítimo de cabotagem - carga/Alto
+Transporte marítimo de longo curso - carga/Alto
+Transporte por navegação interior de carga, municipal, exceto travessia/Alto
+Transporte por navegação de travessia intermunicipal, interestadual e internacional/Alto
+Transporte dutoviário/Alto
+A coleta e transporte de esgoto doméstico ou industrial e de águas pluviais por meio de redes de coletores, tanques e outros meios de transporte/Alto
+Exploração de portos, terminais marítimos, atracadouros/Alto
+Exploração dos aeroportos e campos de aterrissagem/Alto
+Operação dos aeroportos e campos de aterrissagem/Alto
+Serviços de operação em terminais ferroviários/Alto
+Serviços de operação em terminais rodoviários/Alto
+Serviços de operações de terminais/Alto
+Serviços de gestão e operação de terminais aquaviários de carga/Alto
+Transporte ferroviário de carga/Alto
+Transporte rodoviário de produtos perigosos/Alto
+Transporte marítimo de cabotagem - carga/Alto
+Transporte marítimo de longo curso - carga/Alto
+Transporte por navegação interior de carga, municipal, exceto travessia/Alto
+Transporte por navegação de travessia intermunicipal, interestadual e internacional/Alto
+Transporte ferroviário de carga/Alto
+Transporte rodoviário de produtos perigosos/Alto
+Transporte marítimo de cabotagem – carga/Alto
+Transporte marítimo de longo curso - carga/Alto
+Transporte por navegação interior de carga, municipal, exceto travessia/Alto
+Transporte por navegação de travessia intermunicipal, interestadual e internacional/Alto
+Transporte ferroviário de carga/Alto
+Transporte rodoviário de produtos perigosos/Alto
+Transporte marítimo de cabotagem - carga/Alto
+Transporte marítimo de longo curso - carga/Alto
+Transporte por navegação interior de carga, municipal, exceto travessia/Alto
+Transporte por navegação de travessia intermunicipal, interestadual e internacional/Alto
+Transporte aéreo de carga/Alto
+Exploração de parque temático/Pequeno
+Extração de madeira em florestas nativas/Médio
+Produção de carvão vegetal - florestas nativas/Médio
+Pesca de peixes em água salgada/Médio
+Pesca de crustáceos e moluscos em água salgada/Médio
+Coleta de outros produtos marinhos/Médio
+Pesca de peixes em água doce/Médio
+Pesca de crustáceos e moluscos em água doce/Médio
+Coleta de outros produtos aquáticos de água doce/Médio
+Criação de outros animais não especificados anteriormente (6)/Médio
+Criação de aves, exceto galináceos (7)/Médio
+Atividades de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental/Médio
+Extração de madeira em florestas plantadas/Médio
+Produção de carvão vegetal - florestas plantadas/Médio
+Extração de madeira em florestas plantadas/Médio
+Produção de carvão vegetal - florestas plantadas/Médio
+Coleta de palmito em florestas nativas/Médio
+Coleta de produtos não madeireiros não especificados anteriormente em florestas nativas/Médio
+Exploração de aeroportos e campos de aterrissagem/-
+Operação de campo de pouso de aeronaves/-
+Operação de campos de aterrissagem/-
+Operação dos aeroportos e campos de aterrissagem/-
+Exploração de aeroportos e campos de aterrissagem/-
+Operação de campo de pouso de aeronaves/-
+Operação de campos de aterrissagem/-
+Operação dos aeroportos e campos de aterrissagem/-
+Transmissão de energia elétrica/-
+Geração de energia elétrica/-
+Geração de energia elétrica/-
+Distribuição de energia elétrica/-
