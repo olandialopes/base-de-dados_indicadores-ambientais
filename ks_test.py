@@ -10,12 +10,8 @@ import os
 inds  = [      'quant_poluentes_emitidos',
                'co2_emissions',
                'massa_salarial',
-               'eco_efic_quant_efluentes_liquidos',
                'eco_efic_co2_emissions',
-               'eco_efic_quant_residuos_solidos',
-               'eco_efic_quant_poluentes_emitidos',
-               'eco_efic_quantidade_energia_padrao_calorias',
-               'eco_efic_quant_consumida_energia_acordo_tipo' ]
+               'eco_efic_quant_poluentes_emitidos']
 
 
 def ktest(base, level=.05):
@@ -290,15 +286,18 @@ def pca_generator(base: dict):
     
     dataset.to_csv('pca_data.csv')
 
-def pca_graph(file):
+def pca_graph(file, y):
     from sklearn.decomposition import PCA
     from sklearn.preprocessing import StandardScaler
     import seaborn as sns; sns.set_style("whitegrid", {'axes.grid' : False})
     import numpy as np
 
     dataset = pd.read_csv(file)
-    target_dataset = dataset['co2_emissions']
-    num_dataset = dataset.drop(columns=['ISIC', 'co2_emissions'])
+    target_dataset = dataset['target']
+    #num_dataset = dataset.drop(columns=['Indicator', 'target'])
+    num_dataset = dataset[[column for column in dataset.columns if y in column]]
+    num_dataset = num_dataset.loc[:, ~num_dataset.columns.str.contains('^Unnamed')]
+    
     X = num_dataset.values
     Y = target_dataset.values
 
@@ -308,25 +307,25 @@ def pca_graph(file):
     pca = PCA()
     X_new = pca.fit_transform(X)
 
-    def myplot(score,coeff,labels=None):
+    def myplot(score,coeff,labels):
         xs = score[:,0]
         ys = score[:,1]
         n = coeff.shape[0]
         scalex = 1.0/(xs.max() - xs.min())
         scaley = 1.0/(ys.max() - ys.min())
-        plt.scatter(xs * scalex,ys * scaley, c = Y, s=100, cmap='viridis', alpha=.6)
+        plt.figure(figsize=(10, 8))
+        plt.axhline(0, color='gray', linestyle='--', linewidth=1)
+        plt.axvline(0, color='gray', linestyle='--', linewidth=1)
+        #plt.scatter(xs * scalex,ys * scaley, c = Y, s=60, cmap='viridis', alpha=.6)
         for i in range(n):
-            plt.arrow(0, 0, coeff[i,0], coeff[i,1], color ='b', alpha = 1, linewidth=.75)
-            if labels is None:
-                plt.text(coeff[i,0]* 1.15, coeff[i,1] * 1.15, "Var"+str(i+1), color = 'g', ha = 'center', va = 'center')
-            else:
-                plt.text(coeff[i,0]* 1.15, coeff[i,1] * 1.15, labels[i], color='black', ha = 'center', va = 'center')
-        plt.xlim(-1,1)
+            plt.arrow(0, 0, coeff[i,0], coeff[i,1], color ='b', alpha = 1, linewidth=1.5)
+            plt.text(coeff[i,0]* 1.15, coeff[i,1] * 1.15, labels[i], color='black', ha = 'center', va = 'center')
+        plt.xlim(-.5,.5)
         plt.ylim(-1,1)
-        plt.title('Análise de componentes principais (PCA)')
+        plt.title(f'Análise de componentes principais (PCA) \n 20{y}')
         plt.xlabel("PC{}".format(1))
         plt.ylabel("PC{}".format(2))
-        plt.grid()
+        #plt.ylim((-.25, .25))
 
     labels = list(num_dataset.columns)
     myplot(X_new[:,0:2],np.transpose(pca.components_[0:2, :]),labels=labels)
@@ -340,9 +339,18 @@ if __name__ == '__main__':
 
     from ecoefficiency import calcular_ecoficiencia_indicator
     base = calcular_ecoficiencia_indicator(b)
+
+    # key = 'poluentes_atm'
+    # ind = 'eco_efic_quant_poluentes_emitidos'
+    # print(base[key][(base[key][ind].notnull()) & (base[key][ind] > 0)][ind].median())
     #pca_generator(base)
 
-    pca_graph('pca_data.csv')
+    #data = pd.read_csv('pca_data_transpose.csv')
+    #data['target'] = data.drop(columns=['Indicator']).sum(axis=1)
+    #data.to_csv('pca_new.csv')
+
+    for year in range(13, 21):
+        pca_graph('pca_new.csv', str(year))
 
     # dataset = pd.read_csv('pca_data.csv')
     

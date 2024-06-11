@@ -8,7 +8,7 @@ credentials = {
                 'HOST': '127.0.1.1',
                 'PORT': '5432',
                 'USER': 'dani',
-                'PASSWORD': '',
+                'PASSWORD': 'inter1000',
                 'DATABASE': 'Dados_RFB'
               }
 
@@ -56,6 +56,26 @@ def main():
     engine = create_engine('postgresql://'+credentials['USER']+':'+credentials['PASSWORD']+'@'+credentials['HOST']+':'+credentials['PORT']+'/'+credentials['DATABASE'])
     conn = psycopg2.connect('dbname='+credentials['DATABASE']+' '+'user='+credentials['USER']+' '+'host='+credentials['HOST']+' '+'port='+credentials['PORT']+' '+'password='+credentials['PASSWORD'])
     cur = conn.cursor()
+
+    ppgu = pd.read_csv('final_ppgu.csv')
+    porte = {1: 'nao informado', 2: 'microempresa', 3: 'pequeno', 5: 'outra'}
+    data = {'CNPJ': [], 'Ano': [], 'UF': [], 'Porte': [], 'Codigo_CNAE': [], 'PP/GU': []}
+
+    for cnae in list(ppgu['CNAE']):
+        cmd = f"select estabelecimento.cnpj_basico, estabelecimento.cnpj_ordem, estabelecimento.cnpj_dv, estabelecimento.data_inicio_atividade, estabelecimento.uf, empresa.porte_empresa, cnae.codigo from empresa, cnae, estabelecimento where (empresa.cnpj_basico = estabelecimento.cnpj_basico) and (cnae.codigo::integer = estabelecimento.cnae_fiscal_principal) and (cnae.descricao = %s);"
+        cur.execute(cmd, (cnae,))
+        query = cur.fetchall()
+        for enterprise in query:
+            data['CNPJ'].append(enterprise[0][:2] + '.' + enterprise[0][2:5] + '.' + enterprise[0][5:] \
+                + '/' + enterprise[1] + '-' + enterprise[2])
+            data['Ano'].append(str(enterprise[3])[:4])
+            data['UF'].append(enterprise[4])            
+            data['Porte'].append(porte[enterprise[5]] if enterprise[5] else porte[1])
+            data['Codigo_CNAE'].append(enterprise[6])
+            data['PP/GU'].append(ppgu[ppgu['CNAE'] == cnae]['PP/GU'].values[0])
+        print(f'{cnae} done!') 
+    df = pd.DataFrame.from_dict(data)
+    df.to_csv('empresas_indicadores.csv')
 
     # dataset = {'Descrição': [], 'N° de empresas': []}
     # acc = 0
@@ -108,12 +128,12 @@ def main():
 
     # 
 
-    data = pd.read_csv('final_ppgu.csv')
+    # data = pd.read_csv('final_ppgu.csv')
 
-    for cnae in data['CNAE']:
-        cmd = f"select empresa  . from empresa, cnae, estabelecimento where (empresa.cnpj_basico = estabelecimento.cnpj_basico) and (cnae.codigo::integer = estabelecimento.cnae_fiscal_principal) and (cnae.descricao = %s);"
-        cur.execute(cmd, (cnae,))
-        num = cur.fetchone()[0]
+    # for cnae in data['CNAE']:
+    #     cmd = f"select empresa  . from empresa, cnae, estabelecimento where (empresa.cnpj_basico = estabelecimento.cnpj_basico) and (cnae.codigo::integer = estabelecimento.cnae_fiscal_principal) and (cnae.descricao = %s);"
+    #     cur.execute(cmd, (cnae,))
+    #     num = cur.fetchone()[0]
               
 
 if __name__ == '__main__':
