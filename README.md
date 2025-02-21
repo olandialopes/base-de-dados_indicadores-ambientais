@@ -1,3 +1,5 @@
+''
+new_process_emission for new data on emissions by sector by municipality
 
 # How to run
 
@@ -12,7 +14,7 @@
 3. Isso significa: mantendo as variáveis de interesse, com nomes harmonizados e no formato correto.
 4. Na sequência as bases são unidas com os dados de massa salarial por meio do CNPJ em comum. Run
 
-`python merge_massa_indicadaores.py`
+`python merge_massa_indicadores.py`
 
 5. As tarefas estão presentes, mas a execução é restrita por motivos de sigilo. Com isso, a base da RAIS com a massa 
 salarial não consta desse repositório. Será disponibilizada apenas após sua desidentificação.
