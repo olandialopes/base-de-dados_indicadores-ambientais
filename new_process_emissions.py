@@ -289,21 +289,23 @@ if __name__ == '__main__':
     em['ano'] = em.ano.astype(int)
 
     t = em.groupby('isic_12').agg('sum')
-    t['eco'] = t['co2_emissions'] / t['massa_salarial']
-    t.sort_values(by='eco')
+    t['eco'] = t['massa_salarial'] / t['co2_emissions']
+    t = t.sort_values(by='eco')
+    t = t.reset_index()[['isic_12', 'eco']]
+    t.to_csv('emissions_sector_average_years.csv', index=False)
 
-    # mun = pd.read_csv('cnpj_mun_code.csv')
-    # mun = mun.loc[mun.groupby('cnpj_cei')['ano'].idxmax()]
-    # mun['cnpj'] = mun['cnpj_cei'].astype(str).str.zfill(14)
-    # mun.drop(['cnpj_cei', 'ano'], axis=1, inplace=True)
-    #
-    # emun = pd.merge(em, mun, on='cnpj', how='left')
-    # emun = emun[~emun.massa_salarial.isna()]
-    # emun['codemun'] = emun['codemun'].astype(int)
-    #
-    # # Getting the median of massa salarial by sector and municipality over all available years
-    # # Then calculating eco-efficiency
-    # emun.drop(['ano', 'cnpj'], axis=1, inplace=True)
-    # eco = emun.groupby(['isic_12', 'codemun']).median().reset_index()
-    # eco = eco[eco.massa_salarial > 0]
-    # eco['eco'] = eco['co2_emissions'] / eco['massa_salarial']
+    mun = pd.read_csv('cnpj_mun_code.csv')
+    mun = mun.loc[mun.groupby('cnpj_cei')['ano'].idxmax()]
+    mun['cnpj'] = mun['cnpj_cei'].astype(str).str.zfill(14)
+    mun.drop(['cnpj_cei', 'ano'], axis=1, inplace=True)
+
+    emun = pd.merge(em, mun, on='cnpj', how='left')
+    emun = emun[~emun.massa_salarial.isna()]
+    emun['codemun'] = emun['codemun'].astype(int)
+
+    # Getting the median of massa salarial by sector and municipality over all available years
+    # Then calculating eco-efficiency
+    emun.drop(['ano', 'cnpj'], axis=1, inplace=True)
+    eco = emun.groupby(['isic_12', 'codemun']).median().reset_index()
+    eco = eco[eco.massa_salarial > 0]
+    eco['eco'] = eco['massa_salarial'] / eco['co2_emissions']
